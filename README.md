@@ -34,6 +34,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 - Click the "Clone or download" button on this page, then download as zip
 - Extract/paste contents of the .zip into your `tera-proxy/bin/node_modules`.
 - Start TERA-Proxy however you would normally
+- To talk in the chat, type /7 or join the discord.
 
 **NOTE:** Due to current unmapped packets, some features (webbrowser support) will not work. The opcode required is `S_SHOW_AWESOMIUMWEB_SHOP`. `21587` for NA, `53369` for EU.
 **Also note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
