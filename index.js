@@ -124,7 +124,6 @@ module.exports = function ChatThing(dispatch) {
         });
     }
     function deZone() {
-        if(inFake)
         dispatch.toClient('S_LOAD_TOPO', 2, {
             zone: rZone,
             x: savedLoc.x,
@@ -353,8 +352,9 @@ module.exports = function ChatThing(dispatch) {
             case 'leave':
             case 'dezone':
             case 'return':
-                inFake = false;
-                deZone();
+                if (inFake) {
+                    deZone();
+                }
                 break
             case 'join':
                 joinChat();
