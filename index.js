@@ -414,7 +414,6 @@ module.exports = function ChatThing(dispatch) {
     });
 
     net.on('spawnNpc', (npc) => {
-        console.log(npc)
         if (config.spawnNpcs)
             dispatch.toClient('S_SPAWN_NPC', 6, {
                 gameId: npc.id,
