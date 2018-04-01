@@ -124,6 +124,7 @@ module.exports = function ChatThing(dispatch) {
         });
     }
     function deZone() {
+        if(inFake)
         dispatch.toClient('S_LOAD_TOPO', 2, {
             zone: rZone,
             x: savedLoc.x,
@@ -413,6 +414,7 @@ module.exports = function ChatThing(dispatch) {
     });
 
     net.on('spawnNpc', (npc) => {
+        console.log(npc)
         if (config.spawnNpcs)
             dispatch.toClient('S_SPAWN_NPC', 6, {
                 gameId: npc.id,
