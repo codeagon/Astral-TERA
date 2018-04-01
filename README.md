@@ -65,7 +65,7 @@ Command | Argument(s) |  Description
 ---|---|---|---
 **at** | disconnect | Disconnects you from the server
 **at** | connect/reconnect | Reconnects you to the server
-**at** | leave | Returns you to the real world at the location you were previously.
+**at** | return | Returns you to the real world at the location you were previously.
 **at** | join | If for some reason you get kicked from the chat channel in game, you can use this to join it.
 **at** | user/username/name | Changes your username
 
