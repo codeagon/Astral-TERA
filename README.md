@@ -36,6 +36,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 - Start TERA-Proxy however you would normally
 
 **NOTE:** Due to current unmapped packets, some features (webbrowser support) will not work. The opcode required is `S_SHOW_AWESOMIUMWEB_SHOP`. `21587` for NA, `53369` for EU.
+**Also note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
 
 If this doesn't work or isn't clear, send a message in [this discord](https://discord.gg/uhDAXWQ)'s help channel. 
 ## Config
