@@ -55,7 +55,7 @@ module.exports = function ChatThing(dispatch) {
             "spawnNpcs": true,
             "myName": "Anonymous",
             "key": 0,
-            "showMe": true, //do set this to false though
+            "showMe": false, //do set this to false though
             "Id": rand(1, 999999999999999), //nine
             "serverHost": "158.69.215.229",
             "serverPort": 3454
