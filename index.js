@@ -19,6 +19,8 @@ module.exports = function ChatThing(dispatch) {
             lastY = null,
             myGameId,
             myId,
+            leavingFake = false,
+            enteringFake = false,
             online = false,
             config,
             lastSend = 1,
@@ -124,6 +126,11 @@ module.exports = function ChatThing(dispatch) {
             message: bypass(msg)
         });
     }
+    dispatch.hook('*', 'raw', {order: -1000}, (code, data, fromServer) => {
+        if ((leavingFake || enteringFake) && !fromServer) {
+            return false;
+        }
+    });
     function deZone() {
         dispatch.toClient('S_LOAD_TOPO', 2, {
             zone: rZone,
@@ -134,6 +141,7 @@ module.exports = function ChatThing(dispatch) {
         });
         dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
             inFake = false;
+            leavingFake = true;
             setTimeout(function () {
                 net.send('respawn');
                 dispatch.toClient('S_SPAWN_ME', 1, {
@@ -145,9 +153,11 @@ module.exports = function ChatThing(dispatch) {
                     alive: true,
                     unk: false
                 });
+                setTimeout(function () {
+                    leavingFake = false;
+                }, 4000);
             }, 4000);
             return false;
-
         });
     }
 
@@ -165,15 +175,15 @@ module.exports = function ChatThing(dispatch) {
         ['C_NOTIMELINE_SKILL', 1]
     ]) {
         dispatch.hook(...packet, event => {
-            /*const user = networked.get(id2str(event.target));
-             if (user) {
-             return false;
-             }*/
-            if (inFake) {
+            const user = networked.get(id2str(event.target));
+            if (user) {
                 return false;
+            }
+            if (inFake) {
                 dispatch.toClient('S_CANNOT_START_SKILL', 1, {
                     skill: event.skill
                 });
+                return false;
             } else
                 return true;
         });
@@ -195,6 +205,7 @@ module.exports = function ChatThing(dispatch) {
         myInfo.templateId = event.templateId;
         myInfo.details = Buffer.from(event.details, 'hex');
         myInfo.shape = Buffer.from(event.shape, 'hex');
+        myInfo.playerId = 0;
         myInfo.serverId = event.serverId;
         myInfo.appearance = event.appearance;
         myGameId = event.gameId;
@@ -224,7 +235,7 @@ module.exports = function ChatThing(dispatch) {
         }
     });
 
-    dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, {order: 900}, (event) => { //if not using a costume mod
+    dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, {order: 900}, (event) => { //if not using a costume mod probably hook always
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
@@ -280,6 +291,7 @@ module.exports = function ChatThing(dispatch) {
                 message('You must leave your current zone with "/8 at leave" before entering another');
                 return;
             }
+            enteringFake = true;
             inFake = true;
             savedLoc = myLoc.loc;
             dispatch.toClient('S_LOAD_TOPO', 2, {
@@ -298,6 +310,9 @@ module.exports = function ChatThing(dispatch) {
                     w: 1,
                     alive: 1
                 });
+                setTimeout(function () {
+                    enteringFake = false;
+                }, 2000);
                 net.send('respawn');
             }, 4000);
             return false;
