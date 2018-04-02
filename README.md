@@ -1,5 +1,3 @@
-
-
 # Astral-TERA
 [![Discord](https://discordapp.com/api/guilds/385946679733518338/widget.png)](https://discord.gg/dzB7xZK)
 
@@ -8,17 +6,15 @@
 - [Astral-TERA](#astral-tera)
   - [What this mod does](#what-this-mod-does)
   - [How to:](#how-to)
-  - [Config](#config)
+  - [Safety/"Will this mod get me banned":](#safetywill-this-mod-get-me-banned)
+  - [](#)
+  - [Astral Projection/Zones](#astral-projectionzones)
   - [In-game Commands](#in-game-commands)
   - [Chat Commands/Features](#chat-commandsfeatures)
   - [Discord commands](#discord-commands)
-  - [Astral Projection/Zones](#astral-projectionzones)
     - [List of zones](#list-of-zones)
     - [List of NPC names](#list-of-npc-names)
   - [FAQ/Errors:](#faqerrors)
-
-
-
 
 ***
 [Please funnel money into my mouth to support development and server costs](https://ko-fi.com/codeagon)
@@ -41,7 +37,11 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 **Also note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
 
 If this doesn't work or isn't clear, send a message in [this discord](https://discord.gg/uhDAXWQ)'s help channel. 
-## Config
+
+## Safety/"Will this mod get me banned":
+No identifiable player data is ever sent to anyone else, including the server.  On top of this, no malformed packets (or packets at all) are ever sent to the real server, making this mod a lot safer than most others. (tl;dr, no you wont get banned)
+## 
+Config
 Nearly every feature of this module can be disabled within the config file that is generate on first run. By default no features are disabled. 
 
 Option | Default | Description
