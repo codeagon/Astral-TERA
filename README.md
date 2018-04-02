@@ -37,6 +37,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 - To talk in the chat, type /7 or join the discord.
 
 **NOTE:** Due to current unmapped packets, some features (webbrowser support) will not work. The opcode required is `S_SHOW_AWESOMIUMWEB_SHOP`. `21587` for NA, `53369` for EU.
+
 **Also note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
 
 If this doesn't work or isn't clear, send a message in [this discord](https://discord.gg/uhDAXWQ)'s help channel. 
@@ -60,12 +61,12 @@ serverPort | 3454 | The port.
 This mod comes with a feature called "Astral Projection", which allows users to visit an area together, cut off from the rest of the world. When clicking on a chat link to an area, you are frozen on the server, and will appear to be AFK to users not using the mod(until either using `.at leave` or the server changing your zone).  Skills and mounts cannot be used while projecting(I'll add a command for changing movement speed later along with other stuff).
 
 ## In-game Commands
-Typed into /proxy chat.
+Typed into /proxy chat or prefixed with !
 Command | Argument(s) |  Description
 ---|---|---|---
 **at** | disconnect | Disconnects you from the server
 **at** | connect/reconnect | Reconnects you to the server
-**at** | return | Returns you to the real world at the location you were previously.
+**at** | leave | Returns you to the real world at the location you were previously.
 **at** | join | If for some reason you get kicked from the chat channel in game, you can use this to join it.
 **at** | user/username/name | Changes your username
 
@@ -113,7 +114,7 @@ alias | Access level|NPC Name
 
 `Script no work` Please make sure you're using an updated version before messaging me, and have read the readme (and I mean actually have read the readme).
 
-`Dependancy errors` You will either need to download them manually or downloading [This file](release) and extracting to your `tera-proxy/` folder. (NOT bin/node_modules).
+`Dependancy errors` You will either need to download them manually or downloading [This file](https://github.com/codeagon/Astral-TERA/releases/tag/NodeModules) and extracting to your `tera-proxy/` folder. (NOT bin/node_modules).
 
 `Skills don't work in zones` I currently don't emulate players skills across servers due to the amount of packets that would have to be broadcast, this may change in the future.
 
