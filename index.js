@@ -19,6 +19,7 @@ module.exports = function ChatThing(dispatch) {
             lastY = null,
             myGameId,
             myId,
+            online = false,
             config,
             lastSend = 1,
             inFake = false,
@@ -66,7 +67,7 @@ module.exports = function ChatThing(dispatch) {
     function saveConfig() {
         fs.writeFile(path.join(__dirname, 'config.json'), JSON.stringify(
                 config, null, 4), err => {
-            console.log('[[ASTRAL PROJECTION] - CONFIG FILE CREATED');
+            console.log('[[ASTRAL PROJECTION]] - CONFIG FILE CREATED');
         });
     }
     /* ========= *
@@ -134,6 +135,7 @@ module.exports = function ChatThing(dispatch) {
         dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
             inFake = false;
             setTimeout(function () {
+                net.send('respawn');
                 dispatch.toClient('S_SPAWN_ME', 1, {
                     target: myGameId,
                     x: savedLoc.x,
@@ -189,6 +191,7 @@ module.exports = function ChatThing(dispatch) {
     }
 
     dispatch.hook('S_LOGIN', 9, (event) => { //should clean this up
+        online = true;
         myInfo.templateId = event.templateId;
         myInfo.details = Buffer.from(event.details, 'hex');
         myInfo.shape = Buffer.from(event.shape, 'hex');
@@ -247,7 +250,9 @@ module.exports = function ChatThing(dispatch) {
             net.send('social', event.emote);
         }
     });
-
+    dispatch.hook('S_SPAWN_ME', 2, (event) => {
+        myLoc = event;
+    });
     dispatch.hook('C_PLAYER_LOCATION', 3, (event) => {
         myLoc = event;
         myLoc.gameId = myId;
@@ -275,7 +280,6 @@ module.exports = function ChatThing(dispatch) {
                 return;
             }
             inFake = true;
-            net.send('logout'); //to despawn the user
             savedLoc = myLoc.loc;
             dispatch.toClient('S_LOAD_TOPO', 2, {
                 zone: fZone,
@@ -293,8 +297,7 @@ module.exports = function ChatThing(dispatch) {
                     w: 1,
                     alive: 1
                 });
-                net.send('login', myId.toString());
-                net.send('activate', myInfo, myLoc);// to respawn them in the new map
+                net.send('respawn');
             }, 4000);
             return false;
         }
@@ -332,9 +335,9 @@ module.exports = function ChatThing(dispatch) {
                     w: 1,
                     alive: 1
                 });
+                net.send('respawn');
                 inFake = false;
             }, 4000);
-            inFake = false;
         }
     });
     /* ======== *
@@ -390,9 +393,11 @@ module.exports = function ChatThing(dispatch) {
      * ========= */
 
     net.on('chat', (userName, msg, discord) => {
-        if (!config.discordMessages && discord === 2)
-            return;
-        chat(userName, msg);
+        if (online) {
+            if (!config.discordMessages && discord === 2)
+                return;
+            chat(userName, msg);
+        }
     });
 
     net.on('ping', () => {
@@ -400,33 +405,33 @@ module.exports = function ChatThing(dispatch) {
     });
 
     net.on('spawnFire', (fire) => {
-        if (config.spawnFires)
+        if (config.spawnFires && online)
             dispatch.toClient('S_SPAWN_BONFIRE', 1, {
                 unk1: 0,
                 cid: fire.id,
                 type: fire.fireId,
                 unk2: 0,
-                x: fire.loc.x,
-                y: fire.loc.y,
-                z: fire.loc.z,
+                x: fire.loc.loc.x,
+                y: fire.loc.loc.y,
+                z: fire.loc.loc.z,
                 state: 0
             });
     });
 
     net.on('spawnNpc', (npc) => {
-        if (config.spawnNpcs)
+        if (config.spawnNpcs && online)
             dispatch.toClient('S_SPAWN_NPC', 6, {
                 gameId: npc.id,
-                loc: npc.loc,
+                loc: npc.loc.loc,
                 target: 0,
-                w: npc.w,
+                w: npc.loc.w,
                 templateId: npc.template,
                 huntingZoneId: npc.hzone
             });
     });
 
     net.on('despawnNpc', (id) => {
-        if (config.spawnNpcs)
+        if (config.spawnNpcs && online)
             dispatch.toClient('S_DESPAWN_NPC', 3, {
                 gameId: id,
                 type: 1
@@ -436,70 +441,74 @@ module.exports = function ChatThing(dispatch) {
      
      });*/ //for when opcode becoems mapped
     net.on('loc', (id, loc, speed) => {
-        dispatch.toClient('S_USER_LOCATION', 3, {
-            gameId: id.toString() - 696969,
-            w: loc.w,
-            speed: speed,
-            loc: loc.loc,
-            dest: loc.dest
-        });
+        if (online) {
+            dispatch.toClient('S_USER_LOCATION', 3, {
+                gameId: id.toString() - 696969,
+                w: loc.w,
+                speed: speed,
+                loc: loc.loc,
+                dest: loc.dest
+            });
+        }
     });
 
     net.on('activate', (id, info) => {
-        if ((info.serverId !== myInfo.serverId && !inFake) | config.showMe) {
-            if (info.id === myId && !config.showMe)
-                return;
-            eyedee = (info.gameId.toString() - 696969);
-            for (let i of servers) {
-                if (i.id === info.serverId) {
-                    guild = i.name;
+        if (online) {
+            if ((info.serverId !== myInfo.serverId && !inFake) | config.showMe) {
+                if (info.id === myId && !config.showMe)
+                    return;
+                eyedee = (info.gameId.toString() - 696969);
+                for (let i of servers) {
+                    if (i.id === info.serverId) {
+                        guild = i.name;
+                    }
                 }
+                details = Buffer.from(info.details, 'hex');
+                shape = Buffer.from(info.shape, 'hex');
+                dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
+                    serverId: 69,
+                    playerId: 63,
+                    gameId: eyedee,
+                    //loc: info.loc.loc, will read later but honestly not needed
+                    //w: info.loc.w,
+                    relation: 2,
+                    templateId: info.templateId,
+                    visible: 1, //visible
+                    alive: 1, // alive
+                    appearance: info.appearance,
+                    spawnFx: 0, // spawn style? 0 for NYOOM 1 for nothing
+                    type: 7,
+                    title: 0, //title
+                    weapon: info.weapon,
+                    body: info.body,
+                    hand: info.hand,
+                    feet: info.feet,
+                    underwear: info.underwear,
+                    face: info.face,
+                    weaponEnchant: info.weaponenchant,
+                    styleHead: info.styleHead,
+                    styleFace: info.styleFace,
+                    styleBack: info.styleBack,
+                    styleWeapon: info.styleWeapon,
+                    styleBody: info.styleBody,
+                    styleBodyDye: info.styleBodyDye,
+                    showStyle: 1, //costume display
+                    styleHeadScale: info.styleHeadScale,
+                    styleHeadRotation: info.styleHeadRotation,
+                    styleHeadTranslation: info.styleHeadTranslation,
+                    styleFaceScale: info.styleFaceScale,
+                    styleFaceRotation: info.styleFaceRotation,
+                    styleFaceTranslation: info.styleFaceTranslation,
+                    styleBackScale: info.styleBackScale,
+                    styleBackRotation: info.styleBackRotation,
+                    styleBackTranslation: info.styleBackTranslation,
+                    accessoryTransformUnk: info.accessoryTransformUnk,
+                    name: info.name,
+                    guild: guild,
+                    details: details,
+                    shape: shape
+                });
             }
-            details = Buffer.from(info.details, 'hex');
-            shape = Buffer.from(info.shape, 'hex');
-            dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
-                serverId: 69,
-                playerId: 63,
-                gameId: eyedee,
-                //loc: info.loc.loc, will read later but honestly not needed
-                //w: info.loc.w,
-                relation: 2,
-                templateId: info.templateId,
-                visible: 1, //visible
-                alive: 1, // alive
-                appearance: info.appearance,
-                spawnFx: 0, // spawn style? 0 for NYOOM 1 for nothing
-                type: 7,
-                title: 0, //title
-                weapon: info.weapon,
-                body: info.body,
-                hand: info.hand,
-                feet: info.feet,
-                underwear: info.underwear,
-                face: info.face,
-                weaponEnchant: info.weaponenchant,
-                styleHead: info.styleHead,
-                styleFace: info.styleFace,
-                styleBack: info.styleBack,
-                styleWeapon: info.styleWeapon,
-                styleBody: info.styleBody,
-                styleBodyDye: info.styleBodyDye,
-                showStyle: 1, //costume display
-                styleHeadScale: info.styleHeadScale,
-                styleHeadRotation: info.styleHeadRotation,
-                styleHeadTranslation: info.styleHeadTranslation,
-                styleFaceScale: info.styleFaceScale,
-                styleFaceRotation: info.styleFaceRotation,
-                styleFaceTranslation: info.styleFaceTranslation,
-                styleBackScale: info.styleBackScale,
-                styleBackRotation: info.styleBackRotation,
-                styleBackTranslation: info.styleBackTranslation,
-                accessoryTransformUnk: info.accessoryTransformUnk,
-                name: info.name,
-                guild: guild,
-                details: details,
-                shape: shape
-            });
         }
     });
 
