@@ -111,7 +111,8 @@ alias | Zone Name
 
 ### List of NPC names
 To be updated soon.
-alias | Access level|NPC Name
+
+alias | Access level | NPC Name
 ---|---|---
 **Chef** | All | Woodland Path
 
