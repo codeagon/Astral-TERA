@@ -100,8 +100,8 @@ Command | Argument(s) |  Description
 ### List of zones
 More to be added when I can be bothered
 
-alias | Zone Name 
----|---|---
+Alias | Zone Name 
+---|---
 **woodland** | Woodland Path
 **arena** | Dreadspire arena
 **sigil** | Sigil Adstringo
@@ -113,7 +113,7 @@ alias | Zone Name
 To be updated soon.
 
 alias | Access level | NPC Name
----|---
+---|---|---
 **Chef** | All | Woodland Path
 
 ## FAQ/Errors: 
