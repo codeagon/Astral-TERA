@@ -322,7 +322,19 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-
+    dispatch.hook('S_RETURN_TO_LOBBY', 1, (event) => {
+        online = false;
+        net.send('logout');
+        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => { //wew
+            net.send('login', myId.toString());
+            setTimeout(function () {
+                message(`Connected across dimensions!`);
+                //initial login, delayed for spawning of NPCs etc
+                net.send('activate', myInfo, myLoc);
+                moveMe();
+            }, 4000);
+        });
+    });
     dispatch.hook('S_LOAD_TOPO', 2, (event) => {
         rZone = event.zone;
         if (inFake) {
