@@ -43,6 +43,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 If this doesn't work or isn't clear, send a message in [this discord](https://discord.gg/uhDAXWQ)'s help channel. 
 ## Config
 Nearly every feature of this module can be disabled within the config file that is generate on first run. By default no features are disabled. 
+
 Option | Default | Description
 ---|---|---
 Online | True |Toggles whether or not the mod will connect to the server. No idea why you would want to disable this
@@ -62,6 +63,7 @@ This mod comes with a feature called "Astral Projection", which allows users to 
 
 ## In-game Commands
 Typed into /proxy chat or prefixed with !
+
 Command | Argument(s) |  Description
 ---|---|---
 **at** | disconnect | Disconnects you from the server
@@ -72,6 +74,7 @@ Command | Argument(s) |  Description
 
 ## Chat Commands/Features
 Typed into /Astral chat.
+
 Command | Argument(s) | Description
 ---|---|---
 **.list** | | Shows how many people are currently online
@@ -88,6 +91,7 @@ Command | Argument(s) | Description
 
 ## Discord commands
 More coming soon!
+
 Command | Argument(s) |  Description
 ---|---|---
 **!ping** |  |  Checks if the bot is online
@@ -95,6 +99,7 @@ Command | Argument(s) |  Description
 
 ### List of zones
 More to be added when I can be bothered
+
 alias | Zone Name 
 ---|---|---
 **woodland** | Woodland Path
