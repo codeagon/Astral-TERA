@@ -113,7 +113,7 @@ alias | Zone Name
 To be updated soon.
 
 alias | Access level | NPC Name
----|---|---
+---|---
 **Chef** | All | Woodland Path
 
 ## FAQ/Errors: 
