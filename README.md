@@ -44,7 +44,7 @@ If this doesn't work or isn't clear, send a message in [this discord](https://di
 ## Config
 Nearly every feature of this module can be disabled within the config file that is generate on first run. By default no features are disabled. 
 Option | Default | Description
----|---|---|---
+---|---|---
 Online | True |Toggles whether or not the mod will connect to the server. No idea why you would want to disable this
 discordMessages | True | Toggles displaying of messages from discord users.
 allowAstralProjection | True | Toggles whether or not you can visit fake-zones.
@@ -63,7 +63,7 @@ This mod comes with a feature called "Astral Projection", which allows users to 
 ## In-game Commands
 Typed into /proxy chat or prefixed with !
 Command | Argument(s) |  Description
----|---|---|---
+---|---|---
 **at** | disconnect | Disconnects you from the server
 **at** | connect/reconnect | Reconnects you to the server
 **at** | leave | Returns you to the real world at the location you were previously.
@@ -73,7 +73,7 @@ Command | Argument(s) |  Description
 ## Chat Commands/Features
 Typed into /Astral chat.
 Command | Argument(s) | Description
----|---|---|---
+---|---|---
 **.list** | | Shows how many people are currently online
 **.zone** | name | Sends a chat linking to the specified zone(list below).
 **.zone** | name | Sends a chat linking to the specified zone(list below).
@@ -89,14 +89,14 @@ Command | Argument(s) | Description
 ## Discord commands
 More coming soon!
 Command | Argument(s) |  Description
----|---|---|---
+---|---|---
 **!ping** |  |  Checks if the bot is online
 **!list** |  |  Prints how many people are connected to the server
 
 ### List of zones
 More to be added when I can be bothered
 alias | Zone Name 
----|---|---|---
+---|---|---
 **woodland** | Woodland Path
 **arena** | Dreadspire arena
 **sigil** | Sigil Adstringo
@@ -107,7 +107,7 @@ alias | Zone Name
 ### List of NPC names
 To be updated soon.
 alias | Access level|NPC Name
----|---|---|---
+---|---|---
 **Chef** | All | Woodland Path
 
 ## FAQ/Errors: 
