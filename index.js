@@ -252,6 +252,7 @@ module.exports = function ChatThing(dispatch) {
     });
     dispatch.hook('S_SPAWN_ME', 2, (event) => {
         myLoc = event;
+        myLoc.gameId = myId;
     });
     dispatch.hook('C_PLAYER_LOCATION', 3, (event) => {
         myLoc = event;
