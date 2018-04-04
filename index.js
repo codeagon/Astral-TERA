@@ -19,6 +19,8 @@ module.exports = function ChatThing(dispatch) {
             lastY = null,
             myGameId,
             myId,
+            originalStats,
+            runSpeed = 200,
             leavingFake = false,
             enteringFake = false,
             online = false,
@@ -126,8 +128,8 @@ module.exports = function ChatThing(dispatch) {
             message: bypass(msg)
         });
     }
-    dispatch.hook('*', 'raw', {order: -1000}, (code, data, fromServer) => {
-        if ((leavingFake || enteringFake) && !fromServer) {
+    dispatch.hook('*', 'raw', {order: 9999}, (code, data, fromServer) => {
+        if ((leavingFake || enteringFake || inFake) && !fromServer) {
             return false;
         }
     });
@@ -139,6 +141,9 @@ module.exports = function ChatThing(dispatch) {
             z: savedLoc.z,
             quick: false
         });
+        dispatch.toClient('S_PLAYER_STAT_UPDATE', 8,
+                originalStats
+                );
         dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
             inFake = false;
             leavingFake = true;
@@ -191,7 +196,8 @@ module.exports = function ChatThing(dispatch) {
 
     for (let packet of [//junk/etc that should be blocked
         ['C_USE_ITEM', 2],
-        ['C_VISIT_NEW_SECTION', 1]
+        ['C_VISIT_NEW_SECTION', 1],
+        ['C_PLAYER_FLYING_LOCATION', 4]
     ]) {
         dispatch.hook(...packet, event => {
             if (inFake) {
@@ -270,6 +276,7 @@ module.exports = function ChatThing(dispatch) {
         myLoc.gameId = myId;
         if (inFake)
             return false;
+
     });
 
     dispatch.hook('C_SHOW_ITEM_TOOLTIP_EX', 2, (event) => {
@@ -288,7 +295,7 @@ module.exports = function ChatThing(dispatch) {
             if (!config.allowAstralProjection)
                 return;
             if (inFake) {
-                message('You must leave your current zone with "/8 at leave" before entering another');
+                message('You must leave your current zone with "!at leave" before entering another');
                 return;
             }
             enteringFake = true;
@@ -311,6 +318,12 @@ module.exports = function ChatThing(dispatch) {
                     alive: 1
                 });
                 setTimeout(function () {
+                    dispatch.toClient('S_VISIT_NEW_SECTION', 1, {
+                        isFirstVisit: false,
+                        mapId: 1,
+                        guardId: 24,
+                        sectionId: 182003
+                    });
                     enteringFake = false;
                 }, 2000);
                 net.send('respawn');
@@ -321,6 +334,7 @@ module.exports = function ChatThing(dispatch) {
 
     dispatch.hook('S_PLAYER_STAT_UPDATE', 8, (event) => {
         mySpeed = event.runSpeed + event.runSpeedBonus;
+        originalStats = event;
     });
 
     dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
@@ -371,7 +385,7 @@ module.exports = function ChatThing(dispatch) {
     /* ======== *
      * COMMANDS *
      * ======== */
-    command.add('at', (cmd, arg) => {
+    command.add('at', (cmd, arg, arg2, arg3, arg4) => {
         switch (cmd) {
             case 'activate':
                 myInfo.name = config.myName;
@@ -379,6 +393,14 @@ module.exports = function ChatThing(dispatch) {
                 net.send('activate', myInfo, myLoc);
                 moveMe();
                 message(`Now displaying across servers`);
+                break
+            case 'speed':
+                runSpeed = arg;
+                if (inFake) {
+                    dispatch.toClient('S_PLAYER_STAT_UPDATE', 8, {
+                        runSpeed: runSpeed
+                    });
+                }
                 break
             case 'leave':
             case 'dezone':
@@ -474,6 +496,7 @@ module.exports = function ChatThing(dispatch) {
                 gameId: id.toString() - 696969,
                 w: loc.w,
                 speed: speed,
+                type: 7,
                 loc: loc.loc,
                 dest: loc.dest
             });
