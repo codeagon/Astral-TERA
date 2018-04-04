@@ -129,7 +129,7 @@ module.exports = function ChatThing(dispatch) {
         });
     }
     dispatch.hook('*', 'raw', {order: 9999}, (code, data, fromServer) => {
-        if ((leavingFake || enteringFake || inFake) && !fromServer) {
+        if ((leavingFake || enteringFake) && !fromServer) {
             return false;
         }
     });
@@ -318,12 +318,6 @@ module.exports = function ChatThing(dispatch) {
                     alive: 1
                 });
                 setTimeout(function () {
-                    dispatch.toClient('S_VISIT_NEW_SECTION', 1, {
-                        isFirstVisit: false,
-                        mapId: 1,
-                        guardId: 24,
-                        sectionId: 182003
-                    });
                     enteringFake = false;
                 }, 2000);
                 net.send('respawn');
