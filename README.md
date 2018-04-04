@@ -3,18 +3,7 @@
 
 ![Wonderholme](https://i.imgur.com/dlHdbmC.jpg)
 
-- [Astral-TERA](#astral-tera)
-  - [What this mod does](#what-this-mod-does)
-  - [How to:](#how-to)
-  - [Safety/"Will this mod get me banned":](#safetywill-this-mod-get-me-banned)
-  - [](#)
-  - [Astral Projection/Zones](#astral-projectionzones)
-  - [In-game Commands](#in-game-commands)
-  - [Chat Commands/Features](#chat-commandsfeatures)
-  - [Discord commands](#discord-commands)
-    - [List of zones](#list-of-zones)
-    - [List of NPC names](#list-of-npc-names)
-  - [FAQ/Errors:](#faqerrors)
+
 
 ***
 [Please funnel money into my mouth to support development and server costs](https://ko-fi.com/codeagon)
@@ -66,23 +55,24 @@ Typed into /proxy chat or prefixed with !
 
 Command | Argument(s) |  Description
 ---|---|---
-**at** | disconnect | Disconnects you from the server
-**at** | connect/reconnect | Reconnects you to the server
+**at** | disconnect | Disconnects you from the server.
+**at** | connect/reconnect | Reconnects you to the server.
 **at** | leave | Returns you to the real world at the location you were previously.
+**at** | speed | Sets the players speed to the specified amount while projecting.
 **at** | join | If for some reason you get kicked from the chat channel in game, you can use this to join it.
-**at** | user/username/name | Changes your username
+**at** | user/username/name | Changes your username.
 
 ## Chat Commands/Features
 Typed into /Astral chat.
 
 Command | Argument(s) | Description
 ---|---|---
-**.list** | | Shows how many people are currently online
+**.list** | | Shows how many people are currently online.
 **.zone** | name | Sends a chat linking to the specified zone(list below).
-**.zone** | name | Sends a chat linking to the specified zone(list below).
+**.zone** | [name](https://github.com/codeagon/Astral-TERA/wiki/Areas) | Sends a chat linking to the specified zone [(list here)](https://github.com/codeagon/Astral-TERA/wiki/Areas)
 **.fire** |  red/blue/purple/santa | Spawns a bonfire of that type to all players. Currently admin only due to lack of despawning capabilities.
 **.dfire** | index# | Despawns a fire spawned with that index number.
-**.npc** | name | Spawns an NPC with that name(NPC names found [here](#list-of-npc-names). Max 5 for normal users.
+**.npc** | [name](https://github.com/codeagon/Astral-TERA/wiki/NPCs) | Spawns an NPC with that name(NPC names found [here](https://github.com/codeagon/Astral-TERA/wiki/NPCs). Max 5 for normal users.
 **.dnpc** | index# | Despawns an NPC with that index number
 **[any link]** | | Any linked typed into chat starting with `www.` will be converted to a link and become clickable in chat, eg `www.google.com`.
 **dognose** |  |  If you type `dognose` in chat, it will be replaced with an image of a random dognose image (ground-breaking feature).
@@ -96,25 +86,6 @@ Command | Argument(s) |  Description
 ---|---|---
 **!ping** |  |  Checks if the bot is online
 **!list** |  |  Prints how many people are connected to the server
-
-### List of zones
-More to be added when I can be bothered
-
-Alias | Zone Name 
----|---
-**woodland** | Woodland Path
-**arena** | Dreadspire arena
-**sigil** | Sigil Adstringo
-**dvelika** | Destroyed Velika
-**ca/celestial** | Celestial Arena
-**wondeholme/wh** | Wonderholme
-
-### List of NPC names
-To be updated soon.
-
-alias | Access level | NPC Name
----|---|---
-**Chef** | All | Woodland Path
 
 ## FAQ/Errors: 
 
