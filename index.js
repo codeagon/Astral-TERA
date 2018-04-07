@@ -47,7 +47,6 @@ module.exports = function ChatThing(dispatch) {
                 {id: 2800, name: '?????'},
                 {id: 500, name: '????'},
                 {id: 501, name: '??????'}];
-
     try {
         config = require('./config.json');
     } catch (e) {
@@ -77,7 +76,7 @@ module.exports = function ChatThing(dispatch) {
     /* ========= *
      * Functions *
      * ========= */
-    //why I do dis
+//why I do dis
 
     function rand(min, max)
     {
@@ -179,7 +178,7 @@ module.exports = function ChatThing(dispatch) {
         ['C_PRESS_SKILL', 1],
         ['C_NOTIMELINE_SKILL', 1]
     ]) {
-        dispatch.hook(...packet, event => {
+        dispatch.hook(...packet, {order: -900}, event => {
             const user = networked.get(id2str(event.target));
             if (user) {
                 return false;
@@ -199,7 +198,7 @@ module.exports = function ChatThing(dispatch) {
         ['C_VISIT_NEW_SECTION', 1],
         ['C_PLAYER_FLYING_LOCATION', 4]
     ]) {
-        dispatch.hook(...packet, event => {
+        dispatch.hook(...packet, {order: -900}, event => {
             if (inFake) {
                 return false;
             }
@@ -215,18 +214,16 @@ module.exports = function ChatThing(dispatch) {
         myInfo.serverId = event.serverId;
         myInfo.appearance = event.appearance;
         myGameId = event.gameId;
-        myId = config.Id;
+        myId = config.Id.toString();
         myInfo.name = config.myName;
         myInfo.gameId = myId.toString();
         message(`Now displaying across servers`);
     });
-
     dispatch.hook('S_LOAD_CLIENT_USER_SETTING', 1, () => {
         process.nextTick(() => {
             joinChat();
         });
     });
-
     dispatch.hook('S_JOIN_PRIVATE_CHANNEL', 1, event => event.index === 6 ? false : undefined);
     dispatch.hook('C_LEAVE_PRIVATE_CHANNEL', 1, event => event.index === 6 ? false : undefined);
     dispatch.hook('C_REQUEST_PRIVATE_CHANNEL_INFO', 1, event => {
@@ -240,28 +237,24 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-
     dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, {order: 900}, (event) => { //if not using a costume mod probably hook always
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-
     dispatch.hook('S_USER_EXTERNAL_CHANGE', 6, {order: 999, filter: {fake: null}}, (event) => {
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-
     dispatch.hook('C_CHAT', 1, {order: -10}, event => {
         if (event.channel === 17) {
             net.send('chat', config.myName.toString(), strip(event.message.toString()), config.key, 0);
             return false;
         }
     });
-
     dispatch.hook('C_SOCIAL', 1, (event) => {
         if (config.allowAstralProjection) {
             net.send('social', event.emote);
@@ -276,9 +269,7 @@ module.exports = function ChatThing(dispatch) {
         myLoc.gameId = myId;
         if (inFake)
             return false;
-
     });
-
     dispatch.hook('C_SHOW_ITEM_TOOLTIP_EX', 2, (event) => {
         tooltipId = event.id.toString();
         for (let i of website) {
@@ -325,12 +316,10 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-
     dispatch.hook('S_PLAYER_STAT_UPDATE', 8, (event) => {
         mySpeed = event.runSpeed + event.runSpeedBonus;
         originalStats = event;
     });
-
     dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
         net.send('login', myId.toString());
         setTimeout(function () {
@@ -340,7 +329,6 @@ module.exports = function ChatThing(dispatch) {
             moveMe();
         }, 4000);
     });
-
     dispatch.hook('C_LOAD_TOPO_FIN', 1, {order: 999, filter: {fake: null}}, () => {
         if (inFake) {
             return false;
@@ -359,7 +347,7 @@ module.exports = function ChatThing(dispatch) {
             }, 4000);
         });
     });
-    dispatch.hook('S_LOAD_TOPO', 2, (event) => {
+    dispatch.hook('S_LOAD_TOPO', 2, {order: 9999}, (event) => {
         rZone = event.zone;
         if (inFake) {
             setTimeout(function () {
@@ -431,7 +419,6 @@ module.exports = function ChatThing(dispatch) {
                 break
         }
     });
-
     /* ========= *
      * NET STUFF *
      * ========= */
@@ -443,11 +430,9 @@ module.exports = function ChatThing(dispatch) {
             chat(userName, msg);
         }
     });
-
     net.on('ping', () => {
         net.send('pong');
     });
-
     net.on('spawnFire', (fire) => {
         if (config.spawnFires && online)
             dispatch.toClient('S_SPAWN_BONFIRE', 1, {
@@ -461,7 +446,6 @@ module.exports = function ChatThing(dispatch) {
                 state: 0
             });
     });
-
     net.on('spawnNpc', (npc) => {
         if (config.spawnNpcs && online)
             dispatch.toClient('S_SPAWN_NPC', 6, {
@@ -473,7 +457,6 @@ module.exports = function ChatThing(dispatch) {
                 huntingZoneId: npc.hzone
             });
     });
-
     net.on('despawnNpc', (id) => {
         if (config.spawnNpcs && online)
             dispatch.toClient('S_DESPAWN_NPC', 3, {
@@ -496,74 +479,77 @@ module.exports = function ChatThing(dispatch) {
             });
         }
     });
-
     net.on('activate', (id, info) => {
         if (online) {
-            if ((info.serverId !== myInfo.serverId && !inFake) | config.showMe) {
-                if (info.id === myId && !config.showMe)
-                    return;
-                eyedee = (info.gameId.toString() - 696969);
-                for (let i of servers) {
-                    if (i.id === info.serverId) {
-                        guild = i.name;
-                    }
-                }
-                details = Buffer.from(info.details, 'hex');
-                shape = Buffer.from(info.shape, 'hex');
-                dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
-                    serverId: 69,
-                    playerId: 63,
-                    gameId: eyedee,
-                    //loc: info.loc.loc, will read later but honestly not needed
-                    //w: info.loc.w,
-                    relation: 2,
-                    templateId: info.templateId,
-                    visible: 1, //visible
-                    alive: 1, // alive
-                    appearance: info.appearance,
-                    spawnFx: 0, // spawn style? 0 for NYOOM 1 for nothing
-                    type: 7,
-                    title: 0, //title
-                    weapon: info.weapon,
-                    body: info.body,
-                    hand: info.hand,
-                    feet: info.feet,
-                    underwear: info.underwear,
-                    face: info.face,
-                    weaponEnchant: info.weaponenchant,
-                    styleHead: info.styleHead,
-                    styleFace: info.styleFace,
-                    styleBack: info.styleBack,
-                    styleWeapon: info.styleWeapon,
-                    styleBody: info.styleBody,
-                    styleBodyDye: info.styleBodyDye,
-                    showStyle: 1, //costume display
-                    styleHeadScale: info.styleHeadScale,
-                    styleHeadRotation: info.styleHeadRotation,
-                    styleHeadTranslation: info.styleHeadTranslation,
-                    styleFaceScale: info.styleFaceScale,
-                    styleFaceRotation: info.styleFaceRotation,
-                    styleFaceTranslation: info.styleFaceTranslation,
-                    styleBackScale: info.styleBackScale,
-                    styleBackRotation: info.styleBackRotation,
-                    styleBackTranslation: info.styleBackTranslation,
-                    accessoryTransformUnk: info.accessoryTransformUnk,
-                    name: info.name,
-                    guild: guild,
-                    details: details,
-                    shape: shape
-                });
+            if (info.serverId === myInfo.serverId && !inFake) {
+                return;
             }
+            eyedee = (info.gameId.toString() - 696969);
+
+            if (info.gameId.toString() === myId) {
+                return;
+            }
+
+            for (let i of servers) {
+                if (i.id === info.serverId) {
+                    guild = i.name;
+                }
+            }
+            details = Buffer.from(info.details, 'hex');
+            shape = Buffer.from(info.shape, 'hex');
+            dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
+                serverId: 69,
+                playerId: 63,
+                gameId: eyedee,
+                //loc: info.loc.loc, will read later but honestly not needed
+                //w: info.loc.w,
+                relation: 2,
+                templateId: info.templateId,
+                visible: 1, //visible
+                alive: 1, // alive
+                appearance: info.appearance,
+                spawnFx: 0, // spawn style? 0 for NYOOM 1 for nothing
+                type: 7,
+                title: 0, //title
+                weapon: info.weapon,
+                body: info.body,
+                hand: info.hand,
+                feet: info.feet,
+                underwear: info.underwear,
+                face: info.face,
+                weaponEnchant: info.weaponenchant,
+                styleHead: info.styleHead,
+                styleFace: info.styleFace,
+                styleBack: info.styleBack,
+                styleWeapon: info.styleWeapon,
+                styleBody: info.styleBody,
+                styleBodyDye: info.styleBodyDye,
+                showStyle: 1, //costume display
+                styleHeadScale: info.styleHeadScale,
+                styleHeadRotation: info.styleHeadRotation,
+                styleHeadTranslation: info.styleHeadTranslation,
+                styleFaceScale: info.styleFaceScale,
+                styleFaceRotation: info.styleFaceRotation,
+                styleFaceTranslation: info.styleFaceTranslation,
+                styleBackScale: info.styleBackScale,
+                styleBackRotation: info.styleBackRotation,
+                styleBackTranslation: info.styleBackTranslation,
+                accessoryTransformUnk: info.accessoryTransformUnk,
+                name: info.name,
+                guild: guild,
+                details: details,
+                shape: shape
+            });
+            // }
+            //}
         }
     });
-
     net.on('social', (id, social) => {
         dispatch.toClient('S_SOCIAL', 1, {
             target: id,
             animation: social
         });
     });
-
     net.on('remove', (id) => {
         networked.delete(id);
         dispatch.toClient('S_DESPAWN_USER', 3, {
@@ -571,11 +557,9 @@ module.exports = function ChatThing(dispatch) {
             type: 0
         });
     });
-
     net.on('weburl', (link, linkKey) => {
         website.push(website, {link, linkKey});
     });
-
     net.on('zone', (zone, x, y, z) => {
         fZone = zone;
         fx = x;
@@ -587,15 +571,12 @@ module.exports = function ChatThing(dispatch) {
             addUser(id, users[id]);
         }
     });
-
     net.on('add', (id) => {
         addUser(id);
     });
-
     net.on('error', (err) => {
         console.warn(err);
     });
-
     function addUser(id, user = {}) {
         networked.set(id, user);
     }
