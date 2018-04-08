@@ -21,6 +21,7 @@ module.exports = function ChatThing(dispatch) {
             myId,
             originalStats,
             runSpeed = 200,
+            mySpeed = 500,
             leavingFake = false,
             enteringFake = false,
             online = false,
@@ -169,29 +170,7 @@ module.exports = function ChatThing(dispatch) {
      * HOOKS *
      * ===== */
 
-    for (let packet of [//skills
-        ['C_START_SKILL', 3],
-        ['C_START_COMBO_INSTANT_SKILL', 1],
-        ['C_START_TARGETED_SKILL', 3],
-        ['C_START_INSTANCE_SKILL', 1],
-        ['C_START_INSTANCE_SKILL_EX', 2],
-        ['C_PRESS_SKILL', 1],
-        ['C_NOTIMELINE_SKILL', 1]
-    ]) {
-        dispatch.hook(...packet, {order: -900}, event => {
-            const user = networked.get(id2str(event.target));
-            if (user) {
-                return false;
-            }
-            if (inFake) {
-                dispatch.toClient('S_CANNOT_START_SKILL', 1, {
-                    skill: event.skill
-                });
-                return false;
-            } else
-                return true;
-        });
-    }
+
 
     for (let packet of [//junk/etc that should be blocked
         ['C_USE_ITEM', 2],
@@ -204,21 +183,51 @@ module.exports = function ChatThing(dispatch) {
             }
         });
     }
-
-    dispatch.hook('S_LOGIN', 9, (event) => { //should clean this up
-        online = true;
-        myInfo.templateId = event.templateId;
-        myInfo.details = Buffer.from(event.details, 'hex');
-        myInfo.shape = Buffer.from(event.shape, 'hex');
-        myInfo.playerId = 0;
-        myInfo.serverId = event.serverId;
-        myInfo.appearance = event.appearance;
-        myGameId = event.gameId;
-        myId = config.Id.toString();
-        myInfo.name = config.myName;
-        myInfo.gameId = myId.toString();
-        message(`Now displaying across servers`);
+    dispatch.hook('C_CHECK_VERSION', 1, (event) => {
+        enable();
     });
+    function addHook(packetName, packetVersion, func) {
+        dispatch.hook(packetName, packetVersion, func);
+    }
+    function enable() { //idk lol   
+        for (let packet of [//skills
+            ['C_START_SKILL', (dispatch.majorPatchVersion >= 67) ? 5 : 4],
+            ['C_START_COMBO_INSTANT_SKILL', 1],
+            ['C_START_TARGETED_SKILL', 3],
+            ['C_START_INSTANCE_SKILL', 1],
+            ['C_START_INSTANCE_SKILL_EX', 2],
+            ['C_PRESS_SKILL', 1],
+            ['C_NOTIMELINE_SKILL', 1]
+        ]) {
+            dispatch.hook(...packet, {order: -900}, event => {
+                const user = networked.get(id2str(event.target));
+                if (user) {
+                    return false;
+                }
+                if (inFake) {
+                    dispatch.toClient('S_CANNOT_START_SKILL', 1, {
+                        skill: event.skill
+                    });
+                    return false;
+                } else
+                    return true;
+            });
+        }
+        addHook('S_LOGIN', (dispatch.majorPatchVersion >= 67) ? 10 : 9, (event) => { //should clean this up
+            online = true;
+            myInfo.templateId = event.templateId;
+            myInfo.details = Buffer.from(event.details, 'hex');
+            myInfo.shape = Buffer.from(event.shape, 'hex');
+            myInfo.playerId = 0;
+            myInfo.serverId = event.serverId;
+            myInfo.appearance = event.appearance;
+            myGameId = event.gameId;
+            myId = config.Id.toString();
+            myInfo.name = config.myName;
+            myInfo.gameId = myId.toString();
+            message(`Now displaying across servers`);
+        });
+    }
     dispatch.hook('S_LOAD_CLIENT_USER_SETTING', 1, () => {
         process.nextTick(() => {
             joinChat();
@@ -391,6 +400,8 @@ module.exports = function ChatThing(dispatch) {
                     deZone();
                 }
                 break
+            case 'loc':
+            message(`x:${myLoc.loc.x}, y:${myLoc.loc.y}, z:${myLoc.loc.z}, zone: ${rZone}`);
             case 'join':
                 joinChat();
                 break
@@ -486,7 +497,7 @@ module.exports = function ChatThing(dispatch) {
             }
             eyedee = (info.gameId.toString() - 696969);
 
-            if (info.gameId.toString() === myId) {
+            if (info.gameId.toString() === myId && !config.showMe) {
                 return;
             }
 
@@ -546,7 +557,7 @@ module.exports = function ChatThing(dispatch) {
     });
     net.on('social', (id, social) => {
         dispatch.toClient('S_SOCIAL', 1, {
-            target: id,
+            target: id - 696969,
             animation: social
         });
     });
