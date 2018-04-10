@@ -1,3 +1,4 @@
+
 # Astral-TERA
 [![Discord](https://discordapp.com/api/guilds/385946679733518338/widget.png)](https://discord.gg/dzB7xZK)
 
@@ -67,8 +68,8 @@ Typed into /Astral chat.
 
 Command | Argument(s) | Description
 ---|---|---
+**.guide**| [name](https://github.com/codeagon/Astral-TERA/wiki/Guides) | Sends a (clickable) link to a guide in chat
 **.list** | | Shows how many people are currently online.
-**.zone** | name | Sends a chat linking to the specified zone(list below).
 **.zone** | [name](https://github.com/codeagon/Astral-TERA/wiki/Areas) | Sends a chat linking to the specified zone [(list here)](https://github.com/codeagon/Astral-TERA/wiki/Areas)
 **.fire** |  red/blue/purple/santa | Spawns a bonfire of that type to all players. Currently admin only due to lack of despawning capabilities.
 **.dfire** | index# | Despawns a fire spawned with that index number.
@@ -90,6 +91,8 @@ Command | Argument(s) |  Description
 ## FAQ/Errors: 
 
 `Script no work` Please make sure you're using an updated version before messaging me, and have read the readme (and I mean actually have read the readme).
+
+`Can I kill monster in dunjiioonnnn???` no, never ask me this again thanks
 
 `Dependancy errors` You will either need to download them manually or downloading [This file](https://github.com/codeagon/Astral-TERA/releases/tag/NodeModules) and extracting to your `tera-proxy/` folder. (NOT bin/node_modules).
 
