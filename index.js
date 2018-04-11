@@ -128,11 +128,7 @@ module.exports = function ChatThing(dispatch) {
             message: bypass(msg)
         });
     }
-    dispatch.hook('*', 'raw', {order: 9999}, (code, data, fromServer) => {
-        if ((leavingFake || enteringFake) && !fromServer) {
-            return false;
-        }
-    });
+
     function deZone() {
         dispatch.toClient('S_LOAD_TOPO', 2, {
             zone: rZone,
@@ -172,6 +168,7 @@ module.exports = function ChatThing(dispatch) {
 
 
 
+
     for (let packet of [//junk/etc that should be blocked
         ['C_USE_ITEM', 2],
         ['C_VISIT_NEW_SECTION', 1],
@@ -191,7 +188,7 @@ module.exports = function ChatThing(dispatch) {
     }
     function enable() { //idk lol   
         for (let packet of [//skills
-            ['C_START_SKILL', (dispatch.majorPatchVersion >= 67) ? 5 : 4],
+            ['C_START_SKILL', (dispatch.base.majorPatchVersion >= 67) ? 5 : 4],
             ['C_START_COMBO_INSTANT_SKILL', 1],
             ['C_START_TARGETED_SKILL', 3],
             ['C_START_INSTANCE_SKILL', 1],
@@ -199,7 +196,7 @@ module.exports = function ChatThing(dispatch) {
             ['C_PRESS_SKILL', 1],
             ['C_NOTIMELINE_SKILL', 1]
         ]) {
-            dispatch.hook(...packet, {order: -900}, event => {
+            dispatch.hook(...packet, {order: -50}, event => {
                 const user = networked.get(id2str(event.target));
                 if (user) {
                     return false;
@@ -213,7 +210,12 @@ module.exports = function ChatThing(dispatch) {
                     return true;
             });
         }
-        addHook('S_LOGIN', (dispatch.majorPatchVersion >= 67) ? 10 : 9, (event) => { //should clean this up
+        dispatch.hook('*', 'raw', {order: 9999}, (code, data, fromServer) => {
+            if ((leavingFake || enteringFake) && !fromServer) {
+                return false;
+            }
+        });
+        addHook('S_LOGIN', (dispatch.base.majorPatchVersion >= 67) ? 10 : 9, (event) => { //should clean this up
             online = true;
             myInfo.templateId = event.templateId;
             myInfo.details = Buffer.from(event.details, 'hex');
@@ -376,7 +378,7 @@ module.exports = function ChatThing(dispatch) {
     /* ======== *
      * COMMANDS *
      * ======== */
-    command.add('at', (cmd, arg, arg2, arg3, arg4) => {
+    command.add('at', (cmd, arg, arg2, arg3, arg4, arg5, arg6, arg7) => {
         switch (cmd) {
             case 'activate':
                 myInfo.name = config.myName;
@@ -401,7 +403,7 @@ module.exports = function ChatThing(dispatch) {
                 }
                 break
             case 'loc':
-            message(`x:${myLoc.loc.x}, y:${myLoc.loc.y}, z:${myLoc.loc.z}, zone: ${rZone}`);
+                message(`x:${myLoc.loc.x}, y:${myLoc.loc.y}, z:${myLoc.loc.z}, zone: ${rZone}`);
             case 'join':
                 joinChat();
                 break
