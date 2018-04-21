@@ -188,7 +188,7 @@ module.exports = function ChatThing(dispatch) {
     }
     function enable() { //idk lol   
         for (let packet of [//skills
-            ['C_START_SKILL', (dispatch.base.majorPatchVersion >= 67) ? 5 : 4],
+            ['C_START_SKILL', 5],
             ['C_START_COMBO_INSTANT_SKILL', 1],
             ['C_START_TARGETED_SKILL', 3],
             ['C_START_INSTANCE_SKILL', 1],
@@ -215,7 +215,7 @@ module.exports = function ChatThing(dispatch) {
                 return false;
             }
         });
-        addHook('S_LOGIN', (dispatch.base.majorPatchVersion >= 67) ? 10 : 9, (event) => { //should clean this up
+        addHook('S_LOGIN', 10, (event) => { //should clean this up
             online = true;
             myInfo.templateId = event.templateId;
             myInfo.details = Buffer.from(event.details, 'hex');
