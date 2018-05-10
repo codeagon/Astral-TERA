@@ -15,6 +15,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 - Players to visit previously inaccessible areas together through "Astral Projection" (see: [Astral Projection/Zones](#astral-projectionzones))
 - NPCs, campfires and other objects to be spawned in with easy to use chat commands
 - A lot more
+
 ## How to: 
 - Download and install [Caali's Proxy](https://discord.gg/maqBmJV)
 - Click the "Clone or download" button on this page, then download as zip
@@ -22,9 +23,7 @@ Astral-TERA shares your character (if enabled) and chat (if enabled) across regi
 - Start TERA-Proxy however you would normally
 - To talk in the chat, type /7 or join the discord.
 
-**NOTE:** Due to current unmapped packets, some features (webbrowser support) will not work. The opcode required is `S_SHOW_AWESOMIUMWEB_SHOP`. `21587` for NA, `53369` for EU.
-
-**Also note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
+**note:** This module is still very much a WIP, some features may be broken, not work as intended or change drastically in the future.
 
 If this doesn't work or isn't clear, send a message in [this discord](https://discord.gg/uhDAXWQ)'s help channel. 
 
