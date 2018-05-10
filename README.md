@@ -29,8 +29,8 @@ If this doesn't work or isn't clear, send a message in [this discord](https://di
 
 ## Safety/"Will this mod get me banned":
 No identifiable player data is ever sent to anyone else, including the server.  On top of this, no malformed packets (or packets at all) are ever sent to the real server, making this mod a lot safer than most others. (tl;dr, no you wont get banned)
-## 
-Config
+
+## Config
 Nearly every feature of this module can be disabled within the config file that is generate on first run. By default no features are disabled. 
 
 Option | Default | Description
