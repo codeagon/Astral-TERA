@@ -461,7 +461,7 @@ module.exports = function ChatThing(dispatch) {
     });
     net.on('spawnNpc', (npc) => {
         if (config.spawnNpcs && online)
-            dispatch.toClient('S_SPAWN_NPC', 6, {
+            dispatch.toClient('S_SPAWN_NPC', 8, {
                 gameId: npc.id,
                 loc: npc.loc.loc,
                 target: 0,
