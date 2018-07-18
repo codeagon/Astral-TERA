@@ -6,48 +6,55 @@ const fs = require('fs');
 const Networking = require('./networking');
 const PRIVATE_CHANNEL_ID = -4 >>> 0;
 const PRIVATE_CHANNEL_NAME = `Astral`;
-const key = 6969;
 const networked = new Map();
 module.exports = function ChatThing(dispatch) {
     const command = Command(dispatch);
     const net = new Networking();
-    let website = [{link: 4012, linkKey: 'google.com'}],
-            myInfo = {},
-            myLoc = {},
-            savedLoc = {},
-            lastX = null,
-            lastY = null,
-            myGameId,
-            myId,
-            originalStats,
-            runSpeed = 200,
-            mySpeed = 500,
-            leavingFake = false,
-            enteringFake = false,
-            online = false,
-            config,
-            lastSend = 1,
-            inFake = false,
-            servers = [{id: 4012, name: 'Mount Tyrannas'},
-                {id: 4024, name: 'Ascension Valley'},
-                {id: 4009, name: 'Celestial Hills'},
-                {id: 4004, name: 'Tempest Reach'},
-                {id: 4032, name: 'Fey Forest'},
-                {id: 30, name: 'Sikander'},
-                {id: 27, name: 'Mystel'},
-                {id: 26, name: 'Killian'},
-                {id: 32, name: 'Amarun'},
-                {id: 29, name: 'Seren'},
-                {id: 31, name: 'Saleron'},
-                {id: 28, name: 'Yurian'},
-                {id: 8, name: '???? ??'},
-                {id: 1, name: '??? ?? - Karas'},
-                {id: 2, name: 'Zuras'},
-                {id: 5071, name: '????'},
-                {id: 5072, name: '????'},
-                {id: 2800, name: '?????'},
-                {id: 500, name: '????'},
-                {id: 501, name: '??????'}];
+    let website = [{ link: 4012, linkKey: 'google.com' }],
+        myInfo = {},
+        myLoc = {},
+        savedLoc = {},
+        lastX = null,
+        lastY = null,
+        fx,
+        fy,
+        fz,
+        fZone,
+        rZone,
+        tooltipId,
+        eyedee,
+        guild,
+        myGameId,
+        myId,
+        originalStats,
+        runSpeed = 200,
+        mySpeed = 500,
+        leavingFake = false,
+        enteringFake = false,
+        online = false,
+        config,
+        lastSend = 1,
+        inFake = false,
+        servers = [{ id: 4012, name: 'Mount Tyrannas' },
+        { id: 4024, name: 'Ascension Valley' },
+        { id: 4009, name: 'Celestial Hills' },
+        { id: 4004, name: 'Tempest Reach' },
+        { id: 4032, name: 'Fey Forest' },
+        { id: 30, name: 'Sikander' },
+        { id: 27, name: 'Mystel' },
+        { id: 26, name: 'Killian' },
+        { id: 32, name: 'Amarun' },
+        { id: 29, name: 'Seren' },
+        { id: 31, name: 'Saleron' },
+        { id: 28, name: 'Yurian' },
+        { id: 8, name: 'Kaia' },
+        { id: 1, name: 'Karas' },
+        { id: 2, name: 'Zuras' },
+        { id: 5071, name: 'Elinu' },
+        { id: 5072, name: 'idk' },
+        { id: 2800, name: 'idk part 2' },
+        { id: 500, name: 'Kaya' },
+        { id: 501, name: 'Velika' }];
     try {
         config = require('./config.json');
     } catch (e) {
@@ -70,17 +77,16 @@ module.exports = function ChatThing(dispatch) {
 
     function saveConfig() {
         fs.writeFile(path.join(__dirname, 'config.json'), JSON.stringify(
-                config, null, 4), err => {
-            console.log('[[ASTRAL PROJECTION]] - CONFIG FILE CREATED');
-        });
+            config, null, 4), err => {
+                console.log('[[ASTRAL PROJECTION]] - CONFIG FILE CREATED');
+            });
     }
     /* ========= *
      * Functions *
      * ========= */
-//why I do dis
+    //why I do dis
 
-    function rand(min, max)
-    {
+    function rand(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
@@ -138,9 +144,9 @@ module.exports = function ChatThing(dispatch) {
             quick: false
         });
         dispatch.toClient('S_PLAYER_STAT_UPDATE', 8,
-                originalStats
-                );
-        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
+            originalStats
+        );
+        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
             inFake = false;
             leavingFake = true;
             setTimeout(function () {
@@ -174,7 +180,7 @@ module.exports = function ChatThing(dispatch) {
         ['C_VISIT_NEW_SECTION', 1],
         ['C_PLAYER_FLYING_LOCATION', 4]
     ]) {
-        dispatch.hook(...packet, {order: -900}, event => {
+        dispatch.hook(...packet, { order: -900 }, event => {
             if (inFake) {
                 return false;
             }
@@ -196,7 +202,7 @@ module.exports = function ChatThing(dispatch) {
             ['C_PRESS_SKILL', 1],
             ['C_NOTIMELINE_SKILL', 1]
         ]) {
-            dispatch.hook(...packet, {order: -50}, event => {
+            dispatch.hook(...packet, { order: -50 }, event => {
                 const user = networked.get(id2str(event.target));
                 if (user) {
                     return false;
@@ -210,7 +216,7 @@ module.exports = function ChatThing(dispatch) {
                     return true;
             });
         }
-        dispatch.hook('*', 'raw', {order: 9999}, (code, data, fromServer) => {
+        dispatch.hook('*', 'raw', { order: 9999 }, (code, data, fromServer) => {
             if ((leavingFake || enteringFake) && !fromServer) {
                 return false;
             }
@@ -248,19 +254,19 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-    dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, {order: 900}, (event) => { //if not using a costume mod probably hook always
+    dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, { order: 900 }, (event) => { //if not using a costume mod probably hook always
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-    dispatch.hook('S_USER_EXTERNAL_CHANGE', 6, {order: 999, filter: {fake: null}}, (event) => {
+    dispatch.hook('S_USER_EXTERNAL_CHANGE', 6, { order: 999, filter: { fake: null } }, (event) => {
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-    dispatch.hook('C_CHAT', 1, {order: -10}, event => {
+    dispatch.hook('C_CHAT', 1, { order: -10 }, event => {
         if (event.channel === 17) {
             net.send('chat', config.myName.toString(), strip(event.message.toString()), config.key, 0);
             return false;
@@ -287,7 +293,7 @@ module.exports = function ChatThing(dispatch) {
             if (!config.allowWebLinks)
                 return;
             if (tooltipId.includes(i.linkKey)) {
-                dispatch.toClient('S_SHOW_AWESOMIUMWEB_SHOP', {
+                dispatch.toClient('S_SHOW_AWESOMIUMWEB_SHOP', 1, {
                     link: i.link.toString()
                 });
                 return false;
@@ -331,7 +337,7 @@ module.exports = function ChatThing(dispatch) {
         mySpeed = event.runSpeed + event.runSpeedBonus;
         originalStats = event;
     });
-    dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => {
+    dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
         net.send('login', myId.toString());
         setTimeout(function () {
             message(`Connected across dimensions!`);
@@ -340,15 +346,15 @@ module.exports = function ChatThing(dispatch) {
             moveMe();
         }, 4000);
     });
-    dispatch.hook('C_LOAD_TOPO_FIN', 1, {order: 999, filter: {fake: null}}, () => {
+    dispatch.hook('C_LOAD_TOPO_FIN', 1, { order: 999, filter: { fake: null } }, () => {
         if (inFake) {
             return false;
         }
     });
-    dispatch.hook('S_RETURN_TO_LOBBY', 1, (event) => {
+    dispatch.hook('S_RETURN_TO_LOBBY', 1, () => {
         online = false;
         net.send('logout');
-        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, (event) => { //wew
+        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => { //wew
             net.send('login', myId.toString());
             setTimeout(function () {
                 message(`Connected across dimensions!`);
@@ -358,7 +364,7 @@ module.exports = function ChatThing(dispatch) {
             }, 4000);
         });
     });
-    dispatch.hook('S_LOAD_TOPO', 2, {order: 9999}, (event) => {
+    dispatch.hook('S_LOAD_TOPO', 2, { order: 9999 }, (event) => {
         rZone = event.zone;
         if (inFake) {
             setTimeout(function () {
@@ -378,7 +384,7 @@ module.exports = function ChatThing(dispatch) {
     /* ======== *
      * COMMANDS *
      * ======== */
-    command.add('at', (cmd, arg, arg2, arg3, arg4, arg5, arg6, arg7) => {
+    command.add('at', (cmd, arg, arg2, arg3, arg4) => {
         switch (cmd) {
             case 'activate':
                 myInfo.name = config.myName;
@@ -394,7 +400,7 @@ module.exports = function ChatThing(dispatch) {
                         runSpeed: runSpeed
                     });
                 }
-                break
+                break          
             case 'leave':
             case 'dezone':
             case 'return':
@@ -404,6 +410,7 @@ module.exports = function ChatThing(dispatch) {
                 break
             case 'loc':
                 message(`x:${myLoc.loc.x}, y:${myLoc.loc.y}, z:${myLoc.loc.z}, zone: ${rZone}`);
+                break
             case 'join':
                 joinChat();
                 break
@@ -508,8 +515,8 @@ module.exports = function ChatThing(dispatch) {
                     guild = i.name;
                 }
             }
-            details = Buffer.from(info.details, 'hex');
-            shape = Buffer.from(info.shape, 'hex');
+            let details = Buffer.from(info.details, 'hex');
+            let shape = Buffer.from(info.shape, 'hex');
             dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
                 serverId: 69,
                 playerId: 63,
@@ -571,7 +578,7 @@ module.exports = function ChatThing(dispatch) {
         });
     });
     net.on('weburl', (link, linkKey) => {
-        website.push(website, {link, linkKey});
+        website.push(website, { link, linkKey });
     });
     net.on('zone', (zone, x, y, z) => {
         fZone = zone;
