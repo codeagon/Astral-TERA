@@ -1,14 +1,12 @@
 /* global __dirname */
 
 const path = require('path');
-const Command = require('command');
 const fs = require('fs');
 const Networking = require('./networking');
 const PRIVATE_CHANNEL_ID = -4 >>> 0;
 const PRIVATE_CHANNEL_NAME = `Astral`;
 const networked = new Map();
-module.exports = function ChatThing(dispatch) {
-    const command = Command(dispatch);
+module.exports = function ChatThing(mod) {
     const net = new Networking();
     let website = [{ link: 4012, linkKey: 'google.com' }],
         myInfo = {},
@@ -35,26 +33,28 @@ module.exports = function ChatThing(dispatch) {
         config,
         lastSend = 1,
         inFake = false,
-        servers = [{ id: 4012, name: 'Mount Tyrannas' },
-        { id: 4024, name: 'Ascension Valley' },
-        { id: 4009, name: 'Celestial Hills' },
-        { id: 4004, name: 'Tempest Reach' },
-        { id: 4032, name: 'Fey Forest' },
-        { id: 30, name: 'Sikander' },
-        { id: 27, name: 'Mystel' },
-        { id: 26, name: 'Killian' },
-        { id: 32, name: 'Amarun' },
-        { id: 29, name: 'Seren' },
-        { id: 31, name: 'Saleron' },
-        { id: 28, name: 'Yurian' },
-        { id: 8, name: 'Kaia' },
-        { id: 1, name: 'Karas' },
-        { id: 2, name: 'Zuras' },
-        { id: 5071, name: 'Elinu' },
-        { id: 5072, name: 'idk' },
-        { id: 2800, name: 'idk part 2' },
-        { id: 500, name: 'Kaya' },
-        { id: 501, name: 'Velika' }];
+        servers = [
+            { id: 4012, name: 'Mount Tyrannas' },
+            { id: 4024, name: 'Ascension Valley' },
+            { id: 4009, name: 'Celestial Hills' },
+            { id: 4004, name: 'Tempest Reach' },
+            { id: 4032, name: 'Fey Forest' },
+            { id: 30, name: 'Sikander' },
+            { id: 27, name: 'Mystel' },
+            { id: 26, name: 'Killian' },
+            { id: 32, name: 'Amarun' },
+            { id: 29, name: 'Seren' },
+            { id: 31, name: 'Saleron' },
+            { id: 28, name: 'Yurian' },
+            { id: 8, name: 'Kaia' },
+            { id: 1, name: 'Karas' },
+            { id: 2, name: 'Zuras' },
+            { id: 5071, name: 'Elinu' },
+            { id: 5072, name: 'idk' },
+            { id: 2800, name: 'idk part 2' },
+            { id: 500, name: 'Kaya' },
+            { id: 501, name: 'Velika' }
+        ];
     try {
         config = require('./config.json');
     } catch (e) {
@@ -76,11 +76,11 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function saveConfig() {
-        fs.writeFile(path.join(__dirname, 'config.json'), JSON.stringify(
-            config, null, 4), err => {
-                console.log('[[ASTRAL PROJECTION]] - CONFIG FILE CREATED');
-            });
+        fs.writeFile(path.join(__dirname, 'config.json'), JSON.stringify(config, null, 4), (err) => {
+            console.log('[[ASTRAL PROJECTION]] - CONFIG FILE CREATED');
+        });
     }
+
     /* ========= *
      * Functions *
      * ========= */
@@ -91,15 +91,15 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function message(msg) {
-        command.message(`<font color="#c5e8ff">  [ASTRAL-NOTICE] - </font> <font color="#6efff0">${msg}`);
+        mod.command.message(`<font color="#c5e8ff">  [ASTRAL-NOTICE] - </font> <font color="#6efff0">${msg}`);
     }
 
     function bypass(str) {
-        return str = str.replace(/<FONT>(.*?)<\/FONT>/g, '<FONT></FONT>$1');
+        return str = str.replace(/<FONT>(.*?)<\/FONT>/gu, '<FONT></FONT>$1');
     }
 
     function strip(str) {
-        return str.replace(/^<[^>]+>|<\/[^>]+><[^\/][^>]*>|<\/[^>]+>$/g, '');
+        return str.replace(/^<[^>]+>|<\/[^>]+><[^\/][^>]*>|<\/[^>]+>$/gu, '');
     }
 
     function id2str(id) { //remove this
@@ -107,7 +107,7 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function joinChat() {
-        dispatch.toClient('S_JOIN_PRIVATE_CHANNEL', 1, {
+        mod.send('S_JOIN_PRIVATE_CHANNEL', 1, {
             index: 6,
             id: PRIVATE_CHANNEL_ID,
             unk: [],
@@ -116,7 +116,7 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function moveMe() {
-        setInterval(function () {
+        setInterval(() => {
             if ((Math.abs(myLoc.loc.x - lastX) > 10 || Math.abs(myLoc.loc.y - lastY) > 10) || Date.now() - lastSend > 7000) {
                 lastX = myLoc.loc.x;
                 lastY = myLoc.loc.y;
@@ -127,7 +127,7 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function chat(userName, msg) {
-        dispatch.toClient('S_PRIVATE_CHAT', 1, {
+        mod.send('S_PRIVATE_CHAT', 1, {
             channel: PRIVATE_CHANNEL_ID,
             authorID: 0,
             authorName: userName,
@@ -136,22 +136,23 @@ module.exports = function ChatThing(dispatch) {
     }
 
     function deZone() {
-        dispatch.toClient('S_LOAD_TOPO', 2, {
+        mod.send('S_LOAD_TOPO', 2, {
             zone: rZone,
             x: savedLoc.x,
             y: savedLoc.y,
             z: savedLoc.z,
             quick: false
         });
-        dispatch.toClient('S_PLAYER_STAT_UPDATE', 8,
+        mod.send(
+            'S_PLAYER_STAT_UPDATE', 8,
             originalStats
         );
-        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
+        mod.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
             inFake = false;
             leavingFake = true;
-            setTimeout(function () {
+            setTimeout(() => {
                 net.send('respawn');
-                dispatch.toClient('S_SPAWN_ME', 1, {
+                mod.send('S_SPAWN_ME', 1, {
                     target: myGameId,
                     x: savedLoc.x,
                     y: savedLoc.y,
@@ -160,7 +161,7 @@ module.exports = function ChatThing(dispatch) {
                     alive: true,
                     unk: false
                 });
-                setTimeout(function () {
+                setTimeout(() => {
                     leavingFake = false;
                 }, 4000);
             }, 4000);
@@ -180,17 +181,17 @@ module.exports = function ChatThing(dispatch) {
         ['C_VISIT_NEW_SECTION', 1],
         ['C_PLAYER_FLYING_LOCATION', 4]
     ]) {
-        dispatch.hook(...packet, { order: -900 }, event => {
+        mod.hook(...packet, { order: -900 }, (event) => {
             if (inFake) {
                 return false;
             }
         });
     }
-    dispatch.hook('C_CHECK_VERSION', 1, (event) => {
+    mod.hook('C_CHECK_VERSION', 1, () => {
         enable();
     });
     function addHook(packetName, packetVersion, func) {
-        dispatch.hook(packetName, packetVersion, func);
+        mod.hook(packetName, packetVersion, func);
     }
     function enable() { //idk lol   
         for (let packet of [//skills
@@ -202,25 +203,25 @@ module.exports = function ChatThing(dispatch) {
             ['C_PRESS_SKILL', 1],
             ['C_NOTIMELINE_SKILL', 1]
         ]) {
-            dispatch.hook(...packet, { order: -50 }, event => {
+            mod.hook(...packet, { order: -50 }, (event) => {
                 const user = networked.get(id2str(event.target));
                 if (user) {
                     return false;
                 }
                 if (inFake) {
-                    dispatch.toClient('S_CANNOT_START_SKILL', 1, {
+                    mod.send('S_CANNOT_START_SKILL', 1, {
                         skill: event.skill
                     });
                     return false;
-                } else
-                    return true;
+                }
             });
         }
-        dispatch.hook('*', 'raw', { order: 9999 }, (code, data, fromServer) => {
-            if ((leavingFake || enteringFake) && !fromServer) {
+        mod.hook('*', 'raw', { order: 9999 }, (code, data, fromServer) => {
+            if ((leavingFake || enteringFake || inFake) && !fromServer) {
                 return false;
             }
         });
+
         addHook('S_LOGIN', 10, (event) => { //should clean this up
             online = true;
             myInfo.templateId = event.templateId;
@@ -236,16 +237,16 @@ module.exports = function ChatThing(dispatch) {
             message(`Now displaying across servers`);
         });
     }
-    dispatch.hook('S_LOAD_CLIENT_USER_SETTING', 1, () => {
+    mod.hook('S_LOAD_CLIENT_USER_SETTING', 1, () => {
         process.nextTick(() => {
             joinChat();
         });
     });
-    dispatch.hook('S_JOIN_PRIVATE_CHANNEL', 1, event => event.index === 6 ? false : undefined);
-    dispatch.hook('C_LEAVE_PRIVATE_CHANNEL', 1, event => event.index === 6 ? false : undefined);
-    dispatch.hook('C_REQUEST_PRIVATE_CHANNEL_INFO', 1, event => {
+    mod.hook('S_JOIN_PRIVATE_CHANNEL', 1, (event) => event.index === 6 ? false : undefined);
+    mod.hook('C_LEAVE_PRIVATE_CHANNEL', 1, (event) => event.index === 6 ? false : undefined);
+    mod.hook('C_REQUEST_PRIVATE_CHANNEL_INFO', 1, (event) => {
         if (event.channelId === PRIVATE_CHANNEL_ID) {
-            dispatch.toClient('S_REQUEST_PRIVATE_CHANNEL_INFO', 1, {
+            mod.send('S_REQUEST_PRIVATE_CHANNEL_INFO', 1, {
                 owner: 1,
                 password: 0,
                 members: [],
@@ -254,46 +255,46 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-    dispatch.hookOnce('S_USER_EXTERNAL_CHANGE', 6, { order: 900 }, (event) => { //if not using a costume mod probably hook always
+    mod.hookOnce('S_USER_EXTERNAL_CHANGE', 6, { order: 900 }, (event) => { //if not using a costume mod probably hook always
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-    dispatch.hook('S_USER_EXTERNAL_CHANGE', 6, { order: 999, filter: { fake: null } }, (event) => {
+    mod.hook('S_USER_EXTERNAL_CHANGE', 6, { order: 999, filter: { fake: null } }, (event) => {
         if (event.gameId.equals(myGameId)) {
             Object.assign(myInfo, event);
             myInfo.gameId = myId.toString();
         }
     });
-    dispatch.hook('C_CHAT', 1, { order: -10 }, event => {
+    mod.hook('C_CHAT', 1, { order: -10 }, (event) => {
         if (event.channel === 17) {
             net.send('chat', config.myName.toString(), strip(event.message.toString()), config.key, 0);
             return false;
         }
     });
-    dispatch.hook('C_SOCIAL', 1, (event) => {
+    mod.hook('C_SOCIAL', 1, (event) => {
         if (config.allowAstralProjection) {
             net.send('social', event.emote);
         }
     });
-    dispatch.hook('S_SPAWN_ME', 2, (event) => {
+    mod.hook('S_SPAWN_ME', 2, (event) => {
         myLoc = event;
         myLoc.gameId = myId;
     });
-    dispatch.hook('C_PLAYER_LOCATION', 3, (event) => {
+    mod.hook('C_PLAYER_LOCATION', 3, (event) => {
         myLoc = event;
         myLoc.gameId = myId;
         if (inFake)
             return false;
     });
-    dispatch.hook('C_SHOW_ITEM_TOOLTIP_EX', 2, (event) => {
+    mod.hook('C_SHOW_ITEM_TOOLTIP_EX', 2, (event) => {
         tooltipId = event.id.toString();
         for (let i of website) {
             if (!config.allowWebLinks)
                 return;
             if (tooltipId.includes(i.linkKey)) {
-                dispatch.toClient('S_SHOW_AWESOMIUMWEB_SHOP', 1, {
+                mod.send('S_SHOW_AWESOMIUMWEB_SHOP', 1, {
                     link: i.link.toString()
                 });
                 return false;
@@ -309,15 +310,15 @@ module.exports = function ChatThing(dispatch) {
             enteringFake = true;
             inFake = true;
             savedLoc = myLoc.loc;
-            dispatch.toClient('S_LOAD_TOPO', 2, {
+            mod.send('S_LOAD_TOPO', 2, {
                 zone: fZone,
                 x: fx,
                 y: fy,
                 z: fz,
                 quick: false
             });
-            setTimeout(function () {
-                dispatch.toClient('S_SPAWN_ME', 1, {
+            setTimeout(() => {
+                mod.send('S_SPAWN_ME', 1, {
                     target: myGameId,
                     x: fx,
                     y: fy,
@@ -325,7 +326,7 @@ module.exports = function ChatThing(dispatch) {
                     w: 1,
                     alive: 1
                 });
-                setTimeout(function () {
+                setTimeout(() => {
                     enteringFake = false;
                 }, 2000);
                 net.send('respawn');
@@ -333,30 +334,30 @@ module.exports = function ChatThing(dispatch) {
             return false;
         }
     });
-    dispatch.hook('S_PLAYER_STAT_UPDATE', 8, (event) => {
+    mod.hook('S_PLAYER_STAT_UPDATE', 8, (event) => {
         mySpeed = event.runSpeed + event.runSpeedBonus;
         originalStats = event;
     });
-    dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
+    mod.hookOnce('C_LOAD_TOPO_FIN', 1, () => {
         net.send('login', myId.toString());
-        setTimeout(function () {
+        setTimeout(() => {
             message(`Connected across dimensions!`);
             //initial login, delayed for spawning of NPCs etc
             net.send('activate', myInfo, myLoc);
             moveMe();
         }, 4000);
     });
-    dispatch.hook('C_LOAD_TOPO_FIN', 1, { order: 999, filter: { fake: null } }, () => {
+    mod.hook('C_LOAD_TOPO_FIN', 1, { order: 999, filter: { fake: null } }, () => {
         if (inFake) {
             return false;
         }
     });
-    dispatch.hook('S_RETURN_TO_LOBBY', 1, () => {
+    mod.hook('S_RETURN_TO_LOBBY', 1, () => {
         online = false;
         net.send('logout');
-        dispatch.hookOnce('C_LOAD_TOPO_FIN', 1, () => { //wew
+        mod.hookOnce('C_LOAD_TOPO_FIN', 1, () => { //wew
             net.send('login', myId.toString());
-            setTimeout(function () {
+            setTimeout(() => {
                 message(`Connected across dimensions!`);
                 //initial login, delayed for spawning of NPCs etc
                 net.send('activate', myInfo, myLoc);
@@ -364,11 +365,11 @@ module.exports = function ChatThing(dispatch) {
             }, 4000);
         });
     });
-    dispatch.hook('S_LOAD_TOPO', 2, { order: 9999 }, (event) => {
+    mod.hook('S_LOAD_TOPO', 2, { order: 9999 }, (event) => {
         rZone = event.zone;
         if (inFake) {
-            setTimeout(function () {
-                dispatch.toClient('S_SPAWN_ME', 1, {
+            setTimeout(() => {
+                mod.send('S_SPAWN_ME', 1, {
                     target: myGameId,
                     x: savedLoc.x,
                     y: savedLoc.y,
@@ -381,10 +382,11 @@ module.exports = function ChatThing(dispatch) {
             }, 4000);
         }
     });
+
     /* ======== *
      * COMMANDS *
      * ======== */
-    command.add('at', (cmd, arg, arg2, arg3, arg4) => {
+    mod.command.add('at', (cmd, arg) => {
         switch (cmd) {
             case 'activate':
                 myInfo.name = config.myName;
@@ -396,11 +398,11 @@ module.exports = function ChatThing(dispatch) {
             case 'speed':
                 runSpeed = arg;
                 if (inFake) {
-                    dispatch.toClient('S_PLAYER_STAT_UPDATE', 8, {
-                        runSpeed: runSpeed
+                    mod.send('S_PLAYER_STAT_UPDATE', 8, {
+                        runSpeed
                     });
                 }
-                break          
+                break
             case 'leave':
             case 'dezone':
             case 'return':
@@ -425,7 +427,7 @@ module.exports = function ChatThing(dispatch) {
                 break
             case 'disconnect':
                 net.send('logout');
-                setTimeout(function () {
+                setTimeout(() => {
                     net.close();
                     message('Disconnected');
                 }, 1000);
@@ -439,6 +441,7 @@ module.exports = function ChatThing(dispatch) {
                 break
         }
     });
+
     /* ========= *
      * NET STUFF *
      * ========= */
@@ -455,7 +458,7 @@ module.exports = function ChatThing(dispatch) {
     });
     net.on('spawnFire', (fire) => {
         if (config.spawnFires && online)
-            dispatch.toClient('S_SPAWN_BONFIRE', 1, {
+            mod.send('S_SPAWN_BONFIRE', 1, {
                 unk1: 0,
                 cid: fire.id,
                 type: fire.fireId,
@@ -468,7 +471,7 @@ module.exports = function ChatThing(dispatch) {
     });
     net.on('spawnNpc', (npc) => {
         if (config.spawnNpcs && online)
-            dispatch.toClient('S_SPAWN_NPC', 8, {
+            mod.send('S_SPAWN_NPC', 8, {
                 gameId: npc.id,
                 loc: npc.loc.loc,
                 target: 0,
@@ -479,20 +482,21 @@ module.exports = function ChatThing(dispatch) {
     });
     net.on('despawnNpc', (id) => {
         if (config.spawnNpcs && online)
-            dispatch.toClient('S_DESPAWN_NPC', 3, {
+            mod.send('S_DESPAWN_NPC', 3, {
                 gameId: id,
                 type: 1
             });
     });
+
     /* net.on('despawnFire', (id) => {
      
      });*/ //for when opcode becoems mapped
     net.on('loc', (id, loc, speed) => {
         if (online) {
-            dispatch.toClient('S_USER_LOCATION', 3, {
+            mod.send('S_USER_LOCATION', 3, {
                 gameId: id.toString() - 696969,
                 w: loc.w,
-                speed: speed,
+                speed,
                 type: 7,
                 loc: loc.loc,
                 dest: loc.dest
@@ -517,7 +521,7 @@ module.exports = function ChatThing(dispatch) {
             }
             let details = Buffer.from(info.details, 'hex');
             let shape = Buffer.from(info.shape, 'hex');
-            dispatch.toClient('S_SPAWN_USER', 13, {// shud clean this up probably
+            mod.send('S_SPAWN_USER', 13, {// shud clean this up probably
                 serverId: 69,
                 playerId: 63,
                 gameId: eyedee,
@@ -556,23 +560,23 @@ module.exports = function ChatThing(dispatch) {
                 styleBackTranslation: info.styleBackTranslation,
                 accessoryTransformUnk: info.accessoryTransformUnk,
                 name: info.name,
-                guild: guild,
-                details: details,
-                shape: shape
+                guild,
+                details,
+                shape
             });
             // }
             //}
         }
     });
     net.on('social', (id, social) => {
-        dispatch.toClient('S_SOCIAL', 1, {
+        mod.send('S_SOCIAL', 1, {
             target: id - 696969,
             animation: social
         });
     });
     net.on('remove', (id) => {
         networked.delete(id);
-        dispatch.toClient('S_DESPAWN_USER', 3, {
+        mod.send('S_DESPAWN_USER', 3, {
             gameId: id.toString() - 696969,
             type: 0
         });
