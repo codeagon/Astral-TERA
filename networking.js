@@ -12,7 +12,7 @@ class Networking extends events.EventEmitter {
 	connect(options = {}) {
 		this.socket = (options.secure ? tls : net).connect(options, () => {
 			this.emit('connect')
-			console.log('[ASTRAL TERA] - CONNECTED TO CHAT')
+			console.log('Connected to Astral TERA')
 			readline.createInterface({ input: this.socket }).on('line', (line) => {
 				try {
 					this.emit(...JSON.parse(line))
@@ -21,6 +21,14 @@ class Networking extends events.EventEmitter {
 				}
 			})
 		}).on('error', (err) => {
+			if(err.toString().includes("ECONNREFUSED")){
+				this.emit('dead')
+				return
+			}
+			if(err.toString().includes("ECONNRESET")){
+				this.emit('died')
+				return
+			}
 			this.emit('error', err)
 		}).on('close', () => {
 			this.emit('close')
@@ -33,7 +41,7 @@ class Networking extends events.EventEmitter {
 	}
 
 	close() {
-		console.log('CHAT- CONNECTION CLOSED')
+		console.log('BOT- CONNECTION CLOSED')
 		if (this.socket) {
 			this.socket.end()
 			this.socket.unref()

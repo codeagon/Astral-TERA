@@ -1,4 +1,6 @@
 {
-    "servers": ["https://raw.githubusercontent.com/codeagon/Astral-TERA/master/"],
-    "supportUrl": "https://discord.gg/uhDAXWQ"
-}
+"options": {
+        "niceName": "MAZEEEZZZZ",
+        "reloadable": true
+		}
+		}

@@ -1,0 +1,282 @@
+/***********
+ * GENERAL *
+ ***********/
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-app-region: drag;
+    user-select: none;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    background: var(--background) !important;
+    color: var(--f_med);
+}
+
+.nodrag {
+    -webkit-app-region: no-drag;
+}
+
+/*************
+ * TITLE BAR *
+ *************/
+
+#title-bar {
+    background-color: var(--b_low);
+    position: fixed;
+    height: 32px;
+    top: 0px;
+    left: 0px;
+    right: 0px
+}
+
+#title {
+    position: fixed;
+    left: 32px;
+    line-height: 32px
+}
+
+#title-status {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    line-height: 32px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#title-icon {
+    position: fixed;
+    margin: 4px;
+    width: 24px;
+    height: 24px
+}
+
+#minimize-btn {
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    height: 32px;
+    width: 32px;
+    border: none;
+    background-color: transparent;
+    color: var(--f_med);
+}
+
+#minimize-btn:hover {
+    color: #E81C4F;
+}
+
+#minimize-btn:focus {
+    outline: 0;
+}
+
+#close-btn {
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 32px;
+    width: 32px;
+    border: none;
+    background-color: transparent;
+    color: var(--_med);
+}
+
+close-btn:hover {
+    color: #color:var(--f_high) !important;
+}
+
+#close-btn:focus {
+    outline: 0;
+}
+
+/********
+ * MAIN *
+ ********/
+
+.container {
+    margin: 34px 8px 8px 8px
+}
+
+ul.tabs {
+    margin-left: 16px;
+    margin-right: 16px
+}
+
+ul.tabs li {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    user-select: none
+}
+
+ul.tabs li:hover {
+    background-color: var(--b_low)
+}
+
+ul.tabs li.current {
+    background: var(--b_med);
+}
+
+.tab-content {
+    display: none;
+    padding: 8px;
+    border-radius: 8px;
+    /* todo? edit width&height */
+    width: 944px;
+    height: 464px;
+    overflow-y: auto;
+    background: var(--b_low);
+    border: solid 4px var(--b_med);
+    position: absolute;
+    z-index: 2;
+}
+
+.tab-content.current {
+    display: inherit
+}
+
+.button {
+    display: inherit;
+    text-align: right;
+    float: right;
+    border: inherit;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--f_high)
+}
+
+.button.refresh {
+    padding-left: 10
+}
+
+statusText {
+    color: var(--f_high);
+    position: fixed;
+    right: 300;
+}
+
+#status {
+    line-height: 200%;
+    padding-left: 10;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#status:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+/***********
+ * MASCOTS *
+ **********/
+
+#mascotList {
+    width: 760;
+    background-color: var(--b_med);
+    color: var(--f-med);
+}
+
+#mascot {
+    position: fixed;
+    z-index: -1;
+    bottom: 10;
+    right: 30;
+    opacity: 0.4;
+    height: 70%;
+    overflow: scroll;
+}
+
+/**********
+ * SPAWNS *
+ *********/
+
+#npcData {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 30px;
+    padding-left: 10;
+    line-height: 200%
+}
+
+#npcData:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+#npcData:hover {
+    background-color: var(--b_med)
+}
+
+.spawnLink {
+    background-color: var(--b_med);
+    display: inline-block;
+    padding: 5 50;
+}
+
+#npcContainer {
+    border-top-style: solid;
+    border-color: var(--f_low)
+}
+
+.spawnLink:hover {
+    background-color: var(--b_high);
+}
+
+spawndata {
+    height: 20;
+}
+
+#npcData:before {
+    content: "+";
+    position: absolute;
+    right: 20;
+    color: var(--f_high)
+}
+
+#npcData.selected:before {
+    content: "-";
+    right: 22
+}
+
+#npcData.selected {
+    display: inline-grid;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+input {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    border: 1px solid var(--f_med)
+}
+
+input:before {
+    padding-left: 300;
+}
+
+.displayedInfo {
+    height: 40;
+}

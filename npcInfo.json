@@ -1,0 +1,5218 @@
+[
+    {
+        "name": "FV_AUT_StrawBall",
+        "id": 641000
+    },
+    {
+        "name": "HookaToad_A",
+        "id": 6013000
+    },
+    {
+        "name": "HookaToad_B",
+        "id": 6014000
+    },
+    {
+        "name": "HookaToad_C",
+        "id": 6015000
+    },
+    {
+        "name": "FierceDoberman",
+        "id": 30001000
+    },
+    {
+        "name": "FierceDoberman_17_Elite",
+        "id": 30001100
+    },
+    {
+        "name": "ShadowCougar",
+        "id": 30002000
+    },
+    {
+        "name": "ShadowCougar_AWAKEN",
+        "id": 30002200
+    },
+    {
+        "name": "ImpServant",
+        "id": 30003000
+    },
+    {
+        "name": "CannibalImp",
+        "id": 30003100
+    },
+    {
+        "name": "DevilJailer",
+        "id": 30004002
+    },
+    {
+        "name": "ForestQueen",
+        "id": 30004100
+    },
+    {
+        "name": "LongTusk",
+        "id": 30005000
+    },
+    {
+        "name": "ObeseGula",
+        "id": 30006000
+    },
+    {
+        "name": "Mantiscore",
+        "id": 30007000
+    },
+    {
+        "name": "MystyIsleMantisCore",
+        "id": 30007100
+    },
+    {
+        "name": "IceMantisCore",
+        "id": 30007200
+    },
+    {
+        "name": "PollutedUnicorn",
+        "id": 30008000
+    },
+    {
+        "name": "DruggedUnicorn",
+        "id": 30008100
+    },
+    {
+        "name": "Q_Mon_Serabi",
+        "id": 30008200
+    },
+    {
+        "name": "PollutedUnicorn_A",
+        "id": 30008300
+    },
+    {
+        "name": "Q_Mon_Serabi_OB",
+        "id": 30008400
+    },
+    {
+        "name": "Pollutedwolf",
+        "id": 30009000
+    },
+    {
+        "name": "MorphedArcaneHunter",
+        "id": 30009100
+    },
+    {
+        "name": "Qamara",
+        "id": 30010000
+    },
+    {
+        "name": "Qamara_Fog",
+        "id": 30010100
+    },
+    {
+        "name": "SlaveManager",
+        "id": 30011000
+    },
+    {
+        "name": "CruelTorturer",
+        "id": 30011100
+    },
+    {
+        "name": "CruelTorturer_17_Elite",
+        "id": 30011200
+    },
+    {
+        "name": "CruelTorturer_33_Elite",
+        "id": 30011300
+    },
+    {
+        "name": "ZombieMiner",
+        "id": 30012000
+    },
+    {
+        "name": "ZombiePrisoner",
+        "id": 30012100
+    },
+    {
+        "name": "BloodMagician",
+        "id": 30013001
+    },
+    {
+        "name": "DevaFemaleRogue",
+        "id": 30014000
+    },
+    {
+        "name": "DevaFemaleAssasin",
+        "id": 30014100
+    },
+    {
+        "name": "CultOfVengeanceEscort",
+        "id": 30014200
+    },
+    {
+        "name": "DevaHunter",
+        "id": 30015000
+    },
+    {
+        "name": "CultOfVengeanceScout",
+        "id": 30015100
+    },
+    {
+        "name": "DevaHunter_B",
+        "id": 30015200
+    },
+    {
+        "name": "DevaShaman",
+        "id": 30016000
+    },
+    {
+        "name": "CultOfVengeancePriest",
+        "id": 30016100
+    },
+    {
+        "name": "DevaShaman_B",
+        "id": 30016200
+    },
+    {
+        "name": "Enchanteddoll",
+        "id": 30017000
+    },
+    {
+        "name": "Enchanteddoll_A",
+        "id": 30017200
+    },
+    {
+        "name": "HookaChieftain",
+        "id": 30018000
+    },
+    {
+        "name": "ControlledHookaCaptain",
+        "id": 30018100
+    },
+    {
+        "name": "Hooka_OB01",
+        "id": 30018200
+    },
+    {
+        "name": "HookaChieftain_B",
+        "id": 30018300
+    },
+    {
+        "name": "HookaToad",
+        "id": 30018400
+    },
+    {
+        "name": "HookaChieftain_Argonite_Half",
+        "id": 30018500
+    },
+    {
+        "name": "HookaToad_Argonite_Half",
+        "id": 30018600
+    },
+    {
+        "name": "HookaFootman",
+        "id": 30019010
+    },
+    {
+        "name": "HookaSlave",
+        "id": 30019100
+    },
+    {
+        "name": "HookaBomber",
+        "id": 30019210
+    },
+    {
+        "name": "ControlledHookaFootman",
+        "id": 30019300
+    },
+    {
+        "name": "HookaShockTrooper",
+        "id": 30019410
+    },
+    {
+        "name": "HookaBombThrower",
+        "id": 30019500
+    },
+    {
+        "name": "HalloweenHooka",
+        "id": 30019600
+    },
+    {
+        "name": "HookaFootman_A",
+        "id": 30019710
+    },
+    {
+        "name": "HookaFootman_B",
+        "id": 30019810
+    },
+    {
+        "name": "Hyena",
+        "id": 30020000
+    },
+    {
+        "name": "GoldHyena",
+        "id": 30020100
+    },
+    {
+        "name": "HungryHyena",
+        "id": 30020200
+    },
+    {
+        "name": "ViolentHyena",
+        "id": 30020300
+    },
+    {
+        "name": "KilliansServant",
+        "id": 30021000
+    },
+    {
+        "name": "EnragedBear",
+        "id": 30022000
+    },
+    {
+        "name": "EnragedBear_Argonite_Half",
+        "id": 30022100
+    },
+    {
+        "name": "PollutedEarthSpirit",
+        "id": 30023000
+    },
+    {
+        "name": "Pixie",
+        "id": 30024000
+    },
+    {
+        "name": "CharmedPixie",
+        "id": 30024100
+    },
+    {
+        "name": "BeautifulPixie",
+        "id": 30024200
+    },
+    {
+        "name": "Pixie_Argonite",
+        "id": 30024400
+    },
+    {
+        "name": "RedCap",
+        "id": 30025000
+    },
+    {
+        "name": "RedCap_ev",
+        "id": 30025100
+    },
+    {
+        "name": "RedCap_ev",
+        "id": 30025200
+    },
+    {
+        "name": "SabertoothCougar",
+        "id": 30026000
+    },
+    {
+        "name": "VeteranSabretoothCougar",
+        "id": 30026100
+    },
+    {
+        "name": "ShadowArmor",
+        "id": 30027200
+    },
+    {
+        "name": "ShadowArmor_17_Elite",
+        "id": 30027100
+    },
+    {
+        "name": "SikandariEliteSoldier",
+        "id": 30028000
+    },
+    {
+        "name": "MekonariBarbarian",
+        "id": 30028100
+    },
+    {
+        "name": "SikandariOracle",
+        "id": 30029000
+    },
+    {
+        "name": "MekonariWitchdoctor",
+        "id": 30029100
+    },
+    {
+        "name": "MekonariArchon",
+        "id": 30029200
+    },
+    {
+        "name": "SikandariArchon",
+        "id": 30029300
+    },
+    {
+        "name": "UndeadBeast",
+        "id": 30030000
+    },
+    {
+        "name": "UndeadBeast_32_Elite",
+        "id": 30030100
+    },
+    {
+        "name": "UndeadSpearman",
+        "id": 30031000
+    },
+    {
+        "name": "UndeadSpearman_A",
+        "id": 30031100
+    },
+    {
+        "name": "Undeadspearman_20_Elite",
+        "id": 30031200
+    },
+    {
+        "name": "VampirLady",
+        "id": 30032000
+    },
+    {
+        "name": "VampirLady_487_Elite",
+        "id": 30032100
+    },
+    {
+        "name": "PollutedTreeSpirit",
+        "id": 30033000
+    },
+    {
+        "name": "YoungCentaurs",
+        "id": 30034000
+    },
+    {
+        "name": "Q_Mon_Orpheus",
+        "id": 30034100
+    },
+    {
+        "name": "BloodGolem",
+        "id": 30035500
+    },
+    {
+        "name": "ReinforcedBloodGolem",
+        "id": 30035110
+    },
+    {
+        "name": "ForestGuardian",
+        "id": 30035200
+    },
+    {
+        "name": "BloodGolem_A",
+        "id": 30035300
+    },
+    {
+        "name": "ForestGuardian_26_Elite",
+        "id": 30035400
+    },
+    {
+        "name": "BloodCreature",
+        "id": 30036000
+    },
+    {
+        "name": "TwistedBloodCreature",
+        "id": 30036101
+    },
+    {
+        "name": "BloodCreature_Argonite_Half",
+        "id": 30036200
+    },
+    {
+        "name": "BloodCreature_Argonite",
+        "id": 30036300
+    },
+    {
+        "name": "TwistedBloodCreature_Argonite_Half",
+        "id": 30036400
+    },
+    {
+        "name": "TwistedBloodCreature_Argonite",
+        "id": 30036500
+    },
+    {
+        "name": "TwistedBloodCreature_Argonite_First",
+        "id": 30036600
+    },
+    {
+        "name": "BloodCreature_Argonite_First",
+        "id": 30036700
+    },
+    {
+        "name": "GulaChef",
+        "id": 30037000
+    },
+    {
+        "name": "GulaSlaver",
+        "id": 30037100
+    },
+    {
+        "name": "GulaButcher",
+        "id": 30037200
+    },
+    {
+        "name": "GulaSlaver_Fog",
+        "id": 30037300
+    },
+    {
+        "name": "GulaButcher_9_Boss",
+        "id": 30037400
+    },
+    {
+        "name": "Synuuth",
+        "id": 30038000
+    },
+    {
+        "name": "AngrySynuuth",
+        "id": 30038100
+    },
+    {
+        "name": "JomporiPorter",
+        "id": 30039000
+    },
+    {
+        "name": "AngryJomporiPorter",
+        "id": 30039100
+    },
+    {
+        "name": "KoboldRaider",
+        "id": 30040000
+    },
+    {
+        "name": "KoboldStoneThrower",
+        "id": 30040100
+    },
+    {
+        "name": "KoboldFireHandler",
+        "id": 30040200
+    },
+    {
+        "name": "KoboldRaider_AWAKEN",
+        "id": 30040300
+    },
+    {
+        "name": "BabaHooka",
+        "id": 30041020
+    },
+    {
+        "name": "HookaWoodcutter",
+        "id": 30041100
+    },
+    {
+        "name": "Hooka_OB03",
+        "id": 30041200
+    },
+    {
+        "name": "HookaWoodcutte_B",
+        "id": 30041300
+    },
+    {
+        "name": "FuryMaligoth",
+        "id": 30042000
+    },
+    {
+        "name": "BetrayerShamael",
+        "id": 30042100
+    },
+    {
+        "name": "KoboldProphet",
+        "id": 30043000
+    },
+    {
+        "name": "MightyKuchartProphet",
+        "id": 30043100
+    },
+    {
+        "name": "KoboldProphet_Desert",
+        "id": 30043200
+    },
+    {
+        "name": "MightyKuchartProphet_Argonite_Half",
+        "id": 30043300
+    },
+    {
+        "name": "KoboldProphet_Desert_AWAKEN",
+        "id": 30043400
+    },
+    {
+        "name": "VampirHandyman",
+        "id": 30044000
+    },
+    {
+        "name": "VampirLooter",
+        "id": 30044100
+    },
+    {
+        "name": "CreationPreacher",
+        "id": 30044200
+    },
+    {
+        "name": "VampirHandyman_A",
+        "id": 30044300
+    },
+    {
+        "name": "VampirLooter_A",
+        "id": 30044400
+    },
+    {
+        "name": "SlimCastanicMadman",
+        "id": 30045000
+    },
+    {
+        "name": "ServantOfGiant",
+        "id": 30046000
+    },
+    {
+        "name": "Creationfarmer",
+        "id": 30047000
+    },
+    {
+        "name": "FatAmanMadman",
+        "id": 30048000
+    },
+    {
+        "name": "VampirGentleman",
+        "id": 30049000
+    },
+    {
+        "name": "Q_Mon_Vikar",
+        "id": 30049100
+    },
+    {
+        "name": "VampirGentleman_487_Elite",
+        "id": 30049200
+    },
+    {
+        "name": "KoboldMarauder",
+        "id": 30050000
+    },
+    {
+        "name": "KoboldMiner",
+        "id": 30050100
+    },
+    {
+        "name": "HoundMaligoth",
+        "id": 30051000
+    },
+    {
+        "name": "HoundMaligoth_Argonite_Half",
+        "id": 30051200
+    },
+    {
+        "name": "MadmanDuo",
+        "id": 30052000
+    },
+    {
+        "name": "CloderA",
+        "id": 30053000
+    },
+    {
+        "name": "CloderB",
+        "id": 30053100
+    },
+    {
+        "name": "CloderB_Freeboss",
+        "id": 30053200
+    },
+    {
+        "name": "StoneHead",
+        "id": 30054000
+    },
+    {
+        "name": "DwarfMadman",
+        "id": 30055000
+    },
+    {
+        "name": "AngryDwarfMadman",
+        "id": 30055100
+    },
+    {
+        "name": "CreationCultist",
+        "id": 30055200
+    },
+    {
+        "name": "KoboldFighter",
+        "id": 30056000
+    },
+    {
+        "name": "MightyKuchartFighter",
+        "id": 30056100
+    },
+    {
+        "name": "KucharteFighter_OB01",
+        "id": 30056200
+    },
+    {
+        "name": "KoboldFighter_Desert",
+        "id": 30056300
+    },
+    {
+        "name": "MightyKuchartFighter_Argonite_Half",
+        "id": 30056400
+    },
+    {
+        "name": "KoboldFighter_Desert_AWAKEN",
+        "id": 30056500
+    },
+    {
+        "name": "KoboldBeliever",
+        "id": 30057000
+    },
+    {
+        "name": "KucharteBeliever_OB01",
+        "id": 30057100
+    },
+    {
+        "name": "KoboldBeliever_Desert",
+        "id": 30057200
+    },
+    {
+        "name": "CreationWorkman",
+        "id": 30058000
+    },
+    {
+        "name": "FollowersOfLida",
+        "id": 30059000
+    },
+    {
+        "name": "UnseelieNoble",
+        "id": 30060000
+    },
+    {
+        "name": "UnseelieNoble_A",
+        "id": 30060100
+    },
+    {
+        "name": "UnseelieNoble_28_Elite",
+        "id": 30060300
+    },
+    {
+        "name": "UnseelieNoble_A_Argonite_Half",
+        "id": 30060400
+    },
+    {
+        "name": "Undeadcavalry",
+        "id": 30061000
+    },
+    {
+        "name": "KnightOfDeath",
+        "id": 30061100
+    },
+    {
+        "name": "Undeadcavalry_Freeb",
+        "id": 30061200
+    },
+    {
+        "name": "ArgoniteLancer",
+        "id": 30061300
+    },
+    {
+        "name": "ArgoniteLancer_R",
+        "id": 30061400
+    },
+    {
+        "name": "PrionMadman",
+        "id": 30062000
+    },
+    {
+        "name": "PrionRaider",
+        "id": 30062100
+    },
+    {
+        "name": "PrionWarrior",
+        "id": 30063000
+    },
+    {
+        "name": "PrionBerserker",
+        "id": 30063100
+    },
+    {
+        "name": "DarkWitchMaster",
+        "id": 30064000
+    },
+    {
+        "name": "ChaosWitchMaster",
+        "id": 30064100
+    },
+    {
+        "name": "DarkpriestessAkia",
+        "id": 30064201
+    },
+    {
+        "name": "Orcan",
+        "id": 30065000
+    },
+    {
+        "name": "OrcanPirate",
+        "id": 30065100
+    },
+    {
+        "name": "WildOrcan",
+        "id": 30065200
+    },
+    {
+        "name": "Orcan_OB01",
+        "id": 30065300
+    },
+    {
+        "name": "OcanPirate_Q",
+        "id": 30065400
+    },
+    {
+        "name": "Orcan_Freeboss",
+        "id": 30065501
+    },
+    {
+        "name": "DestroyerOfFire",
+        "id": 30066002
+    },
+    {
+        "name": "BurningDevastator",
+        "id": 30066100
+    },
+    {
+        "name": "RampagingInferno",
+        "id": 30066200
+    },
+    {
+        "name": "LesserElementalBlue",
+        "id": 30067003
+    },
+    {
+        "name": "ElementalKumas",
+        "id": 30067100
+    },
+    {
+        "name": "SacredGuardian",
+        "id": 30067200
+    },
+    {
+        "name": "LesserElementalBlue_Boss",
+        "id": 30067300
+    },
+    {
+        "name": "SacredGuardian_Boss",
+        "id": 30067500
+    },
+    {
+        "name": "SacredGuardian_Boss01",
+        "id": 30067600
+    },
+    {
+        "name": "YuantiPirate",
+        "id": 30068003
+    },
+    {
+        "name": "YuantiPirateRaider",
+        "id": 30068100
+    },
+    {
+        "name": "ArgonizedRaider",
+        "id": 30068200
+    },
+    {
+        "name": "YuantiPirate_Boss",
+        "id": 30068300
+    },
+    {
+        "name": "YuantiPirateRaider_31_Elite",
+        "id": 30068400
+    },
+    {
+        "name": "YuantiPirate_Boss_Argonite_Half",
+        "id": 30068500
+    },
+    {
+        "name": "FrostGiantJarl",
+        "id": 30069003
+    },
+    {
+        "name": "InfestedFrostGiant",
+        "id": 90020002
+    },
+    {
+        "name": "LastemperorBelten",
+        "id": 90021002
+    },
+    {
+        "name": "ForestGiant",
+        "id": 90022002
+    },
+    {
+        "name": "LastemperorBelten_34_Elite",
+        "id": 30069400
+    },
+    {
+        "name": "FrostGiantJarl_AWAKEN",
+        "id": 30069700
+    },
+    {
+        "name": "Pigling",
+        "id": 30070000
+    },
+    {
+        "name": "SwiftPigling",
+        "id": 30070100
+    },
+    {
+        "name": "OrcanMinimi",
+        "id": 30071000
+    },
+    {
+        "name": "ControlledOrcanMinimi",
+        "id": 30071100
+    },
+    {
+        "name": "AlpinePredator",
+        "id": 90030005
+    },
+    {
+        "name": "TwistedAlpinePredator",
+        "id": 90030004
+    },
+    {
+        "name": "TwistedAlpinePredator_Boss",
+        "id": 30072200
+    },
+    {
+        "name": "TwistedAlpinePredator_R",
+        "id": 30072300
+    },
+    {
+        "name": "AbandonedAutomatedGuardian",
+        "id": 30073000
+    },
+    {
+        "name": "KnightPlasmaGuardian",
+        "id": 30073100
+    },
+    {
+        "name": "TemplePlasmaGuardian",
+        "id": 30073200
+    },
+    {
+        "name": "KnightPlasmaGuardian_27_Elite",
+        "id": 30073300
+    },
+    {
+        "name": "KnightPlasmaGuardian_27_Elite_Argonite_half",
+        "id": 30073400
+    },
+    {
+        "name": "ArgoniteKallashProtector",
+        "id": 30074010
+    },
+    {
+        "name": "MithrilGolem",
+        "id": 30074100
+    },
+    {
+        "name": "TrainedTschodanBeast",
+        "id": 30075000
+    },
+    {
+        "name": "FrenziedTschodanBeast",
+        "id": 30075100
+    },
+    {
+        "name": "TschodanBeast",
+        "id": 30075200
+    },
+    {
+        "name": "RampagingTschodanBeast",
+        "id": 30075300
+    },
+    {
+        "name": "ShrewdTschodanBeast",
+        "id": 30075400
+    },
+    {
+        "name": "ArgoniteGilgashGuardian",
+        "id": 30076003
+    },
+    {
+        "name": "ArgoniteGilgashDefender",
+        "id": 30076100
+    },
+    {
+        "name": "GeneralVespard",
+        "id": 30076200
+    },
+    {
+        "name": "AvatarOfDarkness",
+        "id": 30077002
+    },
+    {
+        "name": "GuardianOfLokh",
+        "id": 30077100
+    },
+    {
+        "name": "Terkasia",
+        "id": 30077200
+    },
+    {
+        "name": "AvatarOfDarkness_20_Boss",
+        "id": 30077300
+    },
+    {
+        "name": "Terkasia_28_Boss",
+        "id": 30077400
+    },
+    {
+        "name": "Arctus",
+        "id": 30078000
+    },
+    {
+        "name": "EnragedIceBear",
+        "id": 30078100
+    },
+    {
+        "name": "EnragedIceBear_Argonite_Half",
+        "id": 30078200
+    },
+    {
+        "name": "ArgoniteKallashGuardLeader",
+        "id": 30079010
+    },
+    {
+        "name": "ArgoniteKallashAssaultLeader",
+        "id": 30079100
+    },
+    {
+        "name": "ArgoniteKallashProtectorLeader",
+        "id": 30079200
+    },
+    {
+        "name": "CommanderBarcadus",
+        "id": 30079300
+    },
+    {
+        "name": "CommanderBarcadus_R",
+        "id": 30079400
+    },
+    {
+        "name": "ArchakalashTrooper",
+        "id": 30080010
+    },
+    {
+        "name": "PerfectArchakalash",
+        "id": 30080100
+    },
+    {
+        "name": "PerfectArchakalash_471_Elite",
+        "id": 30080200
+    },
+    {
+        "name": "ArchakalashTrooper_R",
+        "id": 30080300
+    },
+    {
+        "name": "Basilisk",
+        "id": 30081002
+    },
+    {
+        "name": "Basilisk_Female",
+        "id": 30081100
+    },
+    {
+        "name": "Basilisk_21_Elite",
+        "id": 30081200
+    },
+    {
+        "name": "GiantTula",
+        "id": 30082003
+    },
+    {
+        "name": "GiantTula_Desert",
+        "id": 30082100
+    },
+    {
+        "name": "GiantTula_Female",
+        "id": 30082200
+    },
+    {
+        "name": "GiantTula_Freeboss",
+        "id": 30082300
+    },
+    {
+        "name": "GiantStormDrake",
+        "id": 30083002
+    },
+    {
+        "name": "YuantiShaman",
+        "id": 30084001
+    },
+    {
+        "name": "YuantiShaman_12_Elite",
+        "id": 30084100
+    },
+    {
+        "name": "YuantiShaman_A",
+        "id": 30084200
+    },
+    {
+        "name": "Akasha",
+        "id": 30084300
+    },
+    {
+        "name": "YuantiBuserker",
+        "id": 30085002
+    },
+    {
+        "name": "Tulsa",
+        "id": 90040001
+    },
+    {
+        "name": "YuantiBuserker_Boss",
+        "id": 30085300
+    },
+    {
+        "name": "DarkReaper",
+        "id": 30086004
+    },
+    {
+        "name": "HellboundBeast",
+        "id": 90050004
+    },
+    {
+        "name": "MightyDarkreaper",
+        "id": 90051004
+    },
+    {
+        "name": "HellboundBeast_15_Elite",
+        "id": 30086300
+    },
+    {
+        "name": "MightyDarkReaper_Boss_471_Boss",
+        "id": 30086400
+    },
+    {
+        "name": "DarkReeper_25_Elite",
+        "id": 30086500
+    },
+    {
+        "name": "DarkReaper_Boss",
+        "id": 30086600
+    },
+    {
+        "name": "DarkReaper_AWAKEN",
+        "id": 30086900
+    },
+    {
+        "name": "ViolentArachne",
+        "id": 30087002
+    },
+    {
+        "name": "ViolentForestSpider",
+        "id": 30087100
+    },
+    {
+        "name": "CraftyArachne",
+        "id": 30088003
+    },
+    {
+        "name": "CraftyForestSpider",
+        "id": 30088100
+    },
+    {
+        "name": "CraftyForestSpider_B",
+        "id": 30088400
+    },
+    {
+        "name": "CraftyForestSpider_A",
+        "id": 30088500
+    },
+    {
+        "name": "YuantiWarleader",
+        "id": 30089000
+    },
+    {
+        "name": "PirateYuantiCaptain",
+        "id": 30089100
+    },
+    {
+        "name": "YuantiWarleader_A",
+        "id": 30089200
+    },
+    {
+        "name": "YuantiWarleader_Argonite_Half",
+        "id": 30089300
+    },
+    {
+        "name": "ArgoniteKhelvaWorker",
+        "id": 30090010
+    },
+    {
+        "name": "ArgoniteKhelvaPatrol",
+        "id": 30090100
+    },
+    {
+        "name": "ArgoniteKhelvaTrooper",
+        "id": 30090200
+    },
+    {
+        "name": "ArgoniteKhelvaZealot",
+        "id": 30090300
+    },
+    {
+        "name": "ArgoniteKhelvaWatcher",
+        "id": 30090400
+    },
+    {
+        "name": "ArgoniteKhelvaServant",
+        "id": 30090500
+    },
+    {
+        "name": "CorruptedKhelva",
+        "id": 30090700
+    },
+    {
+        "name": "DyingCromos",
+        "id": 30091000
+    },
+    {
+        "name": "BeastGergon",
+        "id": 30091100
+    },
+    {
+        "name": "DecayingArgass",
+        "id": 30092000
+    },
+    {
+        "name": "WhiteHart",
+        "id": 30092100
+    },
+    {
+        "name": "DyingGhillieDhu",
+        "id": 30093003
+    },
+    {
+        "name": "DecayingGhillieDhu",
+        "id": 30093100
+    },
+    {
+        "name": "SageMaznel",
+        "id": 30093200
+    },
+    {
+        "name": "ProtectGhillieDhu",
+        "id": 30093300
+    },
+    {
+        "name": "BurningTreespirit",
+        "id": 30093400
+    },
+    {
+        "name": "FlowerTreespirit",
+        "id": 30093500
+    },
+    {
+        "name": "FlowerTreespirit_A",
+        "id": 30093600
+    },
+    {
+        "name": "SpiritOfNature",
+        "id": 30094000
+    },
+    {
+        "name": "FallenSpiritOfNature",
+        "id": 30094100
+    },
+    {
+        "name": "DarkMarauder",
+        "id": 30095000
+    },
+    {
+        "name": "DarkLeech",
+        "id": 30095100
+    },
+    {
+        "name": "BlackMarauder",
+        "id": 30096000
+    },
+    {
+        "name": "BlackMarauder_AWAKEN",
+        "id": 30096100
+    },
+    {
+        "name": "KalanHeavyWarrior",
+        "id": 30097000
+    },
+    {
+        "name": "KalanShockTrooper",
+        "id": 30097100
+    },
+    {
+        "name": "KalanHeavyWarrior_MR",
+        "id": 30097200
+    },
+    {
+        "name": "KalanHeavyWarrior_R",
+        "id": 30097300
+    },
+    {
+        "name": "KalanShockTrooper_R",
+        "id": 30097400
+    },
+    {
+        "name": "Ramayan",
+        "id": 30098000
+    },
+    {
+        "name": "HighpriestArcnan",
+        "id": 30098100
+    },
+    {
+        "name": "Ramayan_R",
+        "id": 30098200
+    },
+    {
+        "name": "HighpriestArcnan_R",
+        "id": 30098300
+    },
+    {
+        "name": "ShamBattleGolem",
+        "id": 30099000
+    },
+    {
+        "name": "ShamBattleGolem_19_Elite",
+        "id": 30099100
+    },
+    {
+        "name": "PuppetDummy",
+        "id": 30100000
+    },
+    {
+        "name": "AngryDummy",
+        "id": 30100100
+    },
+    {
+        "name": "AngryDummy_A",
+        "id": 30100200
+    },
+    {
+        "name": "PirateDeva",
+        "id": 30101000
+    },
+    {
+        "name": "PirateGuard",
+        "id": 30101100
+    },
+    {
+        "name": "ControlledGulaWarrior",
+        "id": 30102000
+    },
+    {
+        "name": "ControlledGulaRaider",
+        "id": 30102100
+    },
+    {
+        "name": "PirateSynuuth",
+        "id": 30103002
+    },
+    {
+        "name": "SynuuthLaborer",
+        "id": 30103100
+    },
+    {
+        "name": "WitchApprentice",
+        "id": 30104000
+    },
+    {
+        "name": "WitchApprentice_Top",
+        "id": 30104100
+    },
+    {
+        "name": "UndeadSynuuthSlave",
+        "id": 30105000
+    },
+    {
+        "name": "UndeadSynuuthSlaveLeader",
+        "id": 30105100
+    },
+    {
+        "name": "UnseelieWarrior",
+        "id": 30106000
+    },
+    {
+        "name": "UnseelieWizard",
+        "id": 30106100
+    },
+    {
+        "name": "UnseelieElementalist",
+        "id": 30106200
+    },
+    {
+        "name": "ClownOfKillian",
+        "id": 30107000
+    },
+    {
+        "name": "ClownOfKillian_A",
+        "id": 30107100
+    },
+    {
+        "name": "ClownOfKillian_B",
+        "id": 30107200
+    },
+    {
+        "name": "ClownOfKillian_33_Elite",
+        "id": 30107300
+    },
+    {
+        "name": "UndeadEscort",
+        "id": 30108000
+    },
+    {
+        "name": "UndeadRanger",
+        "id": 30108100
+    },
+    {
+        "name": "PoporiBrute",
+        "id": 30109000
+    },
+    {
+        "name": "DruggedShurianWarrior",
+        "id": 30110000
+    },
+    {
+        "name": "DestroyerGallan",
+        "id": 30110100
+    },
+    {
+        "name": "DruggedShurianWarrior_29_Elite",
+        "id": 30110200
+    },
+    {
+        "name": "DruggedShurianSummoner",
+        "id": 30111000
+    },
+    {
+        "name": "DruggedShurianSummoner",
+        "id": 30111100
+    },
+    {
+        "name": "SummonedHellhound",
+        "id": 30112000
+    },
+    {
+        "name": "ExplosiveHellhound",
+        "id": 30112100
+    },
+    {
+        "name": "ExplosiveHellhound_29_Elite",
+        "id": 30112200
+    },
+    {
+        "name": "DrownedSailor",
+        "id": 30113000
+    },
+    {
+        "name": "DrownedFirstOfficer",
+        "id": 30113100
+    },
+    {
+        "name": "DrownedSailor_Low",
+        "id": 30113200
+    },
+    {
+        "name": "DrownedSailor_High",
+        "id": 30113300
+    },
+    {
+        "name": "DrownedFirstOfficer_Low",
+        "id": 30113400
+    },
+    {
+        "name": "DrownedFirstOfficer_High",
+        "id": 30113500
+    },
+    {
+        "name": "DrownedFirstOfficer_11_Elite",
+        "id": 30113600
+    },
+    {
+        "name": "DrownedSailor_11_Elite",
+        "id": 30113700
+    },
+    {
+        "name": "DrownedSailor_31_Elite",
+        "id": 30113800
+    },
+    {
+        "name": "UndeadCommander",
+        "id": 30114000
+    },
+    {
+        "name": "ForestDeathknight",
+        "id": 30114100
+    },
+    {
+        "name": "UndeadCommander_20_Elite",
+        "id": 30114200
+    },
+    {
+        "name": "UndeadCommander_32_Elite",
+        "id": 30114300
+    },
+    {
+        "name": "UndeadCommander_32_Elite_Argonite_Half",
+        "id": 30114400
+    },
+    {
+        "name": "SyreneOfWind",
+        "id": 30115000
+    },
+    {
+        "name": "SyreneOfTempest",
+        "id": 30115100
+    },
+    {
+        "name": "SikandariBlindGuardian",
+        "id": 30116000
+    },
+    {
+        "name": "SikandariBlindGuardian_B",
+        "id": 30116100
+    },
+    {
+        "name": "SikandariBlindGuardian_B_Argonite_Half",
+        "id": 30116200
+    },
+    {
+        "name": "TorturedSouls",
+        "id": 30117000
+    },
+    {
+        "name": "CursedSoul",
+        "id": 30117100
+    },
+    {
+        "name": "TorturedSouls_20_Boss",
+        "id": 30117200
+    },
+    {
+        "name": "NympiWarrior",
+        "id": 30118000
+    },
+    {
+        "name": "NympiElementalist",
+        "id": 30118100
+    },
+    {
+        "name": "NympiWarrior_Argonite_Half",
+        "id": 30118200
+    },
+    {
+        "name": "NympiElementalist_Argonite_Half",
+        "id": 30118300
+    },
+    {
+        "name": "DumperkanFighter",
+        "id": 30119000
+    },
+    {
+        "name": "DumperkanCaster",
+        "id": 30119100
+    },
+    {
+        "name": "DumperkanFighter_B",
+        "id": 30119200
+    },
+    {
+        "name": "DumperkanCaster_B",
+        "id": 30119300
+    },
+    {
+        "name": "SalvaGangAmbusher",
+        "id": 30120000
+    },
+    {
+        "name": "SalvaGangBurglar",
+        "id": 30120100
+    },
+    {
+        "name": "TownMilitiaOfficier",
+        "id": 30121000
+    },
+    {
+        "name": "TownMilitia",
+        "id": 30122000
+    },
+    {
+        "name": "TownMilitiaSergeant",
+        "id": 30122100
+    },
+    {
+        "name": "KaidunsWizard",
+        "id": 30123000
+    },
+    {
+        "name": "KaidunsShaman",
+        "id": 30123100
+    },
+    {
+        "name": "KaidunsWizard_Boss",
+        "id": 30123200
+    },
+    {
+        "name": "KaidunsEliteWarrior",
+        "id": 30124000
+    },
+    {
+        "name": "KaidunsWarrior",
+        "id": 30124100
+    },
+    {
+        "name": "KaidunsBabarian",
+        "id": 30124200
+    },
+    {
+        "name": "BisqueDoll",
+        "id": 30125000
+    },
+    {
+        "name": "BisqueLady",
+        "id": 30125100
+    },
+    {
+        "name": "BisqueDoll_A",
+        "id": 30125200
+    },
+    {
+        "name": "BronzeGolemFighter",
+        "id": 30126000
+    },
+    {
+        "name": "BronzeGolemGuardian",
+        "id": 30126100
+    },
+    {
+        "name": "BronzeGolemFighter_Argonite_Half",
+        "id": 30126200
+    },
+    {
+        "name": "ShadowMonster",
+        "id": 30127000
+    },
+    {
+        "name": "ShadowMonsterSpawn",
+        "id": 30127100
+    },
+    {
+        "name": "CorruptedSoul",
+        "id": 30127200
+    },
+    {
+        "name": "ShadowMonsterSpawn_B",
+        "id": 30127300
+    },
+    {
+        "name": "ShadowMonster_33_Elite",
+        "id": 30127400
+    },
+    {
+        "name": "CorruptedSoul_AWAKEN",
+        "id": 30127600
+    },
+    {
+        "name": "Pygmytula",
+        "id": 30128000
+    },
+    {
+        "name": "PygmytulaMiss",
+        "id": 30129000
+    },
+    {
+        "name": "PygmytulaMiss_A",
+        "id": 30129100
+    },
+    {
+        "name": "WendigoShaman",
+        "id": 30130000
+    },
+    {
+        "name": "WendigoShaman_34_Elite",
+        "id": 30130100
+    },
+    {
+        "name": "WendigoShaman_Argonite_Half",
+        "id": 30130300
+    },
+    {
+        "name": "WendigoShaman_AWAKEN",
+        "id": 30130400
+    },
+    {
+        "name": "WendigoWarrior",
+        "id": 30131000
+    },
+    {
+        "name": "WendigoHunter",
+        "id": 30131100
+    },
+    {
+        "name": "BrainWashingWendigofighter",
+        "id": 30131200
+    },
+    {
+        "name": "WendigoWarrior_34_Elite",
+        "id": 30131300
+    },
+    {
+        "name": "WendigoWarrior_Argonite_Half",
+        "id": 30131400
+    },
+    {
+        "name": "WendigoWarrior_Argonite",
+        "id": 30131500
+    },
+    {
+        "name": "WendigoWarrior_Argonite_First",
+        "id": 30131600
+    },
+    {
+        "name": "WendigoWarrior_AWAKEN",
+        "id": 30131700
+    },
+    {
+        "name": "YuantiWarrior",
+        "id": 30132000
+    },
+    {
+        "name": "YuantiSpineWarrior",
+        "id": 30132100
+    },
+    {
+        "name": "YuantiWarrior_Argonite_Half",
+        "id": 30132200
+    },
+    {
+        "name": "YuantiWarrior_AWAKEN",
+        "id": 30132300
+    },
+    {
+        "name": "ArgoniteShamalanOracle",
+        "id": 30133200
+    },
+    {
+        "name": "ArgoniteShamalanBattleOracle",
+        "id": 30133100
+    },
+    {
+        "name": "ArgoniteShamalanBattleOracle_R",
+        "id": 30133300
+    },
+    {
+        "name": "Volcanus",
+        "id": 90000000
+    },
+    {
+        "name": "CelestialGuardian",
+        "id": 30134100
+    },
+    {
+        "name": "CelestialGuardian_9_Boss",
+        "id": 30134200
+    },
+    {
+        "name": "Volcanus_A",
+        "id": 30134300
+    },
+    {
+        "name": "LokianBeast",
+        "id": 30134400
+    },
+    {
+        "name": "LokianBeast_Argonite_Half",
+        "id": 30134700
+    },
+    {
+        "name": "Volcan",
+        "id": 30135000
+    },
+    {
+        "name": "Lance_Darker_1",
+        "id": 30136000
+    },
+    {
+        "name": "Lance_Darker_2",
+        "id": 30136100
+    },
+    {
+        "name": "Lance_Darker_3",
+        "id": 30136200
+    },
+    {
+        "name": "Cultist_Lancer",
+        "id": 30136300
+    },
+    {
+        "name": "Cultist_Lancer_26_Elite",
+        "id": 30136400
+    },
+    {
+        "name": "Cultist_Lancer_Boss",
+        "id": 30136500
+    },
+    {
+        "name": "Archer_Darker_1",
+        "id": 30137000
+    },
+    {
+        "name": "Archer_Darker_2",
+        "id": 30137100
+    },
+    {
+        "name": "Archer_Darker_3",
+        "id": 30137200
+    },
+    {
+        "name": "Archer_Darker_3_Argonite_Half",
+        "id": 30137300
+    },
+    {
+        "name": "Slayer_Darker_1",
+        "id": 30138000
+    },
+    {
+        "name": "Slayer_Darker_2",
+        "id": 30138100
+    },
+    {
+        "name": "Slayer_Darker_3",
+        "id": 30138200
+    },
+    {
+        "name": "Cultist_Fighter_11_Elite",
+        "id": 30138300
+    },
+    {
+        "name": "Cultist_Fighter_27_Elite",
+        "id": 30138400
+    },
+    {
+        "name": "Slayer_Darker_3_Argonite_Half",
+        "id": 30138500
+    },
+    {
+        "name": "Priest_Darker_1",
+        "id": 30139000
+    },
+    {
+        "name": "Priest_Darker_2",
+        "id": 30139100
+    },
+    {
+        "name": "Priest_Darker_3",
+        "id": 30139200
+    },
+    {
+        "name": "Cultist_Priest",
+        "id": 30139300
+    },
+    {
+        "name": "Cultist_Priest_Dagon",
+        "id": 30139400
+    },
+    {
+        "name": "Priest_Darker_Boss",
+        "id": 30139500
+    },
+    {
+        "name": "Elementalist_Darker_1",
+        "id": 30140000
+    },
+    {
+        "name": "Elementalist_Darker_2",
+        "id": 30140100
+    },
+    {
+        "name": "Elementalist_Darker_3",
+        "id": 30140200
+    },
+    {
+        "name": "Cultist_Mystic",
+        "id": 30140300
+    },
+    {
+        "name": "Cultist_Mystic_11_Elite",
+        "id": 30140400
+    },
+    {
+        "name": "Cultist_Mystic_17_Elite",
+        "id": 30140500
+    },
+    {
+        "name": "Cultist_Mystic_26_Elite",
+        "id": 30140600
+    },
+    {
+        "name": "Cultist_Mystic_Dagon_A",
+        "id": 30140700
+    },
+    {
+        "name": "Cultist_Mystic_Dagon_B",
+        "id": 30140800
+    },
+    {
+        "name": "Warrior_Darker_1",
+        "id": 30141000
+    },
+    {
+        "name": "Warrior_Darker_2",
+        "id": 30141100
+    },
+    {
+        "name": "Warrior_Darker_3",
+        "id": 30141200
+    },
+    {
+        "name": "Cultist_Warrior",
+        "id": 30141300
+    },
+    {
+        "name": "Cultist_Warrior_19_Elite",
+        "id": 30141400
+    },
+    {
+        "name": "Warrior_Darker_3_Argonite_Half",
+        "id": 30141500
+    },
+    {
+        "name": "Cultist_Warrior_Dagon",
+        "id": 30141600
+    },
+    {
+        "name": "Berserker_Darker_1",
+        "id": 30142000
+    },
+    {
+        "name": "Berserker_Darker_2",
+        "id": 30142100
+    },
+    {
+        "name": "Berserker_Darker_3",
+        "id": 30142200
+    },
+    {
+        "name": "Heretic_Berserker",
+        "id": 30142300
+    },
+    {
+        "name": "Cultist_Berserk",
+        "id": 30142400
+    },
+    {
+        "name": "Cultist_Berserk_11_Elite",
+        "id": 30142500
+    },
+    {
+        "name": "Cultist_Berserk_17_Elite",
+        "id": 30142600
+    },
+    {
+        "name": "Cultist_Berserk_Dagon",
+        "id": 30142700
+    },
+    {
+        "name": "Sorcerer_Darker_1",
+        "id": 30143000
+    },
+    {
+        "name": "Sorcerer_Darker_2",
+        "id": 30143100
+    },
+    {
+        "name": "Sorcerer_Darker_3",
+        "id": 30143200
+    },
+    {
+        "name": "Heretic_Sorcerer",
+        "id": 30143300
+    },
+    {
+        "name": "Cultist_Sorcerer",
+        "id": 30143400
+    },
+    {
+        "name": "Cultist_Sorcerer_19_Elite",
+        "id": 30143500
+    },
+    {
+        "name": "Sorcerer_Darker_1B",
+        "id": 30143600
+    },
+    {
+        "name": "Dark_King_1",
+        "id": 30144000
+    },
+    {
+        "name": "Dark_King_2",
+        "id": 30144100
+    },
+    {
+        "name": "Dark_King_3",
+        "id": 30144200
+    },
+    {
+        "name": "Dark_Rook_Slayer_1",
+        "id": 30145000
+    },
+    {
+        "name": "Dark_Rook_Slayer_2",
+        "id": 30145100
+    },
+    {
+        "name": "Dark_Rook_Slayer_3",
+        "id": 30145200
+    },
+    {
+        "name": "Dark_Rook_Slayer_Stone",
+        "id": 30145300
+    },
+    {
+        "name": "Dark_Rook_Warrior_1",
+        "id": 30146000
+    },
+    {
+        "name": "Dark_Rook_Warrior_2",
+        "id": 30146100
+    },
+    {
+        "name": "Dark_Rook_Warrior_3",
+        "id": 30146200
+    },
+    {
+        "name": "Dark_Queen_1",
+        "id": 30147000
+    },
+    {
+        "name": "Dark_Queen_2",
+        "id": 30147100
+    },
+    {
+        "name": "Dark_Queen_3",
+        "id": 30147200
+    },
+    {
+        "name": "Dark_Queen_Stone",
+        "id": 30147300
+    },
+    {
+        "name": "Dark_Knight_1",
+        "id": 30148000
+    },
+    {
+        "name": "Dark_Knight_2",
+        "id": 30148100
+    },
+    {
+        "name": "Dark_Knight_3",
+        "id": 30148200
+    },
+    {
+        "name": "Dark_Knight_Stone",
+        "id": 30148300
+    },
+    {
+        "name": "Dark_Pawn_Archer_1",
+        "id": 30149000
+    },
+    {
+        "name": "Dark_Pawn_Archer_2",
+        "id": 30149100
+    },
+    {
+        "name": "Dark_Pawn_Archer_3",
+        "id": 30149200
+    },
+    {
+        "name": "Dark_Pawn_Archer_Stone",
+        "id": 30149300
+    },
+    {
+        "name": "Dark_Pawn_Berserker_1",
+        "id": 30150000
+    },
+    {
+        "name": "Dark_Pawn_Berserker_2",
+        "id": 30150100
+    },
+    {
+        "name": "Dark_Pawn_Berserker_3",
+        "id": 30150200
+    },
+    {
+        "name": "Dark_Bishop_1",
+        "id": 30151000
+    },
+    {
+        "name": "Dark_Bishop_2",
+        "id": 30151100
+    },
+    {
+        "name": "Dark_Bishop_3",
+        "id": 30151200
+    },
+    {
+        "name": "Dark_Bishop_Stone",
+        "id": 30151300
+    },
+    {
+        "name": "GiantGriffin",
+        "id": 30152000
+    },
+    {
+        "name": "GiantGriffin_B",
+        "id": 30152100
+    },
+    {
+        "name": "Arkus",
+        "id": 30153010
+    },
+    {
+        "name": "Arkus_B",
+        "id": 30153100
+    },
+    {
+        "name": "Pandurus",
+        "id": 30154000
+    },
+    {
+        "name": "Pandurus_B",
+        "id": 30154100
+    },
+    {
+        "name": "Pandurus_31_Elite",
+        "id": 30154300
+    },
+    {
+        "name": "Toad",
+        "id": 30155000
+    },
+    {
+        "name": "Ssalissali",
+        "id": 30156000
+    },
+    {
+        "name": "SsalissaliKing",
+        "id": 30156100
+    },
+    {
+        "name": "Seal",
+        "id": 30157000
+    },
+    {
+        "name": "Rhinoceros",
+        "id": 30158000
+    },
+    {
+        "name": "Ostrich",
+        "id": 30159000
+    },
+    {
+        "name": "Mole",
+        "id": 30160000
+    },
+    {
+        "name": "Lizard",
+        "id": 30161000
+    },
+    {
+        "name": "Honeybee",
+        "id": 30162000
+    },
+    {
+        "name": "Gorilla",
+        "id": 30163000
+    },
+    {
+        "name": "Gorilla_Freeboss",
+        "id": 30163100
+    },
+    {
+        "name": "Goral",
+        "id": 30164000
+    },
+    {
+        "name": "Ghost",
+        "id": 30165000
+    },
+    {
+        "name": "Ghost2",
+        "id": 30166000
+    },
+    {
+        "name": "Eatingplant",
+        "id": 30167000
+    },
+    {
+        "name": "Crab",
+        "id": 30168000
+    },
+    {
+        "name": "Scorpion",
+        "id": 30169000
+    },
+    {
+        "name": "PossessionGiant",
+        "id": 30171000
+    },
+    {
+        "name": "Armadillo",
+        "id": 30172000
+    },
+    {
+        "name": "MagicianDragon",
+        "id": 30173000
+    },
+    {
+        "name": "MagicianDragon_Boss",
+        "id": 30173100
+    },
+    {
+        "name": "ArgoniteMotherShip",
+        "id": 30174000
+    },
+    {
+        "name": "ArgoniteMotherShip_A",
+        "id": 30174100
+    },
+    {
+        "name": "ArgoniteMotherShip_W",
+        "id": 30174200
+    },
+    {
+        "name": "ArgoniteMotherShip_A_R",
+        "id": 30174300
+    },
+    {
+        "name": "ArgoniteGiant",
+        "id": 30175010
+    },
+    {
+        "name": "ArgoniteGiant_R",
+        "id": 30175100
+    },
+    {
+        "name": "FatHunter",
+        "id": 30176000
+    },
+    {
+        "name": "ArgoniteFemaleMagician",
+        "id": 30177000
+    },
+    {
+        "name": "ArgoniteFemaleMagician_R",
+        "id": 30177100
+    },
+    {
+        "name": "GuardCube",
+        "id": 30178000
+    },
+    {
+        "name": "GuardCube_A",
+        "id": 30178100
+    },
+    {
+        "name": "BossGhilliedhu",
+        "id": 30179000
+    },
+    {
+        "name": "BossGhilliedhu_A",
+        "id": 30179100
+    },
+    {
+        "name": "ShurianHunter",
+        "id": 30180000
+    },
+    {
+        "name": "WormFlower",
+        "id": 30181000
+    },
+    {
+        "name": "BlackPig",
+        "id": 30182000
+    },
+    {
+        "name": "SpreadMind",
+        "id": 30183000
+    },
+    {
+        "name": "LegSpider",
+        "id": 30184000
+    },
+    {
+        "name": "LegSpider_AWAKEN",
+        "id": 30184100
+    },
+    {
+        "name": "GiantGriffin",
+        "id": 30185000
+    },
+    {
+        "name": "GiantGriffin_C",
+        "id": 30185100
+    },
+    {
+        "name": "PoisonousZombie",
+        "id": 30186000
+    },
+    {
+        "name": "WalkingDead",
+        "id": 30187000
+    },
+    {
+        "name": "CraftyArachne_Jr",
+        "id": 30188000
+    },
+    {
+        "name": "CraftyArachne_Kid",
+        "id": 30189000
+    },
+    {
+        "name": "EyeofWacher",
+        "id": 30190000
+    },
+    {
+        "name": "Killian",
+        "id": 30191002
+    },
+    {
+        "name": "Baphomet",
+        "id": 30192001
+    },
+    {
+        "name": "GiantMonkey",
+        "id": 30193000
+    },
+    {
+        "name": "GiantBird",
+        "id": 30194000
+    },
+    {
+        "name": "GiantBird_R",
+        "id": 30194100
+    },
+    {
+        "name": "HeterotypicMonster",
+        "id": 30195000
+    },
+    {
+        "name": "HeterotypicMonster_Argonite",
+        "id": 30195100
+    },
+    {
+        "name": "HeterotypicMonster_Argonite_R",
+        "id": 30195200
+    },
+    {
+        "name": "SummonedTentacle",
+        "id": 30196000
+    },
+    {
+        "name": "RelicOfGuardian",
+        "id": 30197001
+    },
+    {
+        "name": "DeadlockWall",
+        "id": 30198000
+    },
+    {
+        "name": "SummonedSnake",
+        "id": 30199000
+    },
+    {
+        "name": "HatchlingArgoniteParasite",
+        "id": 30200000
+    },
+    {
+        "name": "HatchlingArgoniteParasite_R",
+        "id": 30200100
+    },
+    {
+        "name": "HatchlingArgonitesphere",
+        "id": 30201000
+    },
+    {
+        "name": "HatchlingArgonitesphere_R",
+        "id": 30201100
+    },
+    {
+        "name": "Archaeopteryx",
+        "id": 30202000
+    },
+    {
+        "name": "Archaeopteryx_A",
+        "id": 30202100
+    },
+    {
+        "name": "Archaeopteryx_B",
+        "id": 30202200
+    },
+    {
+        "name": "Monkey",
+        "id": 30203000
+    },
+    {
+        "name": "Monkey_A",
+        "id": 30203100
+    },
+    {
+        "name": "Monkey_B",
+        "id": 30203200
+    },
+    {
+        "name": "ChiefPriest",
+        "id": 30204000
+    },
+    {
+        "name": "TreasureHunter",
+        "id": 30204100
+    },
+    {
+        "name": "Thief",
+        "id": 30204200
+    },
+    {
+        "name": "AncientGardener",
+        "id": 30205000
+    },
+    {
+        "name": "ArgoniteEnergyAbsorber",
+        "id": 30206000
+    },
+    {
+        "name": "SpiritOfFury",
+        "id": 30207000
+    },
+    {
+        "name": "IronEatingMonster",
+        "id": 30208100
+    },
+    {
+        "name": "ArgoniteFly",
+        "id": 30209000
+    },
+    {
+        "name": "ArgoniteFly_R",
+        "id": 30209100
+    },
+    {
+        "name": "JuniorSpirit",
+        "id": 30210000
+    },
+    {
+        "name": "MessengerOfSandramanaia",
+        "id": 30211000
+    },
+    {
+        "name": "SeparateMonsterOfSandramanaia",
+        "id": 30212000
+    },
+    {
+        "name": "CapsuleOfSandramanaia",
+        "id": 30213000
+    },
+    {
+        "name": "IncubatorOfSandramanaia",
+        "id": 30214000
+    },
+    {
+        "name": "TentacleOfSandramanaia",
+        "id": 30215000
+    },
+    {
+        "name": "Cyclops",
+        "id": 30216000
+    },
+    {
+        "name": "GiantStone",
+        "id": 30217001
+    },
+    {
+        "name": "LarvaKing",
+        "id": 30218000
+    },
+    {
+        "name": "Jackolantern",
+        "id": 30219000
+    },
+    {
+        "name": "GiantBeetle",
+        "id": 30220000
+    },
+    {
+        "name": "AbominationOriginal",
+        "id": 30221000
+    },
+    {
+        "name": "AbominationInfection",
+        "id": 30222000
+    },
+    {
+        "name": "AbominationBonemaster",
+        "id": 30223000
+    },
+    {
+        "name": "AbominationRotten",
+        "id": 30224000
+    },
+    {
+        "name": "AbominationTwins",
+        "id": 30225000
+    },
+    {
+        "name": "AbominationHand",
+        "id": 30226000
+    },
+    {
+        "name": "AbominationFusion",
+        "id": 30227000
+    },
+    {
+        "name": "Snowman_red",
+        "id": 30228000
+    },
+    {
+        "name": "Snowman_blue",
+        "id": 30229000
+    },
+    {
+        "name": "CyclopsClown",
+        "id": 30231000
+    },
+    {
+        "name": "LizardWarrior",
+        "id": 30232000
+    },
+    {
+        "name": "LizardGuard",
+        "id": 30233000
+    },
+    {
+        "name": "LizardShaman",
+        "id": 30234000
+    },
+    {
+        "name": "GiantInsectivorousPlant",
+        "id": 30236000
+    },
+    {
+        "name": "MiniPlant",
+        "id": 30237000
+    },
+    {
+        "name": "MiniPlant01",
+        "id": 30237100
+    },
+    {
+        "name": "AnonCrossbowman",
+        "id": 30239000
+    },
+    {
+        "name": "AnonCrossbowman_A",
+        "id": 30239102
+    },
+    {
+        "name": "Anon_Archer_Black",
+        "id": 30239200
+    },
+    {
+        "name": "AnonRider",
+        "id": 30240001
+    },
+    {
+        "name": "AnonRider_A",
+        "id": 30240101
+    },
+    {
+        "name": "AnonShaman",
+        "id": 30241000
+    },
+    {
+        "name": "AnonShaman_A",
+        "id": 30241100
+    },
+    {
+        "name": "AnonSoldier",
+        "id": 30242000
+    },
+    {
+        "name": "AnonSoldier_A",
+        "id": 30242101
+    },
+    {
+        "name": "ElementalSpiritWater",
+        "id": 30243000
+    },
+    {
+        "name": "JellyFish",
+        "id": 30244000
+    },
+    {
+        "name": "Mammoth",
+        "id": 30245000
+    },
+    {
+        "name": "Starfish",
+        "id": 30246000
+    },
+    {
+        "name": "ArchBellion",
+        "id": 30247000
+    },
+    {
+        "name": "GiantBugBee",
+        "id": 30248000
+    },
+    {
+        "name": "GiantMutant",
+        "id": 30249000
+    },
+    {
+        "name": "GiantMutant_G",
+        "id": 30249100
+    },
+    {
+        "name": "Monkfish",
+        "id": 30250000
+    },
+    {
+        "name": "Orca",
+        "id": 30251000
+    },
+    {
+        "name": "Kumas_Baby",
+        "id": 30252000
+    },
+    {
+        "name": "Kumas_Baby_A",
+        "id": 30252100
+    },
+    {
+        "name": "Kumas_Baby_B",
+        "id": 30252200
+    },
+    {
+        "name": "Kumas_Mother",
+        "id": 30253000
+    },
+    {
+        "name": "Arcdeva_Poisoner",
+        "id": 30255000
+    },
+    {
+        "name": "Arcdeva_Poisoner",
+        "id": 30255100
+    },
+    {
+        "name": "FatherOfGhillieDhu",
+        "id": 30256000
+    },
+    {
+        "name": "Arcdeva_Master",
+        "id": 30257000
+    },
+    {
+        "name": "Anon_warrior",
+        "id": 30258001
+    },
+    {
+        "name": "ProArcdeva_Warrior",
+        "id": 30258201
+    },
+    {
+        "name": "Anon_Sorcerer",
+        "id": 30259001
+    },
+    {
+        "name": "ProArcdeva_Sorcerer",
+        "id": 30259101
+    },
+    {
+        "name": "AbominationTyrant",
+        "id": 30260000
+    },
+    {
+        "name": "Abomination_Warrior",
+        "id": 30260100
+    },
+    {
+        "name": "AbominationElin",
+        "id": 30261000
+    },
+    {
+        "name": "Arcdeva_Sorcerer",
+        "id": 30262100
+    },
+    {
+        "name": "Arcdeva_Archer",
+        "id": 30263000
+    },
+    {
+        "name": "Arcdeva_Priest",
+        "id": 30264000
+    },
+    {
+        "name": "Arcdeva_Lancer",
+        "id": 30265000
+    },
+    {
+        "name": "Arcdeva_Warrior",
+        "id": 30266000
+    },
+    {
+        "name": "Arcdeva_Elementalist",
+        "id": 30267000
+    },
+    {
+        "name": "NPC_Anon_Rhodos",
+        "id": 30268001
+    },
+    {
+        "name": "Dharkan_A",
+        "id": 30269000
+    },
+    {
+        "name": "Dharkan_B",
+        "id": 30270000
+    },
+    {
+        "name": "GiantBird_A",
+        "id": 30271000
+    },
+    {
+        "name": "Abomination_Guard",
+        "id": 30272000
+    },
+    {
+        "name": "ArgoniteDevaSommoner",
+        "id": 30300000
+    },
+    {
+        "name": "NPC_GatlingTower",
+        "id": 30301000
+    },
+    {
+        "name": "NPC_DisPenser",
+        "id": 30302000
+    },
+    {
+        "name": "ArchakalashTrooper_Dark",
+        "id": 30312000
+    },
+    {
+        "name": "WatchmanBlackcrack",
+        "id": 30314000
+    },
+    {
+        "name": "InfestedFrostGiant_A",
+        "id": 30315000
+    },
+    {
+        "name": "PerfectDurion",
+        "id": 30316000
+    },
+    {
+        "name": "PerfectDemocrone",
+        "id": 30317000
+    },
+    {
+        "name": "ContaminatedBossGhilliedhu",
+        "id": 30328000
+    },
+    {
+        "name": "ContaminatedArcdeva_Lancer",
+        "id": 30319000
+    },
+    {
+        "name": "ContaminatedArcdeva_Wizard",
+        "id": 30320000
+    },
+    {
+        "name": "ContaminatedYuantiBuserker",
+        "id": 30321000
+    },
+    {
+        "name": "Succubus",
+        "id": 30323000
+    },
+    {
+        "name": "PollutedUnicorn_B",
+        "id": 30324000
+    },
+    {
+        "name": "CraftyForestSpider_C",
+        "id": 30325000
+    },
+    {
+        "name": "Succubus_A",
+        "id": 30326000
+    },
+    {
+        "name": "Henchman_of_Lakan",
+        "id": 30327000
+    },
+    {
+        "name": "Armadilo_Lakan",
+        "id": 30329000
+    },
+    {
+        "name": "GiantMarbleStone",
+        "id": 30330000
+    },
+    {
+        "name": "ChimeraofLakan",
+        "id": 30332000
+    },
+    {
+        "name": "Lakan",
+        "id": 30333000
+    },
+    {
+        "name": "DharkanReborn",
+        "id": 30334000
+    },
+    {
+        "name": "PerfectDurionReborn",
+        "id": 30335000
+    },
+    {
+        "name": "MementoMori",
+        "id": 30336000
+    },
+    {
+        "name": "CaveKeeper",
+        "id": 30337000
+    },
+    {
+        "name": "BrainwashedMiner",
+        "id": 30338000
+    },
+    {
+        "name": "TransformedGoblin",
+        "id": 30339000
+    },
+    {
+        "name": "DrillMachineMichael",
+        "id": 30340000
+    },
+    {
+        "name": "Stromkar",
+        "id": 30341000
+    },
+    {
+        "name": "FellerBahum",
+        "id": 30342000
+    },
+    {
+        "name": "BlackDragon",
+        "id": 30343000
+    },
+    {
+        "name": "CursedKnight",
+        "id": 30344000
+    },
+    {
+        "name": "GiantYuantiBlackSmith",
+        "id": 30345000
+    },
+    {
+        "name": "BloodGolemArmory",
+        "id": 30346000
+    },
+    {
+        "name": "GilgashGuardian_Armor",
+        "id": 30347000
+    },
+    {
+        "name": "Archakalash_Armor",
+        "id": 30348000
+    },
+    {
+        "name": "ArchakalashTrooper_Argon",
+        "id": 30348100
+    },
+    {
+        "name": "Mutated_Lion",
+        "id": 30349000
+    },
+    {
+        "name": "MutatedLion_Argon",
+        "id": 30349300
+    },
+    {
+        "name": "GiantGriffin_M",
+        "id": 30350000
+    },
+    {
+        "name": "Baharr_01",
+        "id": 30351000
+    },
+    {
+        "name": "Baharr_02",
+        "id": 30352000
+    },
+    {
+        "name": "NPC_Baharr",
+        "id": 30353000
+    },
+    {
+        "name": "Devil",
+        "id": 30354000
+    },
+    {
+        "name": "EdwinDragon",
+        "id": 30355000
+    },
+    {
+        "name": "ValleyPredator",
+        "id": 30356000
+    },
+    {
+        "name": "Gemfly_Larva",
+        "id": 30357000
+    },
+    {
+        "name": "Gemfly_Female",
+        "id": 30358000
+    },
+    {
+        "name": "FDI_Dragonian_Commander",
+        "id": 30359000
+    },
+    {
+        "name": "FDI_Naga_female_guard",
+        "id": 30360000
+    },
+    {
+        "name": "FDI_Naga_female_warrior",
+        "id": 30360100
+    },
+    {
+        "name": "FDI_Naga_normal_labor1",
+        "id": 30361000
+    },
+    {
+        "name": "FDI_Naga_normal_labor2",
+        "id": 30361100
+    },
+    {
+        "name": "FDI_Naga_normal_old",
+        "id": 30361200
+    },
+    {
+        "name": "FDI_Naga_normal_slave",
+        "id": 30361300
+    },
+    {
+        "name": "FDI_Naga_normal_warrior",
+        "id": 30361400
+    },
+    {
+        "name": "FDI_Naga_strong_labor",
+        "id": 30362000
+    },
+    {
+        "name": "FDI_Naga_strong_lead",
+        "id": 30362100
+    },
+    {
+        "name": "FDI_Naga_strong_son",
+        "id": 30362200
+    },
+    {
+        "name": "FDI_Naga_strong_warrior",
+        "id": 30362300
+    },
+    {
+        "name": "FDI_Naga_woman_labor",
+        "id": 30363000
+    },
+    {
+        "name": "FDI_Naga_woman_warrior",
+        "id": 30363100
+    },
+    {
+        "name": "FDI_Dragonian_Captain",
+        "id": 30364000
+    },
+    {
+        "name": "FDI_BLS_Larva",
+        "id": 30365000
+    },
+    {
+        "name": "FDI_BLS_Fennecfox",
+        "id": 30366000
+    },
+    {
+        "name": "FDI_BLS_Dganger",
+        "id": 30367000
+    },
+    {
+        "name": "FDI_Dragonian_Overseer",
+        "id": 30368000
+    },
+    {
+        "name": "FDI_BLS_Otyugh",
+        "id": 30369000
+    },
+    {
+        "name": "FDI_BLS_Souleater",
+        "id": 30370000
+    },
+    {
+        "name": "FDI_BLS_Raptor",
+        "id": 30371000
+    },
+    {
+        "name": "FDI_BLS_Winterwolf",
+        "id": 30372000
+    },
+    {
+        "name": "GiantMonkey_Boss",
+        "id": 30373000
+    },
+    {
+        "name": "Cyclops_Boss",
+        "id": 30374000
+    },
+    {
+        "name": "AlpinePredator_Boss",
+        "id": 30375000
+    },
+    {
+        "name": "MarhNak",
+        "id": 30376000
+    },
+    {
+        "name": "FDI_Dragonian_Wirepuller1",
+        "id": 30377000
+    },
+    {
+        "name": "FDI_Dragonian_Wirepuller2",
+        "id": 30378000
+    },
+    {
+        "name": "FDI_AlpinePredator_yellow",
+        "id": 30379000
+    },
+    {
+        "name": "FDI_GemBeetle",
+        "id": 30380000
+    },
+    {
+        "name": "FDI_BoneFrog",
+        "id": 30381000
+    },
+    {
+        "name": "FDI_WoodenMushroom_Spider",
+        "id": 30382000
+    },
+    {
+        "name": "FDI_ChimeraofLakan_naga",
+        "id": 30383000
+    },
+    {
+        "name": "Gemfly_Queen",
+        "id": 30384000
+    },
+    {
+        "name": "FDI_Dragonian_Grappler",
+        "id": 30385000
+    },
+    {
+        "name": "FDI_BLS_Ghcrab",
+        "id": 30386000
+    },
+    {
+        "name": "FDI_Dragonian_Technician1",
+        "id": 30387000
+    },
+    {
+        "name": "FDI_Dragonian_Technician2",
+        "id": 30388000
+    },
+    {
+        "name": "Gemfly_Worrior",
+        "id": 30389000
+    },
+    {
+        "name": "FDI_Dragonian_Red",
+        "id": 30390000
+    },
+    {
+        "name": "FDI_Dragonian_Blue",
+        "id": 30391000
+    },
+    {
+        "name": "Gemfly_Male",
+        "id": 30392000
+    },
+    {
+        "name": "FDI_A_Dragonhouse_Front_Door",
+        "id": 30396000
+    },
+    {
+        "name": "FDI_A_Dragonhouse_Back_Door",
+        "id": 30397000
+    },
+    {
+        "name": "FDI_JumpGear",
+        "id": 30398000
+    },
+    {
+        "name": "FDI_Sculpture",
+        "id": 30399000
+    },
+    {
+        "name": "FDI_Flag",
+        "id": 30399100
+    },
+    {
+        "name": "Vergos",
+        "id": 30400000
+    },
+    {
+        "name": "Vergos",
+        "id": 30401000
+    },
+    {
+        "name": "Vergos",
+        "id": 30402000
+    },
+    {
+        "name": "Vergos_Tail",
+        "id": 30404000
+    },
+    {
+        "name": "GiantTula_Flower",
+        "id": 30405000
+    },
+    {
+        "name": "ChimeraofLakan_Red",
+        "id": 30406000
+    },
+    {
+        "name": "Volcanus_Blue",
+        "id": 30407000
+    },
+    {
+        "name": "GiantStone_Rune",
+        "id": 30408000
+    },
+    {
+        "name": "NPC_BarakaCrack_05",
+        "id": 730420000
+    },
+    {
+        "name": "BG_HookaBomber",
+        "id": 30412000
+    },
+    {
+        "name": "BG_HookaBomberB",
+        "id": 30412100
+    },
+    {
+        "name": "YuantiArgarf",
+        "id": 30420000
+    },
+    {
+        "name": "DevilArgarf",
+        "id": 30421000
+    },
+    {
+        "name": "Gemfly_QueenExodor",
+        "id": 30424000
+    },
+    {
+        "name": "NPC_Transparent",
+        "id": 99502000
+    },
+    {
+        "name": "Human_boy",
+        "id": 40001000
+    },
+    {
+        "name": "Human_girl",
+        "id": 40002200
+    },
+    {
+        "name": "HighElf_girl",
+        "id": 40004000
+    },
+    {
+        "name": "Aman_boy",
+        "id": 40005000
+    },
+    {
+        "name": "Castanic_girl",
+        "id": 40008000
+    },
+    {
+        "name": "Popori_boy",
+        "id": 40009001
+    },
+    {
+        "name": "DevaFemaleAssasin",
+        "id": 50106000
+    },
+    {
+        "name": "Human_F_Mission",
+        "id": 51000000
+    },
+    {
+        "name": "Highelf_F_Mission",
+        "id": 51001000
+    },
+    {
+        "name": "Castanic_F_Mission",
+        "id": 51002000
+    },
+    {
+        "name": "Human_M_Aide",
+        "id": 51003000
+    },
+    {
+        "name": "Human_F_Aide",
+        "id": 51004000
+    },
+    {
+        "name": "General_M_Belica",
+        "id": 51005000
+    },
+    {
+        "name": "General_F_Alemansia",
+        "id": 51006000
+    },
+    {
+        "name": "General_M_Kayador",
+        "id": 51007000
+    },
+    {
+        "name": "Human_M_Mystellium",
+        "id": 51008000
+    },
+    {
+        "name": "Highelf_F_Mystellium",
+        "id": 51009100
+    },
+    {
+        "name": "Baraka_M_Mystellium",
+        "id": 51012100
+    },
+    {
+        "name": "Highelf_M_Alchemist",
+        "id": 51011000
+    },
+    {
+        "name": "Highelf_F_Alchemist",
+        "id": 51012000
+    },
+    {
+        "name": "Baraka_M_Extractor",
+        "id": 51013000
+    },
+    {
+        "name": "Castanic_F_Extractor",
+        "id": 51014000
+    },
+    {
+        "name": "Aman_M_Metalsmith",
+        "id": 51015000
+    },
+    {
+        "name": "Aman_F_Metalsmith",
+        "id": 51016000
+    },
+    {
+        "name": "Aman_M_Heavysmith",
+        "id": 51021000
+    },
+    {
+        "name": "Aman_F_Heavysmith",
+        "id": 51022000
+    },
+    {
+        "name": "Highelf_M_Magicsmith",
+        "id": 51025000
+    },
+    {
+        "name": "Highelf_F_Magicsmith",
+        "id": 51026000
+    },
+    {
+        "name": "Human_M_Hood",
+        "id": 51027000
+    },
+    {
+        "name": "Q_Serion",
+        "id": 51027100
+    },
+    {
+        "name": "Aman_F_Merchant",
+        "id": 51034000
+    },
+    {
+        "name": "Popori_M_Merchant",
+        "id": 51035010
+    },
+    {
+        "name": "Human_M_Peddler",
+        "id": 51037000
+    },
+    {
+        "name": "Popori_M_Peddler",
+        "id": 51038000
+    },
+    {
+        "name": "Human_M_Explorer",
+        "id": 51045000
+    },
+    {
+        "name": "Popori_F_Homunculus",
+        "id": 51048000
+    },
+    {
+        "name": "Q_Human_M_Feller1",
+        "id": 51073000
+    },
+    {
+        "name": "Q_Human_Injury",
+        "id": 51074000
+    },
+    {
+        "name": "Q_Human_M_Common_Temp",
+        "id": 51075000
+    },
+    {
+        "name": "Q_Human_M_NA04",
+        "id": 51075400
+    },
+    {
+        "name": "Q_Human_F_Common_Temp",
+        "id": 51076000
+    },
+    {
+        "name": "Q_Human_F_NA09",
+        "id": 51076200
+    },
+    {
+        "name": "Human_F_Survivor",
+        "id": 51076400
+    },
+    {
+        "name": "Q_Belic",
+        "id": 51077000
+    },
+    {
+        "name": "Q_Samael",
+        "id": 51078000
+    },
+    {
+        "name": "Q_Troubadour",
+        "id": 51081000
+    },
+    {
+        "name": "Q_Janovia",
+        "id": 51082000
+    },
+    {
+        "name": "Q_Mistel",
+        "id": 51083000
+    },
+    {
+        "name": "Q_Kaiduen",
+        "id": 51086000
+    },
+    {
+        "name": "Q_Kaiduen_Ghost",
+        "id": 51086100
+    },
+    {
+        "name": "Elion_Kubel",
+        "id": 51087000
+    },
+    {
+        "name": "Q_Kaia",
+        "id": 52705200
+    },
+    {
+        "name": "Q_Kaia_Ghost",
+        "id": 52705100
+    },
+    {
+        "name": "Q_Thulsa",
+        "id": 52706000
+    },
+    {
+        "name": "NPC_Guard_Temp",
+        "id": 53092000
+    },
+    {
+        "name": "NPC_Guard_Dest",
+        "id": 53093000
+    },
+    {
+        "name": "NPC_Lady_Dest",
+        "id": 53094000
+    },
+    {
+        "name": "NPC_Man_Dest01",
+        "id": 53095000
+    },
+    {
+        "name": "NPC_OldMan_Dest",
+        "id": 53096100
+    },
+    {
+        "name": "NPC_Merchant_Dest",
+        "id": 53097000
+    },
+    {
+        "name": "NPC_Research_Temp",
+        "id": 53098000
+    },
+    {
+        "name": "NPC_Info_Manager_VK",
+        "id": 53098400
+    },
+    {
+        "name": "NPC_Man_Temp",
+        "id": 53099000
+    },
+    {
+        "name": "NPC_Granny_Temp",
+        "id": 53100000
+    },
+    {
+        "name": "NPC_Granny_Dest",
+        "id": 53100100
+    },
+    {
+        "name": "NPC_HighElf_M_Scout",
+        "id": 53101000
+    },
+    {
+        "name": "Legend_Smith",
+        "id": 53104000
+    },
+    {
+        "name": "NPC_Iseulenia",
+        "id": 53105000
+    },
+    {
+        "name": "NPC_Zanella",
+        "id": 53106000
+    },
+    {
+        "name": "Q_ClownOfKillian",
+        "id": 53107000
+    },
+    {
+        "name": "Hasmina_F",
+        "id": 53109000
+    },
+    {
+        "name": "Aman_M_Wound",
+        "id": 53110000
+    },
+    {
+        "name": "Human_M_Wound",
+        "id": 53111000
+    },
+    {
+        "name": "Popori_M_Wound",
+        "id": 53112000
+    },
+    {
+        "name": "Human_M_Common_Cold02",
+        "id": 53115000
+    },
+    {
+        "name": "Elin_Wounded",
+        "id": 53116000
+    },
+    {
+        "name": "Castanic_M_K_Dark",
+        "id": 53117000
+    },
+    {
+        "name": "Castanic_M_K_Gold",
+        "id": 53118000
+    },
+    {
+        "name": "Castanic_M_K_Silver",
+        "id": 53119000
+    },
+    {
+        "name": "Castanic_F_K_Dark",
+        "id": 53120000
+    },
+    {
+        "name": "Castanic_F_K_Gold",
+        "id": 53121000
+    },
+    {
+        "name": "Baraka_M_Common_Cold01",
+        "id": 53122000
+    },
+    {
+        "name": "Baraka_M_Common_Cold02",
+        "id": 53123000
+    },
+    {
+        "name": "Aman_F_Sentry",
+        "id": 53124000
+    },
+    {
+        "name": "Aman_M_Blacksmith",
+        "id": 53125000
+    },
+    {
+        "name": "Aman_M_Sentry",
+        "id": 53126000
+    },
+    {
+        "name": "Human_M_Knight_VK",
+        "id": 53127000
+    },
+    {
+        "name": "Snowman_green",
+        "id": 53128000
+    },
+    {
+        "name": "Snowman_yellow",
+        "id": 53129000
+    },
+    {
+        "name": "Snowman_yellow",
+        "id": 53129100
+    },
+    {
+        "name": "Aman_M_Sentry_KA",
+        "id": 53130000
+    },
+    {
+        "name": "Highelf_F_Magicsmith_AL",
+        "id": 53131000
+    },
+    {
+        "name": "Durion_Past",
+        "id": 53134200
+    },
+    {
+        "name": "Durion_Past_B",
+        "id": 53134300
+    },
+    {
+        "name": "Halrath",
+        "id": 53212000
+    },
+    {
+        "name": "Baharr_EntGate",
+        "id": 60000000
+    },
+    {
+        "name": "ExplosiveDrum",
+        "id": 60001002
+    },
+    {
+        "name": "MysteryBox",
+        "id": 60002000
+    },
+    {
+        "name": "Barricade3",
+        "id": 60003000
+    },
+    {
+        "name": "Barricade5",
+        "id": 60003001
+    },
+    {
+        "name": "Barricade7",
+        "id": 60003002
+    },
+    {
+        "name": "SpineTrap",
+        "id": 60004100
+    },
+    {
+        "name": "FakeCloderA",
+        "id": 60005002
+    },
+    {
+        "name": "demonstone",
+        "id": 60006000
+    },
+    {
+        "name": "NPC_Demonstone02",
+        "id": 60006100
+    },
+    {
+        "name": "WoodDrum",
+        "id": 60016000
+    },
+    {
+        "name": "WoodBox",
+        "id": 60017000
+    },
+    {
+        "name": "TreasureBox",
+        "id": 60018000
+    },
+    {
+        "name": "NPC_BookCase",
+        "id": 60024000
+    },
+    {
+        "name": "NPC_Desk",
+        "id": 60024100
+    },
+    {
+        "name": "NPC_DiningTable",
+        "id": 60024200
+    },
+    {
+        "name": "NPC_AlchemySet",
+        "id": 60024300
+    },
+    {
+        "name": "NPC_Pot",
+        "id": 60024800
+    },
+    {
+        "name": "NPC_TreasureBox",
+        "id": 60025200
+    },
+    {
+        "name": "NPC_Closedspace_Stone_01",
+        "id": 60029000
+    },
+    {
+        "name": "NPC_SpatotemporalGenerator",
+        "id": 60029800
+    },
+    {
+        "name": "NPC_Board",
+        "id": 60031000
+    },
+    {
+        "name": "NPC_HandCart",
+        "id": 60031600
+    },
+    {
+        "name": "NPC_Sign_A_01",
+        "id": 60031700
+    },
+    {
+        "name": "NPC_Sign_A_02",
+        "id": 60031800
+    },
+    {
+        "name": "NPC_T4_Arogonn_Door",
+        "id": 60031900
+    },
+    {
+        "name": "NPC_Door_Gula",
+        "id": 60032000
+    },
+    {
+        "name": "NPC_AEN_Door",
+        "id": 60032100
+    },
+    {
+        "name": "NPC_Memorial_stone_A_01",
+        "id": 60039000
+    },
+    {
+        "name": "NPC_MagicStone02",
+        "id": 60040000
+    },
+    {
+        "name": "NPC_MagicStone02_Blood",
+        "id": 60040400
+    },
+    {
+        "name": "NPC_HookaDrum",
+        "id": 60042000
+    },
+    {
+        "name": "NPC_AncientStone",
+        "id": 60046000
+    },
+    {
+        "name": "NPC_ScareCrow",
+        "id": 60047000
+    },
+    {
+        "name": "NPC_SteelDoor",
+        "id": 60048000
+    },
+    {
+        "name": "NPC_HeavyWagon",
+        "id": 60049300
+    },
+    {
+        "name": "NPC_HeavyWagon_02",
+        "id": 60049200
+    },
+    {
+        "name": "NPC_WoodDoor",
+        "id": 60050000
+    },
+    {
+        "name": "NPC_PrisonSteelDoor",
+        "id": 60051000
+    },
+    {
+        "name": "NPC_TreasureBox",
+        "id": 60052000
+    },
+    {
+        "name": "NPC_StoneDoor",
+        "id": 60053000
+    },
+    {
+        "name": "NPC_CultistStatue",
+        "id": 60056000
+    },
+    {
+        "name": "NPC_CultistMachine",
+        "id": 60056200
+    },
+    {
+        "name": "NPC_DeathBanteng",
+        "id": 60057000
+    },
+    {
+        "name": "NPC_DeathSheep_02",
+        "id": 60057600
+    },
+    {
+        "name": "NPC_Wall_KemelTotem",
+        "id": 60060000
+    },
+    {
+        "name": "NPC_BloodStone",
+        "id": 60061000
+    },
+    {
+        "name": "NPC_MagicStoneRed",
+        "id": 60062000
+    },
+    {
+        "name": "NPC_AncientStone_03",
+        "id": 60065000
+    },
+    {
+        "name": "NPC_MagicDevice_02",
+        "id": 60066100
+    },
+    {
+        "name": "NPC_VK_ForgeMachine",
+        "id": 60068000
+    },
+    {
+        "name": "NPC_VK_AlchemyMachine",
+        "id": 60068200
+    },
+    {
+        "name": "NPC_MagicStone02_L",
+        "id": 60069000
+    },
+    {
+        "name": "NPC_MagicStone02_Machine",
+        "id": 60070000
+    },
+    {
+        "name": "NPC_WitchDoor",
+        "id": 60071000
+    },
+    {
+        "name": "NPC_MIAEgg",
+        "id": 60073000
+    },
+    {
+        "name": "NPC_DaganHalidom",
+        "id": 60076000
+    },
+    {
+        "name": "NPC_Brainwashing",
+        "id": 60084000
+    },
+    {
+        "name": "NPC_WeaponBox",
+        "id": 60085000
+    },
+    {
+        "name": "NPC_Microscope",
+        "id": 60088000
+    },
+    {
+        "name": "NPC_DarkBishop",
+        "id": 60095000
+    },
+    {
+        "name": "NPC_Switch",
+        "id": 60096000
+    },
+    {
+        "name": "NPC_Switch_Green",
+        "id": 60096200
+    },
+    {
+        "name": "NPC_Switch_Puple",
+        "id": 60096300
+    },
+    {
+        "name": "NPC_Switch_Yellow",
+        "id": 60096400
+    },
+    {
+        "name": "NPC_Switch_Red",
+        "id": 60096800
+    },
+    {
+        "name": "NPC_ShieldWall",
+        "id": 60097000
+    },
+    {
+        "name": "ScreamingGiant",
+        "id": 60098000
+    },
+    {
+        "name": "ScreamingCurse",
+        "id": 60099000
+    },
+    {
+        "name": "NPC_CarePackage",
+        "id": 60100000
+    },
+    {
+        "name": "NPC_CarePackage01",
+        "id": 60101000
+    },
+    {
+        "name": "NPC_UAZ",
+        "id": 60110000
+    },
+    {
+        "name": "NPC_C130",
+        "id": 60120000
+    },
+    {
+        "name": "RottingDead",
+        "id": 61112000
+    },
+    {
+        "name": "PurifyingFire",
+        "id": 61113000
+    },
+    {
+        "name": "KilliansCurse",
+        "id": 61114000
+    },
+    {
+        "name": "KelsykeTotem",
+        "id": 61115000
+    },
+    {
+        "name": "RottingDead2",
+        "id": 61116000
+    },
+    {
+        "name": "NPC_EslenFlower",
+        "id": 61119000
+    },
+    {
+        "name": "NPC_ArgonCover",
+        "id": 61120000
+    },
+    {
+        "name": "NPC_ArgonWall",
+        "id": 61121000
+    },
+    {
+        "name": "NPC_GiantGriffinEgg",
+        "id": 61122000
+    },
+    {
+        "name": "NPC_SikandariTower",
+        "id": 61123000
+    },
+    {
+        "name": "NPC_Isren_SealDevice",
+        "id": 61126000
+    },
+    {
+        "name": "NPC_SWC_Door_01",
+        "id": 61128000
+    },
+    {
+        "name": "NPC_SWC_Door_02",
+        "id": 61128100
+    },
+    {
+        "name": "NPC_SWC_Door_04",
+        "id": 61128300
+    },
+    {
+        "name": "NPC_DarkRook",
+        "id": 61129000
+    },
+    {
+        "name": "NPC_DarkQueen",
+        "id": 61130000
+    },
+    {
+        "name": "NPC_DarkKnight",
+        "id": 61131000
+    },
+    {
+        "name": "NPC_DarkPawn",
+        "id": 61132000
+    },
+    {
+        "name": "NPC_HSC_Switch",
+        "id": 61133000
+    },
+    {
+        "name": "NPC_HSC_Nest",
+        "id": 61134000
+    },
+    {
+        "name": "NPC_PVE_Switch",
+        "id": 61136000
+    },
+    {
+        "name": "NPC_PVE_Door",
+        "id": 61136100
+    },
+    {
+        "name": "NPC_PVE_Point",
+        "id": 61136300
+    },
+    {
+        "name": "SynuuthEggrobber",
+        "id": 61137000
+    },
+    {
+        "name": "SynuuthEggrobber_A",
+        "id": 61137100
+    },
+    {
+        "name": "MysteryBox_Event",
+        "id": 61139000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 92041000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61141300
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61141400
+    },
+    {
+        "name": "NPC_T4_Battle_Command",
+        "id": 61142000
+    },
+    {
+        "name": "NPC_T4_Battle_Command_02",
+        "id": 61142300
+    },
+    {
+        "name": "NPC_T4_Battle_Stone",
+        "id": 61143000
+    },
+    {
+        "name": "NPC_T4_Battle_Drill",
+        "id": 61144000
+    },
+    {
+        "name": "NPC_T4_Battle_Drill01",
+        "id": 61144100
+    },
+    {
+        "name": "NPC_T4_Battle_Door",
+        "id": 61145000
+    },
+    {
+        "name": "NPC_T4_Battle_Mirror",
+        "id": 61146000
+    },
+    {
+        "name": "NPC_T4_Battle_Mirror01",
+        "id": 61146100
+    },
+    {
+        "name": "NPC_T4_Battle_Mirror_Clean",
+        "id": 61146300
+    },
+    {
+        "name": "NPC_T4_Battle_Direction",
+        "id": 61147000
+    },
+    {
+        "name": "NPC_T4_Battle_Wall",
+        "id": 61148000
+    },
+    {
+        "name": "NPC_T4_Battle_Pot",
+        "id": 61149000
+    },
+    {
+        "name": "NPC_T4_Battle_Kumas",
+        "id": 61150000
+    },
+    {
+        "name": "NPC_T4_Battle_Argon_Machine",
+        "id": 61151000
+    },
+    {
+        "name": "NPC_T4_Battle_Golem",
+        "id": 61152000
+    },
+    {
+        "name": "NPC_T4_Battle_Golem_02",
+        "id": 61152300
+    },
+    {
+        "name": "BlackCrack_BigStone",
+        "id": 61154000
+    },
+    {
+        "name": "DefenceTower",
+        "id": 61155000
+    },
+    {
+        "name": "Battle_Coin",
+        "id": 61156000
+    },
+    {
+        "name": "Iron_StoneMonster",
+        "id": 61157000
+    },
+    {
+        "name": "CandyPile",
+        "id": 61158000
+    },
+    {
+        "name": "HalloweenPillar",
+        "id": 61160000
+    },
+    {
+        "name": "Pumpkin_01",
+        "id": 61162000
+    },
+    {
+        "name": "Pumpkin_02",
+        "id": 61163000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61167000
+    },
+    {
+        "name": "IronBar_Small_Door",
+        "id": 61170000
+    },
+    {
+        "name": "IronBar_Small_Door_02",
+        "id": 61170100
+    },
+    {
+        "name": "Castle_Gate",
+        "id": 61171000
+    },
+    {
+        "name": "Mini_Dragonic_Core",
+        "id": 61173000
+    },
+    {
+        "name": "NPC_Dragonic_Scout",
+        "id": 61174000
+    },
+    {
+        "name": "EyeofWacher_02",
+        "id": 61180000
+    },
+    {
+        "name": "Extractor",
+        "id": 61180100
+    },
+    {
+        "name": "Queen_Nest_Crystal_01",
+        "id": 61180200
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61196000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61197000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61198000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 61199000
+    },
+    {
+        "name": "NPC_UnionFlag_VK_A",
+        "id": 62001000
+    },
+    {
+        "name": "NPC_UnionFlag_AL_A",
+        "id": 62001100
+    },
+    {
+        "name": "NPC_UnionFlag_KA_A",
+        "id": 62001200
+    },
+    {
+        "name": "NPC_UnionFlag_VK_B",
+        "id": 62002000
+    },
+    {
+        "name": "NPC_UnionFlag_AL_B",
+        "id": 62002100
+    },
+    {
+        "name": "NPC_UnionFlag_KA_B",
+        "id": 62002200
+    },
+    {
+        "name": "NPC_UnionFlag_VK_C",
+        "id": 62003000
+    },
+    {
+        "name": "NPC_UnionFlag_AL_C",
+        "id": 62003100
+    },
+    {
+        "name": "NPC_UnionFlag_KA_C",
+        "id": 62003200
+    },
+    {
+        "name": "DarkCave_Stone",
+        "id": 62100000
+    },
+    {
+        "name": "AbominationTentacle",
+        "id": 62101000
+    },
+    {
+        "name": "NPC_Dice",
+        "id": 63000000
+    },
+    {
+        "name": "Wall_Dice",
+        "id": 63001000
+    },
+    {
+        "name": "Coin_Dice",
+        "id": 63002000
+    },
+    {
+        "name": "MovingTarget",
+        "id": 63003000
+    },
+    {
+        "name": "Npc_Carpet",
+        "id": 63004000
+    },
+    {
+        "name": "NPC_Dice_Demon",
+        "id": 63005000
+    },
+    {
+        "name": "NPC_Dice_Prayer",
+        "id": 63006000
+    },
+    {
+        "name": "NPC_Dice_Sun",
+        "id": 63007000
+    },
+    {
+        "name": "Door_CloseDart",
+        "id": 63008000
+    },
+    {
+        "name": "TransportShip",
+        "id": 63009000
+    },
+    {
+        "name": "MovingTank",
+        "id": 63010001
+    },
+    {
+        "name": "MovingTank_A",
+        "id": 63010010
+    },
+    {
+        "name": "NPC_Dice_Death",
+        "id": 63012000
+    },
+    {
+        "name": "FV_SUM_Fountain",
+        "id": 64001000
+    },
+    {
+        "name": "FV_SUM_Fountain_Clean",
+        "id": 64001100
+    },
+    {
+        "name": "FV_SUM_Lamp",
+        "id": 64003000
+    },
+    {
+        "name": "FV_SUM_Altar",
+        "id": 64005000
+    },
+    {
+        "name": "FV_SUM_Food",
+        "id": 64006000
+    },
+    {
+        "name": "FV_SUM_Food_Bad",
+        "id": 64006100
+    },
+    {
+        "name": "FV_SUM_Ironbar",
+        "id": 64007000
+    },
+    {
+        "name": "FV_SUM_Sandcastle01",
+        "id": 64009000
+    },
+    {
+        "name": "FV_SUM_Sandcastle02",
+        "id": 64009100
+    },
+    {
+        "name": "FV_SUM_WaterMelon",
+        "id": 64010000
+    },
+    {
+        "name": "FV_SUM_SimbolNpc",
+        "id": 64012000
+    },
+    {
+        "name": "FV_SUM_Sandcastle03",
+        "id": 64015000
+    },
+    {
+        "name": "NPC_PirateShip",
+        "id": 64022000
+    },
+    {
+        "name": "NPC_HookaDrum_FV",
+        "id": 64101000
+    },
+    {
+        "name": "NPC_HookaDrum_FV_A",
+        "id": 64102000
+    },
+    {
+        "name": "NPC_HookaDrum_FV_B",
+        "id": 64103000
+    },
+    {
+        "name": "NPC_HookaDrum_FV_C",
+        "id": 64104000
+    },
+    {
+        "name": "NPC_Airship_Cannon",
+        "id": 64105000
+    },
+    {
+        "name": "NPC_Harkya_Rock",
+        "id": 64106000
+    },
+    {
+        "name": "NPC_HarkyaEgg",
+        "id": 64107000
+    },
+    {
+        "name": "ArcDeva_Cannon",
+        "id": 64108000
+    },
+    {
+        "name": "ArcDeva_UpstairDoor",
+        "id": 64109000
+    },
+    {
+        "name": "Instrument",
+        "id": 64202000
+    },
+    {
+        "name": "NPC_OrinSlate",
+        "id": 64203000
+    },
+    {
+        "name": "NPC_seekSlate",
+        "id": 64204000
+    },
+    {
+        "name": "Ball_Stone",
+        "id": 65001000
+    },
+    {
+        "name": "Orca_Door_01",
+        "id": 65002000
+    },
+    {
+        "name": "Orca_Door_02",
+        "id": 65003000
+    },
+    {
+        "name": "VK_WAR_Advance",
+        "id": 65100000
+    },
+    {
+        "name": "Boss_Obj",
+        "id": 65201000
+    },
+    {
+        "name": "Cliff_Bridge_01",
+        "id": 65202000
+    },
+    {
+        "name": "Cliff_Bridge_02",
+        "id": 65203000
+    },
+    {
+        "name": "Pattern_Pendulum",
+        "id": 65204000
+    },
+    {
+        "name": "Puzzle_Feild_S",
+        "id": 65205000
+    },
+    {
+        "name": "Puzzle_Feild_M",
+        "id": 65206000
+    },
+    {
+        "name": "Puzzle_Feild_L",
+        "id": 65207000
+    },
+    {
+        "name": "Beam_Prop",
+        "id": 65208000
+    },
+    {
+        "name": "Puzzle_Controller_Glass",
+        "id": 65209000
+    },
+    {
+        "name": "Puzzle_Controller",
+        "id": 65210000
+    },
+    {
+        "name": "Screen_Door_Arcdeva",
+        "id": 65211000
+    },
+    {
+        "name": "Durion_Gate_01",
+        "id": 65212000
+    },
+    {
+        "name": "Durion_Bridge_01",
+        "id": 65213000
+    },
+    {
+        "name": "DurionStatue_Smash",
+        "id": 65214000
+    },
+    {
+        "name": "NPC_Red_Mineral_01",
+        "id": 65215000
+    },
+    {
+        "name": "NPC_Red_Mineral_02",
+        "id": 65216000
+    },
+    {
+        "name": "NPC_Red_Mineral_03",
+        "id": 65217000
+    },
+    {
+        "name": "NPC_Red_Mineral_04",
+        "id": 65218000
+    },
+    {
+        "name": "Window_Break_Arcdeva",
+        "id": 65219000
+    },
+    {
+        "name": "Pillar_Break_Arcdeva",
+        "id": 65220000
+    },
+    {
+        "name": "Arcdeva_Gate",
+        "id": 65222000
+    },
+    {
+        "name": "LaKan_Stone_01",
+        "id": 65223000
+    },
+    {
+        "name": "Lakan_Twisted_Bars",
+        "id": 65223900
+    },
+    {
+        "name": "Lakan_Twisted_Summon",
+        "id": 65224000
+    },
+    {
+        "name": "NPC_SkyLantern01",
+        "id": 65225000
+    },
+    {
+        "name": "Nighmare_Gate",
+        "id": 65226000
+    },
+    {
+        "name": "Nightmare_Gate02",
+        "id": 65226100
+    },
+    {
+        "name": "RF_RobotArm",
+        "id": 65227000
+    },
+    {
+        "name": "RF_Potal",
+        "id": 65228000
+    },
+    {
+        "name": "Awaken_Brainwash",
+        "id": 65298000
+    },
+    {
+        "name": "Awaken_DragonPortal",
+        "id": 65299000
+    },
+    {
+        "name": "Awaken_BrokenRock",
+        "id": 65300000
+    },
+    {
+        "name": "Revolt_VIllage_Flag",
+        "id": 65303000
+    },
+    {
+        "name": "Revolt_Village_Catapult",
+        "id": 65304000
+    },
+    {
+        "name": "NPC_Transparent",
+        "id": 68000000
+    },
+    {
+        "name": "Transportation",
+        "id": 70001000
+    },
+    {
+        "name": "Trans_AL",
+        "id": 70001100
+    },
+    {
+        "name": "Vehicle_Horse",
+        "id": 70002000
+    },
+    {
+        "name": "Vehicle_Horse_Lord",
+        "id": 70002300
+    },
+    {
+        "name": "Velic",
+        "id": 70003000
+    },
+    {
+        "name": "Transport_KA",
+        "id": 70004100
+    },
+    {
+        "name": "NPC_SEC_Quest",
+        "id": 70005000
+    },
+    {
+        "name": "NPC_TulsaShield",
+        "id": 70006000
+    },
+    {
+        "name": "NPC_ssc_ARG_Obj_02",
+        "id": 70009000
+    },
+    {
+        "name": "NPC_ArgonCommander",
+        "id": 70011000
+    },
+    {
+        "name": "NPC_ArgonFieldInhaler",
+        "id": 70012000
+    },
+    {
+        "name": "NPC_CylinderBookcase",
+        "id": 70013000
+    },
+    {
+        "name": "NPC_T4_CylinderBookcase_Clean",
+        "id": 70013400
+    },
+    {
+        "name": "NPC_DestructArgonWall",
+        "id": 70014000
+    },
+    {
+        "name": "NPC_DestructFairyTree",
+        "id": 70015000
+    },
+    {
+        "name": "NPC_DestructStoned_Toadstool",
+        "id": 70016000
+    },
+    {
+        "name": "NPC_FlashArgonTenTacle",
+        "id": 70017000
+    },
+    {
+        "name": "NPC_Stonelantern",
+        "id": 70018000
+    },
+    {
+        "name": "NPC_T4_Argon_Excavator_Dig",
+        "id": 70019000
+    },
+    {
+        "name": "NPC_T4_Argon_Extractor",
+        "id": 70021000
+    },
+    {
+        "name": "NPC_T4_Argon_Generator",
+        "id": 70022000
+    },
+    {
+        "name": "NPC_T4_Argon_Pipe_02",
+        "id": 70023000
+    },
+    {
+        "name": "NPC_T4_militaryBase",
+        "id": 70024000
+    },
+    {
+        "name": "NPC_T4_ArgonnTeleporter",
+        "id": 70025000
+    },
+    {
+        "name": "NPC_T4_Camp_Flag",
+        "id": 70026000
+    },
+    {
+        "name": "NPC_T4_Camp_Flag_02",
+        "id": 70026100
+    },
+    {
+        "name": "NPC_T4_ARG_TentaTele",
+        "id": 70027000
+    },
+    {
+        "name": "EVCreature_Fish_A_01",
+        "id": 70032000
+    },
+    {
+        "name": "EVCreature_Fish_A_02",
+        "id": 70032100
+    },
+    {
+        "name": "SpiderVehicle",
+        "id": 70034000
+    },
+    {
+        "name": "GreenGiant",
+        "id": 70035000
+    },
+    {
+        "name": "SteelVehicle",
+        "id": 70036000
+    },
+    {
+        "name": "Human_M_Shadow",
+        "id": 70100000
+    },
+    {
+        "name": "Human_F_Shadow",
+        "id": 70101000
+    },
+    {
+        "name": "HighElf_M_Shadow",
+        "id": 70102000
+    },
+    {
+        "name": "HighElf_F_Shadow",
+        "id": 70103000
+    },
+    {
+        "name": "Castanic_M_Shadow",
+        "id": 70104000
+    },
+    {
+        "name": "Castanic_F_Shadow",
+        "id": 70105000
+    },
+    {
+        "name": "Aman_M_Shadow",
+        "id": 70106000
+    },
+    {
+        "name": "Aman_F_Shadow",
+        "id": 70107000
+    },
+    {
+        "name": "Popori_M_Shadow",
+        "id": 70108000
+    },
+    {
+        "name": "Popori_F_Shadow",
+        "id": 70109000
+    },
+    {
+        "name": "Baraka_M_Shadow",
+        "id": 70110000
+    },
+    {
+        "name": "Trans_Lion",
+        "id": 70112000
+    },
+    {
+        "name": "Trans_Lion_Lord",
+        "id": 70113000
+    },
+    {
+        "name": "Vehicle_Ostrich",
+        "id": 70115000
+    },
+    {
+        "name": "Vehicle_Ostrich_A",
+        "id": 70115100
+    },
+    {
+        "name": "Vehicle_Ostrich_A01",
+        "id": 70115200
+    },
+    {
+        "name": "Vehicle_Ostrich_C",
+        "id": 70115500
+    },
+    {
+        "name": "Vehicle_Ostrich_B",
+        "id": 70116000
+    },
+    {
+        "name": "Military_SiegeWeapon",
+        "id": 71000000
+    },
+    {
+        "name": "HalloweenCannon",
+        "id": 71000100
+    },
+    {
+        "name": "NPC_Coconut",
+        "id": 71001000
+    },
+    {
+        "name": "NPC_Coin",
+        "id": 71002000
+    },
+    {
+        "name": "NPC_TreasureBox01",
+        "id": 71003001
+    },
+    {
+        "name": "NPC_TreasureBox02",
+        "id": 71003100
+    },
+    {
+        "name": "NPC_T4_Daily_Flower",
+        "id": 72001000
+    },
+    {
+        "name": "NPC_T4_Daily_Flower_02",
+        "id": 72001100
+    },
+    {
+        "name": "NPC_Daily_Argonn_Magic",
+        "id": 72002000
+    },
+    {
+        "name": "NPC_T4_Daily_ArgonnMushroom",
+        "id": 72003000
+    },
+    {
+        "name": "NPC_T4_Daily_BananaTree",
+        "id": 72004000
+    },
+    {
+        "name": "NPC_T4_Daily_LightHouseDev",
+        "id": 72005000
+    },
+    {
+        "name": "NPC_T4_Mion_LifeTree",
+        "id": 72008000
+    },
+    {
+        "name": "NPC_T4_Argonn_LifePipe",
+        "id": 72011000
+    },
+    {
+        "name": "NPC_T4_Mission_Karego_Horn",
+        "id": 72012000
+    },
+    {
+        "name": "NPC_Tuto_MovePointMaker",
+        "id": 72037000
+    },
+    {
+        "name": "NPC_Tuto_MovePointMaker_A",
+        "id": 72037100
+    },
+    {
+        "name": "BlackCrack_NPC_OBJ_A",
+        "id": 72052000
+    },
+    {
+        "name": "BlackCrack_NPC_OBJ_B",
+        "id": 72053000
+    },
+    {
+        "name": "NPC_UnionExtractor",
+        "id": 72054000
+    },
+    {
+        "name": "NPC_UnionMineral",
+        "id": 72055000
+    },
+    {
+        "name": "BananaTree",
+        "id": 72056000
+    },
+    {
+        "name": "SantaStuckSnow",
+        "id": 72061000
+    },
+    {
+        "name": "HD_Rock_01",
+        "id": 72101000
+    },
+    {
+        "name": "HD_Rock_02",
+        "id": 72102000
+    },
+    {
+        "name": "HD_Rock_03",
+        "id": 72103000
+    },
+    {
+        "name": "RollingStone",
+        "id": 73010002
+    },
+    {
+        "name": "NPC_caveDoor_01",
+        "id": 73022000
+    },
+    {
+        "name": "NPC_caveDoor_02",
+        "id": 73023000
+    },
+    {
+        "name": "NPC_defencewall",
+        "id": 73024000
+    },
+    {
+        "name": "HollyPlace",
+        "id": 73026000
+    },
+    {
+        "name": "SanctuaryGenerator",
+        "id": 73027000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 73027100
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 73027200
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 73027300
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 73027400
+    },
+    {
+        "name": "LaboratoryDoor",
+        "id": 73028000
+    },
+    {
+        "name": "Rider_dead_body",
+        "id": 73029000
+    },
+    {
+        "name": "LieDown_Body",
+        "id": 73030000
+    },
+    {
+        "name": "Sentinel",
+        "id": 73050000
+    },
+    {
+        "name": "MagicalPrison_3NamedDoors",
+        "id": 74220000
+    },
+    {
+        "name": "MagicalPrison_MagicalBridge",
+        "id": 74230000
+    },
+    {
+        "name": "Kubel_Temple_WoodDoor",
+        "id": 74250000
+    },
+    {
+        "name": "Kubel_Temple_GlazingBar",
+        "id": 74251000
+    },
+    {
+        "name": "Kubel_Fortress_2N_eBookA",
+        "id": 74260000
+    },
+    {
+        "name": "Kubel_Fortress_2N_eBookB",
+        "id": 74261000
+    },
+    {
+        "name": "Kubel_Fortress_2N_eBookC",
+        "id": 74262000
+    },
+    {
+        "name": "Kubel_Fortress_2N_tBook",
+        "id": 74270000
+    },
+    {
+        "name": "Kubel_Fortress_2N_bookdoor",
+        "id": 74280000
+    },
+    {
+        "name": "Kubel_Fortress_2N_ball",
+        "id": 74290000
+    },
+    {
+        "name": "Kubel_Fortress_1N_fence",
+        "id": 74300000
+    },
+    {
+        "name": "Kubel_Fortress_1N_pillar",
+        "id": 74310000
+    },
+    {
+        "name": "Kubel_Fortress_Door",
+        "id": 74320000
+    },
+    {
+        "name": "Kubel_Fortress_Door",
+        "id": 74321000
+    },
+    {
+        "name": "HomunculusSmurf",
+        "id": 80001000
+    },
+    {
+        "name": "HomunculusHooka",
+        "id": 80002030
+    },
+    {
+        "name": "HomunculusEnchantedDoll",
+        "id": 80003000
+    },
+    {
+        "name": "EnchantedDoll_ev",
+        "id": 80003100
+    },
+    {
+        "name": "HomunculusGirl",
+        "id": 80004000
+    },
+    {
+        "name": "SmallDog",
+        "id": 80005000
+    },
+    {
+        "name": "BigDog",
+        "id": 80006000
+    },
+    {
+        "name": "Cat",
+        "id": 80007000
+    },
+    {
+        "name": "Chicken",
+        "id": 80008000
+    },
+    {
+        "name": "Banteng",
+        "id": 80009000
+    },
+    {
+        "name": "Pig",
+        "id": 80010000
+    },
+    {
+        "name": "Sheep",
+        "id": 80011000
+    },
+    {
+        "name": "Goat",
+        "id": 80012000
+    },
+    {
+        "name": "Rabbit",
+        "id": 80013000
+    },
+    {
+        "name": "Scorpion",
+        "id": 80014000
+    },
+    {
+        "name": "EvCreature_Crow",
+        "id": 80015000
+    },
+    {
+        "name": "EvCreature_Dove",
+        "id": 80016000
+    },
+    {
+        "name": "EvCreature_Lizard",
+        "id": 80017000
+    },
+    {
+        "name": "EvCreature_Rat",
+        "id": 80018000
+    },
+    {
+        "name": "EvCreature_Crab",
+        "id": 80020000
+    },
+    {
+        "name": "EvCreature_Frog",
+        "id": 80022000
+    },
+    {
+        "name": "GuardianSpirit_1",
+        "id": 80024000
+    },
+    {
+        "name": "GuardianSpirit_2",
+        "id": 80024100
+    },
+    {
+        "name": "HealSpirit_1",
+        "id": 80025000
+    },
+    {
+        "name": "HealSpirit_2",
+        "id": 80025100
+    },
+    {
+        "name": "LightningSpirit_1",
+        "id": 80026000
+    },
+    {
+        "name": "LightningSpirit_2",
+        "id": 80026100
+    },
+    {
+        "name": "NukesSpirit_1",
+        "id": 80027000
+    },
+    {
+        "name": "NukesSpirit_2",
+        "id": 80027100
+    },
+    {
+        "name": "MagicWand",
+        "id": 80028000
+    },
+    {
+        "name": "MagicWand",
+        "id": 80029000
+    },
+    {
+        "name": "MagicWand",
+        "id": 80030000
+    },
+    {
+        "name": "MagicWand",
+        "id": 80031000
+    },
+    {
+        "name": "NPC_TeleportWard",
+        "id": 80032000
+    },
+    {
+        "name": "NPC_DetectWard",
+        "id": 80032100
+    },
+    {
+        "name": "HomunculusSmurf_Pet",
+        "id": 80033000
+    },
+    {
+        "name": "SsalissaliKing_Pet",
+        "id": 80034000
+    },
+    {
+        "name": "TinyDragon",
+        "id": 80035000
+    },
+    {
+        "name": "WhirlWind",
+        "id": 80036000
+    },
+    {
+        "name": "DragonFirework",
+        "id": 80037000
+    },
+    {
+        "name": "Pet_Cat",
+        "id": 80038000
+    },
+    {
+        "name": "Baraka_Balder",
+        "id": 80041000
+    },
+    {
+        "name": "Baraka_Balder_B",
+        "id": 80041100
+    },
+    {
+        "name": "NPC_Popori_Carpet",
+        "id": 80043000
+    },
+    {
+        "name": "Veronicus",
+        "id": 80044001
+    },
+    {
+        "name": "DarkWing",
+        "id": 90010004
+    },
+    {
+        "name": "DarkKentauros",
+        "id": 90011000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90564000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90452000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90453000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90454000
+    },
+    {
+        "name": "ElionKubel_Memorial_stone",
+        "id": 90455000
+    },
+    {
+        "name": "SpiritOfFury_A",
+        "id": 90560000
+    },
+    {
+        "name": "ArgoniteArkus_B",
+        "id": 90562000
+    },
+    {
+        "name": "ArgoniteArkus",
+        "id": 90563000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90567000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90566000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90568000
+    },
+    {
+        "name": "Kumas_begin_ver",
+        "id": 90569000
+    },
+    {
+        "name": "NPC_Trans",
+        "id": 90571000
+    },
+    {
+        "name": "Summoned_Healer",
+        "id": 99001000
+    },
+    {
+        "name": "Summoned_Attacker",
+        "id": 99002000
+    },
+    {
+        "name": "Summoned_Defender",
+        "id": 99003000
+    },
+    {
+        "name": "Awaken_SpiritKing",
+        "id": 300605000
+    },
+    {
+        "name": "TreasureHunter_B",
+        "id": 302044000
+    },
+    {
+        "name": "BurningCave_Sword",
+        "id": 531032000
+    },
+    {
+        "name": "A_Island_Root",
+        "id": 531033000
+    },
+    {
+        "name": "A_Island_Bush",
+        "id": 531034000
+    },
+    {
+        "name": "BalderSymbol_Broken",
+        "id": 600108000
+    },
+    {
+        "name": "NPC_Airship",
+        "id": 641051000
+    },
+    {
+        "name": "ArcDeva_CrackDevice",
+        "id": 641085000
+    },
+    {
+        "name": "Laknan_Cage",
+        "id": 652232000
+    },
+    {
+        "name": "Lakan_Twisted_SnakeHead",
+        "id": 652238000
+    },
+    {
+        "name": "RF_A_Bomb",
+        "id": 652275000
+    },
+    {
+        "name": "ArcDeva_Lab_Tree",
+        "id": 653001000
+    },
+    {
+        "name": "ArcDeva_Lab_Crystal_Green",
+        "id": 653002000
+    },
+    {
+        "name": "ArcDeva_Lab_Crystal_Purple",
+        "id": 653003000
+    },
+    {
+        "name": "Arcdeva_lab_Turret",
+        "id": 653004000
+    },
+    {
+        "name": "ArcDeva_Lab_Banana",
+        "id": 653005000
+    },
+    {
+        "name": "ArcDeva_Lab_TestTube",
+        "id": 653006000
+    },
+    {
+        "name": "ArcDeva_Lab_Vaccine_Blue",
+        "id": 653008000
+    },
+    {
+        "name": "ArcDeva_Lab_Vaccine_Red",
+        "id": 653009000
+    },
+    {
+        "name": "ArcDeva_Lab_WoodDoor",
+        "id": 653010000
+    },
+    {
+        "name": "ArcDeva_Lab_3NGate",
+        "id": 653011000
+    },
+    {
+        "name": "ArcDeva_Lab_WoodDoor02",
+        "id": 653012000
+    },
+    {
+        "name": "ArcDeva_Lab_Beam",
+        "id": 653013000
+    },
+    {
+        "name": "ArcDeva_Lab_MineTrain",
+        "id": 653014000
+    },
+    {
+        "name": "Vehicle_Kumas_C",
+        "id": 709350000
+    },
+    {
+        "name": "Ballista_01",
+        "id": 722001000
+    },
+    {
+        "name": "Ballista_01_Death",
+        "id": 722002000
+    },
+    {
+        "name": "NPC_BarakaCrack_01_A",
+        "id": 730415000
+    },
+    {
+        "name": "Kubel_Temple_Gagoil00",
+        "id": 742520000
+    },
+    {
+        "name": "Kubel_Temple_Gagoil01",
+        "id": 742521000
+    },
+    {
+        "name": "Kubel_Temple_Gagoil02",
+        "id": 742522000
+    },
+    {
+        "name": "Kubel_Temple_MagicalStone",
+        "id": 742550000
+    },
+    {
+        "name": "Kubel_Temple_Stone",
+        "id": 742551000
+    },
+    {
+        "name": "Baraka_Ancientsoul",
+        "id": 800412000
+    }
+]

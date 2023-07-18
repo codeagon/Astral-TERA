@@ -1,0 +1,290 @@
+/***********
+ * GENERAL *
+ ***********/
+
+body {
+    background-color: var(--background) !important;
+    color: var(--f_med);
+}
+
+/*************
+ * TITLE BAR *
+ *************/
+
+#minimize-btn {
+    color: var(--f_med);
+}
+
+    #minimize-btn:hover {
+        color: #color:var(--f_high) !important;
+    }
+
+#close-btn {
+    color: var(--f_med);
+}
+
+    #close-btn:hover {
+        color: #color:var(--f_high) !important;
+    }
+
+
+/********
+ * MAIN *
+ ********/
+
+ul.tabs li {
+    background-color: var(--background) !important;
+}
+
+    ul.tabs li:hover {
+        background-color:var(--b_low)
+    }
+
+    ul.tabs li.current {
+        background:var(--b_med);
+    }
+
+.tab-content {
+    background: var(--b_med);
+    border: solid 4px var(--b_med);
+}
+
+.loading {
+}
+
+    .loading.icon {
+        background: url(../../icons/loadingWhite.svg);
+        background-repeat: no-repeat;
+        background-size: 50px;
+    }
+
+/*********
+ * PROXY *
+ *********/
+
+#startproxy {
+    background: var(--b_high);
+}
+
+    #startproxy:hover {
+        background: #393C40;
+    }
+
+/********
+ * LOGS *
+ ********/
+
+.log-contents {
+    background-color: var(--b_high);
+    color: var(--f_med);
+}
+
+    .log-contents > div.log {
+        color: var(--f_med);
+    }
+
+    .log-contents > div.warn {
+        color: rgb(255, 192, 92);
+    }
+
+    .log-contents > div.error {
+        color: rgb(255, 96, 96);
+    }
+
+#clear-logs {
+    color: var(--f_med);
+}
+
+    #clear-logs:hover {
+        color: #color:var(--f_high) !important;
+    }
+
+/***********
+ * MODULES *
+ ***********/
+
+ul.ModulesList li {
+    background-color: var(--b_high);
+}
+
+#modInfo li {
+    background-color: #282A2d;
+}
+
+.moduleHeader {
+    border-color: #14171A;
+    background-color: var(--b_high);
+}
+
+    .moduleHeader:hover {
+        background-color: var(--background) !important;
+    }
+
+    .moduleHeader.active {
+        background-color: #393C40;
+    }
+
+        .moduleHeader.active:hover {
+            background-color: #393C40;
+        }
+
+.moduleBody {
+}
+
+    .moduleBody.buttons {
+    }
+
+        .moduleBody.buttons.donate {
+            background: url(../../icons/donateWhite.png);
+            background-repeat: no-repeat;
+            background-size: 28px;
+        }
+
+            .moduleBody.buttons.donate:hover {
+                background-size: 30px;
+            }
+
+        .moduleBody.buttons.info {
+            background: url(../../icons/infoWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 25px;
+        }
+
+            .moduleBody.buttons.info:hover {
+                background-size: 27px;
+            }
+
+        .moduleBody.buttons.uninstall {
+            background: url(../../icons/deleteWhite.png);
+            background-repeat: no-repeat;
+            background-size: 28px;
+        }
+
+            .moduleBody.buttons.uninstall:hover {
+                background-size: 30px;
+            }
+
+        .moduleBody.buttons.updateEnabled {
+            background: url(../../icons/updateEnabledWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 26px;
+        }
+
+            .moduleBody.buttons.updateEnabled:hover {
+                background-size: 28px;
+            }
+
+        .moduleBody.buttons.updateDisabled {
+            background: url(../../icons/updateDisabledWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 26px;
+        }
+
+            .moduleBody.buttons.updateDisabled:hover {
+                background-size: 28px;
+            }
+
+        .moduleBody.buttons.loadEnabled {
+            background: url(../../icons/loadEnabledWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 24px;
+            margin-top: 2px;
+        }
+
+            .moduleBody.buttons.loadEnabled:hover {
+                background-size: 26px;
+            }
+
+        .moduleBody.buttons.loadDisabled {
+            background: url(../../icons/loadDisabledWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 24px;
+            margin-top: 2px;
+        }
+
+            .moduleBody.buttons.loadDisabled:hover {
+                background-size: 26px;
+            }
+
+/***********************
+ * INSTALLABLE MODULES *
+ ***********************/
+
+        .installableModulesFilters > label > input[type=text] {
+            color: var(--f_med);
+            border-color: #393C40;
+            background-color: var(--b_high);
+        }
+
+.installableModuleHeader {
+    border-color: #14171A;
+    background-color: var(--b_high);
+}
+
+    .installableModuleHeader:hover {
+        background-color: var(--background) !important;
+    }
+
+.installableModuleBody {
+}
+
+    .installableModuleBody.buttons {
+    }
+
+        .installableModuleBody.buttons.install {
+            background: url(../../icons/installWhite.svg);
+            background-repeat: no-repeat;
+            background-size: 28px;
+        }
+
+            .installableModuleBody.buttons.install:hover {
+                background-size: 30px;
+            }
+
+/*************
+ * SCROLLBAR *
+ *************/
+::-webkit-scrollbar-track {
+    background: var(--b_high);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #393C40;
+}
+
+/**********
+ * CONFIG *
+ **********/
+
+#settings > div {
+    background-color: var(--b_high);
+}
+
+/***********
+ * CREDITS *
+ ***********/
+
+
+/*************
+ * MODAL BOX *
+ *************/
+.modalbox {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalbox-content {
+    background-color: #393C40;
+    border-color: #888;
+}
+
+.modalbox-button {
+    background-color: #393C40;
+    color: white;
+    border-color: #999999;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+    .modalbox-button:hover {
+        border-color: #dddddd;
+    }

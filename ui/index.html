@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="icons/fontawesome/css/all.css">
+    <script src="js/theme.js"></script>
+
+    <script>window.$ = window.jQuery = require('./js/jquery-3.2.1.min.js')</script>
+    <script src="ui.js"></script>
+</head>
+
+<body>
+    <script> let theme = new Theme(); theme.install(); theme.start(); </script>
+    <div id="title-bar" class="title-bar">
+        <img src="cute.ico" id="title-icon">
+        <div id="title">Astral TERA</div>
+        <button id="minimize-btn" class="nodrag">-</button>
+        <link rel="stylesheet" href="icons/fontawesome/css/all.css">
+        <button id="close-btn" class="nodrag">&times;</button>
+    </div>
+    <div class="container">
+        <ul class="tabs">
+            <li class="tab-link nodrag current" tabname="main">Main Info</li>
+            <li class="tab-link nodrag" tabname="manager">World Options</li>
+            <li class="tab-link nodrag" tabname="spawns">Spawn Manager</li>
+            <li class="tab-link nodrag" tabname="settings">Main Settings</li>
+            <li class="tab-link nodrag" tabname="APSettings">Projection Settings</li>
+            <li class="tab-link nodrag" tabname="themeTab">UI Settings</li>
+        </ul>
+        <div id="main" class="tab-content nodrag current">
+            <div class="main text">Wow palceholder text xDDD so cool!!!! <br> wow!!!</div>
+            <div id="mainInfo">
+                <div id="status">Online<statusText id="online"></statusText>
+                </div>
+                <div id="status">AT Name<statusText id="name"></statusText>
+                </div>
+                <div id="status">Channel ID<statusText id="channelId"></statusText>
+                </div>
+                <div id="status">Building Allowed<statusText id="canBuild"></statusText>
+                </div>
+                <div id="status">Credit Balance<statusText id="creditAmount"></statusText>
+                </div>
+            </div>
+        </div>
+        <div id="spawns" class="tab-content nodrag">
+            <div id="spawnLinkContainer">
+                <li class="spawnLink nodrag" spawnType="NPC">NPCs</li>
+                <li class="spawnLink nodrag" spawnType="NPC">Shuttles</li>
+                <li class="spawnLink nodrag" spawnType="NPC">Players</li>
+            </div>
+            <br>
+            <div id="npcBloodhound"> </div>
+            <div id="npcContainer"></div>
+        </div>
+        <div id="themeTab" class="tab-content nodrag">
+            <div class="main text">Click any of the icons below to change your theme!
+                <i class="button refresh fas fa-sync"></i>
+                <i class="button open fas fa-folder-open"></i>
+                <br><br>
+                <!--hue hue huehe hue hue-->
+            </div>
+            <div id="themeContainer"></div>
+            <br>
+            <div class="main text">Add mascot:     
+                <input type="text" id="mascotList">
+                <i id="update" class="button update fas fa-save"></i>
+            </div>
+            <div id="credits" class="tab-content nodrag">
+                <div class="credits text">Caali - Mazes, and much more<br> Salty - bullied me</div>
+            </div>
+        </div>
+</body>
+
+</html>
